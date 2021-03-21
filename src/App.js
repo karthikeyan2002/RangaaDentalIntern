@@ -7,7 +7,7 @@ import Login from "./login.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { NavigationBar } from "./NavigationBar";
 
-export let islogin = true;
+export let islogin = false;
 console.log(islogin);
 
 function App() {
