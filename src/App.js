@@ -1,8 +1,11 @@
 import React from "react";
+import React, { version } from "react";
 import "./App.css";
 import Header from "./Header.js";
 import Input from "./Input.js";
 import Login from "./login.js";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { NavigationBar } from "./NavigationBar";
 
 export let islogin = true;
 console.log(islogin);

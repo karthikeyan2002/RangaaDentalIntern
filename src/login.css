@@ -1,0 +1,62 @@
+/* Login Section */
+.login {
+  background: rgb(102, 51, 153);
+  background: linear-gradient(
+    90deg,
+    rgb(7, 243, 145) 51%,
+    rgb(6, 171, 236) 100%
+  );
+  width: 100%;
+  height: 80vh;
+  text-align: center;
+  padding-top: 10%;
+  font-weight: bold;
+}
+.login input {
+  margin: 1.3% 0%;
+  border: none;
+  background-color: inherit;
+  border-bottom: 1px solid white;
+  width: 80%;
+  text-align: center;
+  padding: 5px;
+}
+.login ::placeholder {
+  color: white;
+  font-weight: bold;
+  margin: 2px;
+  font-size: 1.4em;
+}
+.login .btn {
+  border-radius: 22px;
+  color: #ffffff;
+  font-size: 20px;
+  background: red;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-top: 15px;
+  border: none;
+}
+.login input:focus {
+  outline: none;
+  color: #ffffff;
+  font-size: 1;
+}
+/* This will not automatically changes bg color when text is filled */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition-delay: 9999s;
+  transition-delay: 9999s;
+}
+.login .btn:hover {
+  background: rgb(125, 230, 26);
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+.login .btn:focus {
+  border: none;
+  outline: none;
+}
