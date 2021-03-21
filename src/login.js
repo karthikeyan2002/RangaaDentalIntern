@@ -21,7 +21,7 @@ function login() {
         </label>
 
         <label>
-          <input type="password" name="password" placeholder="Pas****" />
+          <input type="password" name="password" placeholder="Password" />
         </label>
         <br />
 
