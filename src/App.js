@@ -1,5 +1,5 @@
 import React from "react";
-import React, { version } from "react";
+import  { version } from "react";
 import "./App.css";
 import Header from "./Header.js";
 import Input from "./Input.js";
