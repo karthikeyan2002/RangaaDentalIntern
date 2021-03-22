@@ -1,0 +1,22 @@
+diff --git a/node_modules/survey-react/survey.react.js b/node_modules/survey-react/survey.react.js
+index dc4801a..a68cd02 100644
+--- a/node_modules/survey-react/survey.react.js
++++ b/node_modules/survey-react/survey.react.js
+@@ -18260,7 +18260,7 @@ var englishStrings = {
+     panelDynamicProgressText: "Record {0} of {1}",
+     questionsProgressText: "Answered {0}/{1} questions",
+     emptySurvey: "There is no visible page or question in the survey.",
+-    completingSurvey: "Thank you for completing the survey!",
++    completingSurvey: "Submitted Into our records",
+     completingSurveyBefore: "Our records show that you have already completed this survey.",
+     loadingSurvey: "Loading Survey...",
+     optionsCaption: "Choose...",
+@@ -18293,7 +18293,7 @@ var englishStrings = {
+     confirmDelete: "Do you want to delete the record?",
+     keyDuplicationError: "This value should be unique.",
+     addColumn: "Add column",
+-    addRow: "Add row",
++    addRow: "Add new row",
+     removeRow: "Remove",
+     emptyRowsText: "There are no rows.",
+     addPanel: "Add new",
