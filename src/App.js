@@ -1,5 +1,5 @@
 import React from "react";
-import  { version } from "react";
+import { version } from "react";
 import "./App.css";
 import Header from "./Header.js";
 import Input from "./Input.js";
@@ -11,19 +11,19 @@ export let islogin = false;
 console.log(islogin);
 
 function App() {
-	return (
-		<>
-			{islogin ? (
-				<>
-					<Header />
-					<input type='text' placeholder='Search' style={{ float: "right" }} />
-					<Input />
-				</>
-			) : (
-				<Login />
-			)}
-		</>
-	);
+  return (
+    <>
+      {islogin ? (
+        <>
+          <Header />
+          <input type="text" placeholder="Search" style={{ float: "right" }} />
+          <Input />
+        </>
+      ) : (
+        <Login />
+      )}
+    </>
+  );
 }
 
 export default App;

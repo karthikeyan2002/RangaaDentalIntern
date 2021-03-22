@@ -19,7 +19,7 @@ function login() {
           <input type="text" name="username" placeholder="User Name" />
           <br />
         </label>
-
+        
         <label>
           <input type="password" name="password" placeholder="Password" />
         </label>
