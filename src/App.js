@@ -6,7 +6,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import SurveyComponent from "./SurveyComponent";
 import { NavigationBar } from "./NavigationBar";
 
-export let islogin = true;
+export let islogin = false;
 console.log(islogin);
 
 function App() {

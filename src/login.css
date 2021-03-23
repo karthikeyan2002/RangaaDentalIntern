@@ -1,11 +1,7 @@
 /* Login Section */
 .login {
-  background: rgb(102, 51, 153);
-  background: linear-gradient(
-    90deg,
-    rgb(230, 238, 234) 51%,
-    rgb(120, 155, 219) 100%
-  );
+  background: rgb(119,113,189);
+  background: linear-gradient(90deg, rgba(119,113,189,1) 32%, rgba(9,235,244,1) 100%);
   width: 100%;
   height: 80vh;
   text-align: center;
@@ -16,23 +12,25 @@
   margin: 1.3% 0%;
   border: none;
   background-color: inherit;
-  border-bottom: 1px solid rgb(243, 101, 101);
+  border-bottom: 1px solid white;
   width: 95%;
   text-align: center;
   padding: 5px;
+  color: white;
 }
 .login ::placeholder {
-  color: rgb(204, 126, 54);
+  color: white;
   font-weight: bold;
   margin: 2px;
-  font-size: 1.4em;
+  font-size: 1em;
+  font-family: 'Times New Roman', Times, serif;
 }
 .login .btn {
   border-radius: 22px;
   color: #ffffff;
   font-size: 20px;
-  background: red;
-  padding: 10px 20px 10px 20px;
+  background: blue;
+  padding: 10px 10px 10px 20px;
   text-decoration: none;
   margin-top: 15px;
   border: none;
