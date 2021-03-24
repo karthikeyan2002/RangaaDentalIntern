@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-It will download the dependencies required for running of the application.
+It will download the dependencies required for running the application.
 
 ### `npm start`
 
