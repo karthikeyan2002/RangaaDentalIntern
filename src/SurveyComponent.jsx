@@ -40,7 +40,7 @@ class SurveyComponent extends Component {
                 },
                 {
                   name: "liveage",
-                  type: "dropdown",
+                  type: "text",
                   title: "Age",
                   isRequired: true,
                   startWithNewLine: false,
@@ -50,7 +50,6 @@ class SurveyComponent extends Component {
                 },
                 {
                   type: "text",
-                  inputFormat: "###-###-####",
                   name: "phone",
                   title: "Mobile Number:",
                   isRequired: true,
