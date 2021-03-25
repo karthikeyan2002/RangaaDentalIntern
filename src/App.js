@@ -4,25 +4,26 @@ import Header from "./Header.js";
 import Login from "./login.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { NavigationBar } from "./NavigationBar";
-import MySurvey from "./surveydisp/surveyone";
-
+import { createNewPost } from "./utils";
 export let islogin = true;
 console.log(islogin);
-
+createNewPost()
+	.then((res) => console.log(res))
+	.catch((err) => console.log(err));
 function App() {
-  return (
-    <>
-      {islogin ? (
-        <>
-          <Header />
-          <NavigationBar />
-          <MySurvey />
-        </>
-      ) : (
-        <Login />
-      )}
-    </>
-  );
+	return (
+		<>
+			{islogin ? (
+				<>
+					<Header />
+					<NavigationBar />
+					<SurveyComponent />
+				</>
+			) : (
+				<Login />
+			)}
+		</>
+	);
 }
 
 export default App;
