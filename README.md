@@ -1,4 +1,4 @@
-:..# Getting Started with This web application using react js.
+# Getting Started with This web application using react js.
 
   ## Scripts to run the program: 
 
