@@ -1,8 +1,8 @@
 :..# Getting Started with This web application using react js.
 
-## Available Scripts
+  ## Scripts to run the program: 
 
-In the project directory, you can run:
+After installing node js in ur system, In the project directory, you can run:
 
 ### `npm install`
 
