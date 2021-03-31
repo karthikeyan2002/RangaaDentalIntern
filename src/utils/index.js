@@ -1,13 +1,13 @@
 import * as firebase from "firebase";
-import { firestoreRef } from "../firebase";
+import { firestore } from "../firebase";
 
-const createNewPost = async () => {
-	await firebase.default
-		.firestore()
+const createNewPost = async (data) => {
+	await firestore
 		.collection("patients")
-		.get()
-		.then((res) => res)
-		.catch((err) => console.log(err));
+		.add({
+			data,
+			created: firebase.default.firestore.FieldValue.serverTimestamp(),
+		});
 };
 
 export { createNewPost };
