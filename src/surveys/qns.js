@@ -1,4 +1,4 @@
-const json = {
+const Json = {
   progressBarType: "buttons",
   showProgressBar: "top",
   pages: [
@@ -385,5 +385,4 @@ const json = {
     },
   ],
 };
-
-export default json;
+export default Json;

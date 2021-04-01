@@ -9,7 +9,7 @@ Survey.StylesManager.applyTheme("modern");
 const MySurvey = () => {
   //pdf generator code starts here
   const survey = new Survey.Model(Json);
-  function saveSurveyToPdf(filename, surveyModel, pdfWidth, pdfHeight) {
+        function saveSurveyToPdf(filename, surveyModel, pdfWidth, pdfHeight) {
    var options = {
         format: [pdfWidth, pdfHeight]
     };
