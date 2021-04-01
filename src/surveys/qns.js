@@ -43,6 +43,17 @@ const json = {
               isRequired: true,
             },
             {
+              type: "text",
+              name: "email",
+              title: "Please enter your e-mail",
+              isRequired: true,
+              validators: [
+                  {
+                      type: "email"
+                  }
+              ]
+          },
+            {
               type: "matrixdropdown",
               name: "immunizations",
               title: "Medical History of the patient:",
