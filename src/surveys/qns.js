@@ -1,4 +1,4 @@
-const json = {
+const Json = {
   progressBarType: "buttons",
   showProgressBar: "top",
   pages: [
@@ -43,144 +43,26 @@ const json = {
               isRequired: true,
             },
             {
-              type: "matrixdropdown",
-              name: "immunizations",
-              title: "Medical History of the patient:",
-              columns: [
-                {
-                  name: "answer",
-                  title: "Please select",
-                  choices: [
-                    {
-                      value: "yes",
-                      text: "Under medication",
-                    },
-                    {
-                      value: "no",
-                      text: "Not Under medication",
-                    },
-                    {
-                      value: "unknown",
-                      text: "Unknown",
-                    },
-                  ],
-                  cellType: "radiogroup",
-                  isRequired: false,
-                },
-                {
-                  name: "year",
-                  title: "From Year",
-                  cellType: "text",
-                  isRequired: false,
-                  visibleIf: '{row.answer} = "yes"',
-                },
-              ],
-              choices: [1, 2, 3, 4, 5, 6, 7],
-              rows: [
-                "Diabetes",
-                "Hypertension",
-                "Epilepsy",
-                "Ischemic cardiac diseases",
-                "Allergy",
-                "Bleeding disorder",
-                "Anticoagulant therapy",
-              ],
+              type: "text",
+              name: "email",
+              title: "Please enter your e-mail",
+              isRequired: true,
+              validators: [
+                  {
+                      type: "email"
+                  }
+              ]
             },
             {
+              name: "complaints",
               type: "text",
-              name: "anything else1",
-              title: "If any other diseases in history please specify here:",
+              title: "Complaints of the Patient",
               isRequired: false,
             },
             {
-              type: "matrixdropdown",
-              name: "examination",
-              title: "Doctor's Examination",
-              columns: [
-                {
-                  name: "answer",
-                  title: "Please select",
-                  choices: [
-                    {
-                      value: "yes",
-                      text: "Yes",
-                    },
-                    {
-                      value: "no",
-                      text: "No",
-                    },
-                  ],
-                  cellType: "radiogroup",
-                  isRequired: false,
-                },
-                {
-                  name: "year",
-                  title: "Comments (If any)",
-                  cellType: "text",
-                  isRequired: false,
-                  visibleIf: '{row.answer} = "yes"',
-                },
-              ],
-              choices: [1, 2, 3, 4, 5, 6, 7],
-              rows: [
-                "Decayed teeth",
-                "Filled teeth",
-                "Missing teeth",
-                "Calculus teeth",
-                "Mouth ulcers",
-                "Bad Breath",
-                "Fractured teeth",
-                "Mobile teeth",
-              ],
-            },
-            {
+              name: "allergic to",
               type: "text",
-              name: "anything else2",
-              title: "Anything else?, please specify here:",
-              isRequired: false,
-            },
-            {
-              type: "matrixdropdown",
-              name: "habits",
-              title: "Habits of the Patient",
-              columns: [
-                {
-                  name: "answer",
-                  title: "Please select",
-                  choices: [
-                    {
-                      value: "yes",
-                      text: "Yes",
-                    },
-                    {
-                      value: "no",
-                      text: "No",
-                    },
-                  ],
-                  cellType: "radiogroup",
-                  isRequired: false,
-                },
-                {
-                  name: "year",
-                  title: "Comments (If any)",
-                  cellType: "text",
-                  isRequired: false,
-                  visibleIf: '{row.answer} = "yes"',
-                },
-              ],
-              choices: [1, 2, 3, 4, 5],
-              rows: [
-                "Thumb sucking",
-                "Tongue Thrusting",
-                "Mouth breathing",
-                "bottle feeding",
-                "Nail biting",
-              ],
-            },
-            {
-              type: "text",
-              name: "anything else3",
-              title: "Anything else?, please specify here:",
+              title: "Patient Allergic to",
               isRequired: false,
             },
           ],
@@ -190,6 +72,106 @@ const json = {
         },
       ],
     },
+    {
+      navigationTitle: "Medical History",
+      navigationDescription: "By Doctor",
+      questions: [
+        {
+          type: "matrixdropdown",
+          name: "immunizations",
+          title: "Medical History of the patient:",
+          columns: [
+            {
+              name: "answer",
+              title: "Please select",
+              choices: [
+                {
+                  value: "yes",
+                  text: "Under medication",
+                },
+                {
+                  value: "no",
+                  text: "Not Under medication",
+                },
+                {
+                  value: "unknown",
+                  text: "Unknown",
+                },
+              ],
+              cellType: "radiogroup",
+              isRequired: false,
+            },
+            {
+              name: "year",
+              title: "From Year",
+              cellType: "text",
+              isRequired: false,
+              visibleIf: '{row.answer} = "yes"',
+            },
+          ],
+          choices: [1, 2, 3, 4, 5, 6, 7],
+          rows: [
+            "Diabetes",
+            "Hypertension",
+            "Epilepsy",
+            "Ischemic cardiac diseases",
+            "Allergy",
+            "Bleeding disorder",
+            "Anticoagulant therapy",
+          ],
+        },
+        {
+          type: "text",
+          name: "anything else1",
+          title: "If any other diseases in history please specify here:",
+          isRequired: false,
+        },
+        {
+          type: "matrixdropdown",
+          name: "habits",
+          title: "Habits of the Patient",
+          columns: [
+            {
+              name: "answer",
+              title: "Please select",
+              choices: [
+                {
+                  value: "yes",
+                  text: "Yes",
+                },
+                {
+                  value: "no",
+                  text: "No",
+                },
+              ],
+              cellType: "radiogroup",
+              isRequired: false,
+            },
+            {
+              name: "year",
+              title: "Comments (If any)",
+              cellType: "text",
+              isRequired: false,
+              visibleIf: '{row.answer} = "yes"',
+            },
+          ],
+          choices: [1, 2, 3, 4, 5],
+          rows: [
+            "Thumb sucking",
+            "Tongue Thrusting",
+            "Mouth breathing",
+            "bottle feeding",
+            "Nail biting",
+          ],
+        },
+        {
+          type: "text",
+          name: "anything else3",
+          title: "Anything else?, please specify here:",
+          isRequired: false,
+        },
+          ],
+        },
     {
       navigationTitle: "Diagnosis",
       navigationDescription: "By Doctor",
@@ -311,6 +293,53 @@ const json = {
       navigationDescription: "By Doctor",
       questions: [
         {
+          type: "matrixdropdown",
+          name: "examination",
+          title: "Doctor's Examination",
+          columns: [
+            {
+              name: "answer",
+              title: "Please select",
+              choices: [
+                {
+                  value: "yes",
+                  text: "Yes",
+                },
+                {
+                  value: "no",
+                  text: "No",
+                },
+              ],
+              cellType: "radiogroup",
+              isRequired: false,
+            },
+            {
+              name: "year",
+              title: "Comments (If any)",
+              cellType: "text",
+              isRequired: false,
+              visibleIf: '{row.answer} = "yes"',
+            },
+          ],
+          choices: [1, 2, 3, 4, 5, 6, 7],
+          rows: [
+            "Decayed teeth",
+            "Filled teeth",
+            "Missing teeth",
+            "Calculus teeth",
+            "Mouth ulcers",
+            "Bad Breath",
+            "Fractured teeth",
+            "Mobile teeth",
+          ],
+        },
+        {
+          type: "text",
+          name: "anything else2",
+          title: "Anything else?, please specify here:",
+          isRequired: false,
+        },
+        {
           type: "matrix",
           name: "Treatment Pain",
           title: "Treatment Pain",
@@ -356,5 +385,4 @@ const json = {
     },
   ],
 };
-
-export default json;
+export default Json;
