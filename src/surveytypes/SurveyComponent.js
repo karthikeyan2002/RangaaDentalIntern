@@ -22,10 +22,10 @@ const SurveyComponent = () => {
 	return (
 		<Survey.Survey
 			showCompletedPage={true}
-			onComplete={() => {
+			onComplete={(data) => {
 				var pdfWidth = survey.pdfWidth || 210;
 				var pdfHeight = survey.pdfHeight || 297;
-				saveSurveyToPdf("surveyResult.pdf", survey, pdfWidth, pdfHeight);
+				saveSurveyToPdf("surveyResult.pdf", data, pdfWidth, pdfHeight);
 			}}
 			json={Json}
 		/>
