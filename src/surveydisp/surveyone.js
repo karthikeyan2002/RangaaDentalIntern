@@ -1,10 +1,8 @@
 import React from "react";
-import MySurvey from '../surveytypes/SurveyComponent';
+import SurveyComponent from "../surveytypes/SurveyComponent";
 
-const surveyone =()=>{
-    return(
-        <MySurvey />
-    )
-}
+const surveyone = () => {
+	return <SurveyComponent />;
+};
 
 export default surveyone;

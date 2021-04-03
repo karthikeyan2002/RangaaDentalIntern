@@ -7,7 +7,7 @@ import * as SurveyPDF from "survey-pdf";
 
 Survey.StylesManager.applyTheme("modern");
 
-const MySurvey = () => {
+const SurveyComponent = () => {
 	//pdf generator code starts here
 	const survey = new Survey.Model(Json);
 	function saveSurveyToPdf(filename, surveyModel, pdfWidth, pdfHeight) {
@@ -18,19 +18,18 @@ const MySurvey = () => {
 		surveyPDF.data = surveyModel.data;
 		surveyPDF.save(filename);
 	}
-	document.getElementById("saveToPDFbtn").onclick = function () {
-		var pdfWidth = survey.pdfWidth || 210;
-		var pdfHeight = survey.pdfHeight || 297;
-		saveSurveyToPdf("surveyResult.pdf", survey, pdfWidth, pdfHeight);
-	};
 	//pdf generator code ends here
 	return (
 		<Survey.Survey
 			showCompletedPage={true}
-			onComplete={(data) => console.log(data.valuesHash)}
+			onComplete={() => {
+				var pdfWidth = survey.pdfWidth || 210;
+				var pdfHeight = survey.pdfHeight || 297;
+				saveSurveyToPdf("surveyResult.pdf", survey, pdfWidth, pdfHeight);
+			}}
 			json={Json}
 		/>
 	);
 };
 
-export default MySurvey;
+export default SurveyComponent;
