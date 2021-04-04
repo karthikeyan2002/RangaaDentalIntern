@@ -6,7 +6,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { NavigationBar } from "./NavigationBar";
 import { createNewPost } from "./utils";
 import MySurvey from "../src/surveydisp/surveyone";
-export let islogin = true;
+export let islogin = false;
 console.log(islogin);
 createNewPost()
 	.then((res) => console.log(res))
