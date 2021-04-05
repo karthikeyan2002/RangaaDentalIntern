@@ -5,15 +5,7 @@ const Json = {
     {
       navigationTitle: "Personal Details",
       navigationDescription: "Confidential",
-
       questions: [
-        {
-          type: "paneldynamic",
-          name: "panel1",
-          title: "Please Enter Details",
-          renderMode: "progressTop",
-          templateTitle: "About: {panel.relativeType}",
-          templateElements: [
             {
               name: "Name",
               type: "text",
@@ -66,11 +58,6 @@ const Json = {
               isRequired: false,
             },
           ],
-          panelCount: 1,
-          panelAddText: "Add Next Patient",
-          panelRemoveText: "Remove This Patient",
-        },
-      ],
     },
     {
       navigationTitle: "Medical History",
