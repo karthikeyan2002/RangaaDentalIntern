@@ -20,6 +20,7 @@ const SurveyComponent = () => {
 	}
 	//pdf generator code ends here
 	return (
+		<div className="Container">
 		<Survey.Survey
 			showCompletedPage={true}
 			onComplete={(data) => {
@@ -28,7 +29,7 @@ const SurveyComponent = () => {
 				saveSurveyToPdf("surveyResult.pdf", data, pdfWidth, pdfHeight);
 			}}
 			json={Json}
-		/>
+		/></div>
 	);
 };
 
