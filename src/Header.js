@@ -11,7 +11,7 @@ function Header() {
       <p style={{ color: "yellow", float: "right" }}>
         {new Date().toLocaleString() + ""}
       </p>
-      <h1 style={{ color: "#ffffff", textAlign: "center", padding: "2% 0%" }}>
+      <h1 style={{ color: "#ffffff", textAlign: "center", padding: "1.9% 0%" }}>
         Patient Details
       </h1>
     </div>
