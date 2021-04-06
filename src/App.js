@@ -6,6 +6,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { NavigationBar } from "./NavigationBar";
 import { createNewPost } from "./utils";
 import MySurvey from "../src/surveydisp/surveyone";
+import MainForm from "./MainForm";
 export let islogin = true;
 console.log(islogin);
 createNewPost()
@@ -16,9 +17,8 @@ function App() {
 		<>
 			{islogin ? (
 				<>
-					<Header />
-					<NavigationBar />
-					<MySurvey />
+					{/* <MySurvey /> */}
+					<MainForm />
 				</>
 			) : (
 				<Login />
