@@ -7,6 +7,7 @@ import { NavigationBar } from "./NavigationBar";
 import { createNewPost } from "./utils";
 import MySurvey from "../src/surveydisp/surveyone";
 import MainForm from "./MainForm";
+import "./utils";
 export let islogin = true;
 console.log(islogin);
 createNewPost()
