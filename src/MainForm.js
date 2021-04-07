@@ -77,15 +77,15 @@ function MainForm() {
 					onSubmit={(values) => console.log(values)}
 				>
 					<Form>
-						<label>
+						<label >
 							<h4>
-								Name <Field type='text' name='name' placeholder='name'></Field>
+								Name <Field className="bg-gray-200 focus:bg-white" type='text' name='name' placeholder='name'></Field>
 							</h4>
 						</label>
 						<br />
 						<label>
 							<h4>
-								Age <Field type='number' name='age' placeholder='Age'></Field>
+								Age <Field className="bg-gray-200 focus:bg-white" type='number' name='age' placeholder='Age'></Field>
 							</h4>
 						</label>
 						<br />
@@ -100,19 +100,21 @@ function MainForm() {
 							<Field type='radio' name='gender' value='Female'></Field>
 						</label>
 						<br />
-						<label>
+						<label><h4>
 							Mobile Number{" "}
 							<Field
+								className="bg-gray-200 focus:bg-white"
 								type='text'
 								name='mobileNumber'
 								placeholder='Mobile Number'
-							></Field>
+							></Field></h4>
 						</label>
 						<br />
 						<h4>
 							<label htmlFor='email'>
 								Email
 								<Field
+									className="bg-gray-200 focus:bg-white"
 									id='email'
 									name='email'
 									placeholder='xyz@rangdent.org'
@@ -322,8 +324,8 @@ function MainForm() {
 								name='medicalHistory.anticogulant'
 								value='Unknown'
 							></Field>
-						</label>
-						<br /><button class="py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">Submit</button>
+						</label><br />
+						<button className="py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">Submit</button>
 					</Form>
 				</Formik>
 			</div>
