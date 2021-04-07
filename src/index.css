@@ -1,6 +1,6 @@
 body {
-  margin: 0%;
-  padding: 0%;
+  margin: 1%;
+  padding: 1%;
   font-family: "Lato", sans-serif;
 }
 
@@ -38,6 +38,7 @@ select {
 }
 /* Form Section */
 .Container{
+  text-align: center;
   margin: 2%;
   padding: 2%;
   background: linear-gradient(-45deg, #78c6da, #ffffff, #ffffff, #dbd9b5);
