@@ -18,6 +18,8 @@ function App() {
 		<>
 			{islogin ? (
 				<>
+					<Header />
+					<NavigationBar />
 					{/* <MySurvey /> */}
 					<MainForm />
 				</>

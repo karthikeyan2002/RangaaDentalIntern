@@ -6,58 +6,58 @@ const Json = {
       navigationTitle: "Personal Details",
       navigationDescription: "Confidential",
       questions: [
+        {
+          name: "Name",
+          type: "text",
+          title: "Name",
+          isRequired: false,
+        },
+        {
+          name: "Gender",
+          type: "radiogroup",
+          title: "Gender",
+          startWithNewLine: false,
+          isRequired: false,
+          colCount: 0,
+          choices: ["Male", "Female", "Others"],
+        },
+        {
+          name: "Age",
+          type: "text",
+          title: "Age",
+          isRequired: false,
+          startWithNewLine: false,
+        },
+        {
+          type: "text",
+          name: "phone",
+          title: "Mobile Number:",
+          isRequired: false,
+        },
+        {
+          type: "text",
+          name: "email",
+          title: "Please enter your e-mail",
+          isRequired: false,
+          validators: [
             {
-              name: "Name",
-              type: "text",
-              title: "Name",
-              isRequired: true,
-            },
-            {
-              name: "Gender",
-              type: "radiogroup",
-              title: "Gender",
-              startWithNewLine: false,
-              isRequired: true,
-              colCount: 0,
-              choices: ["Male", "Female", "Others"],
-            },
-            {
-              name: "Age",
-              type: "text",
-              title: "Age",
-              isRequired: true,
-              startWithNewLine: false,
-            },
-            {
-              type: "text",
-              name: "phone",
-              title: "Mobile Number:",
-              isRequired: true,
-            },
-            {
-              type: "text",
-              name: "email",
-              title: "Please enter your e-mail",
-              isRequired: true,
-              validators: [
-                  {
-                      type: "email"
-                  }
-              ]
-            },
-            {
-              name: "complaints",
-              type: "text",
-              title: "Complaints of the Patient",
-              isRequired: false,
-            },
-            {
-              name: "allergic to",
-              type: "text",
-              title: "Patient Allergic to",
-              isRequired: false,
+              type: "email",
             },
           ],
+        },
+        {
+          name: "complaints",
+          type: "text",
+          title: "Complaints of the Patient",
+          isRequired: false,
+        },
+        {
+          name: "allergic to",
+          type: "text",
+          title: "Patient Allergic to",
+          isRequired: false,
+        },
+      ],
     },
     {
       navigationTitle: "Medical History",
@@ -157,8 +157,8 @@ const Json = {
           title: "Anything else?, please specify here:",
           isRequired: false,
         },
-          ],
-        },
+      ],
+    },
     {
       navigationTitle: "Diagnosis",
       navigationDescription: "By Doctor",
