@@ -3,8 +3,8 @@ import { Formik, Form, Field } from "formik";
 
 function MainForm() {
 	return (
-		<div>
-			<div className='Container'>
+		<div className='Container'>
+		<div className="p-8 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
 				<Formik
 					initialValues={{
 						name: "",
@@ -323,9 +323,7 @@ function MainForm() {
 								value='Unknown'
 							></Field>
 						</label>
-						<br />
-
-						<button type='submit'>Submit</button>
+						<br /><button class="py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">Submit</button>
 					</Form>
 				</Formik>
 			</div>
