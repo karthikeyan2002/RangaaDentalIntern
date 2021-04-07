@@ -12,7 +12,7 @@ function Header() {
         {new Date().toLocaleString() + ""}
       </p>
       <h1 style={{ color: "#ffffff", textAlign: "center", padding: "1.9% 0%" }}>
-        Patient Details
+        Dashboard
       </h1>
     </div>
   );

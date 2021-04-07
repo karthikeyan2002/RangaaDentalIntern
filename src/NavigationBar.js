@@ -22,25 +22,30 @@ const Styles = styled.div`
   }
   .form-center {
     position: absolute !important;
-    left: 25%;
-    right: 25%;
+    left: 1%;
+    right: 70%;
   }
 `;
 export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">Dashboard</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Form className="form-center">
+    <Form className="form-center">
         <FormControl type="text" placeholder="Search" className="" />
       </Form>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item>
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/">Admin Panel</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/about">Contact Us</Nav.Link>
+            <Nav.Link href="/about">Doctor Login</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/">Patient Login</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/about">Medical Login</Nav.Link>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>
