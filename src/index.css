@@ -2,18 +2,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 body {
-  margin: 1%;
-  padding: 1%;
-  font-family: "Lato", sans-serif;
+  margin: 0%;
+  padding: 0%;
 }
 
+.Dashboard{
+  background: url("./dental.jpg");
+  background-size: cover;
+  padding: 1%;
+}
 /* Header Section */
-.header {
-  background-image: url("/src/dental.jpg");
-  background-size:auto;
 
+.header {
+  background: rgb(237,255,236);
+  background: linear-gradient(90deg, rgba(237,255,236,1) 45%, rgba(202,247,227,1) 83%);
+  color: black;
+  font-family: 'Montserrat', sans-serif;
 }
 .logo {
   float: left;

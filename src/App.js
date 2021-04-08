@@ -22,6 +22,7 @@ function App() {
 					<NavigationBar /> */}
 					{/* <MySurvey /> */}
 					{/* <MainForm /> */}
+					
 					<Table />
 				</>
 			) : (
