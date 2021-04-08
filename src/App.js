@@ -6,6 +6,7 @@ import { NavigationBar } from "./NavigationBar";
 import { createNewPost } from "./utils";
 import MySurvey from "../src/surveydisp/surveyone";
 import MainForm from "./MainForm";
+import Table from "./Table";
 import "./utils";
 export let islogin = true;
 console.log(islogin);
@@ -17,10 +18,11 @@ function App() {
 		<>
 			{islogin ? (
 				<>
-					<Header />
-					<NavigationBar />
+					{/* <Header />
+					<NavigationBar /> */}
 					{/* <MySurvey /> */}
-					<MainForm />
+					{/* <MainForm /> */}
+					<Table />
 				</>
 			) : (
 				<Login />
