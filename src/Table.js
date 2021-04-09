@@ -1,93 +1,91 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from "react";
 import "./Table.css";
 import Header from "./Header";
-import {getPatients} from "./utils/index";
+import { getPatients } from "./utils/index";
 
 function Table() {
+	const [patients, setPatients] = useState([]);
+	useEffect(() => {
+		const data = getPatients();
+		setPatients(data);
+	}, []);
 
-    const [patients,setPatients] = useState([]);
-    setPatients(getPatients());
-    
-    return (
-        <div className="Dashboard">
-                <Header />
+	console.log(patients);
 
-                <table>
-                    <tr style={{backgroundColor:'black',color:'white'}}>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Age</th>
-                        <th>Email</th>
-                        <th>Complaint</th>
-                        <th>Add</th>
-                                            
-                    </tr>
-                    
-                    {/*                                                             
-                        {Patients.map(function (Patients) {
-                    
-                        return (
-                            <tr>
-                                <td>Patients.name</td>
-                                <td>Patients.age</td>
-                            </tr>
-                        );
-                    
-                        })}
-                    */}
+	return (
+		<div className='Dashboard'>
+			<Header />
 
-                    <tr>
-                        <td>Avinash</td>
-                        <td>987654321</td>
-                        <td>20</td>
-                        <td>avinashr@gmail.com</td>
-                        <td>complaint----</td>
-                        <td>edit</td>
-                    </tr>
-                    <tr>
-                        <td>Karthikeyan</td>
-                        <td>9080585673</td>
-                        <td>18</td>
-                        <td>bkarthi1000@gmail.com</td>
-                        <td>complaint----</td>
-                        <td>edit</td>
-                    </tr>
-                    <tr>
-                        <td>Karthikeyan</td>
-                        <td>9080585673</td>
-                        <td>18</td>
-                        <td>bkarthi1000@gmail.com</td>
-                        <td>complaint </td>
-                        <td>edit</td>
-                    </tr>
-                    <tr>
-                        <td>Karthikeyan</td>
-                        <td>9080585673</td>
-                        <td>18</td>
-                        <td>bkarthi1000@gmail.com</td>
-                        <td>asfasfasf</td>
-                        <td>edit</td>
-                    </tr>
-                    <tr>
-                        <td>Karthikeyan</td>
-                        <td>9080585673</td>
-                        <td>18</td>
-                        <td>bkarthi1000@gmail.com</td>
-                        <td>asfasfasf</td>
-                        <td>edit</td>
-                    </tr>
-                    <tr>
-                        <td>Karthikeyan</td>
-                        <td>9080585673</td>
-                        <td>18</td>
-                        <td>bkarthi1000@gmail.com</td>
-                        <td>asfasfasf</td>
-                        <td>edit</td>
-                    </tr>
-                                       
-                </table>
-        </div>
-    )
+			<table>
+				<tr style={{ backgroundColor: "black", color: "white" }}>
+					<th>Name</th>
+					<th>Phone</th>
+					<th>Age</th>
+					<th>Email</th>
+					<th>Complaint</th>
+					<th>Add</th>
+				</tr>
+
+				{/* {patients.map(function (patient) {
+					return (
+						<tr>
+							<td>{patient.name}</td>
+							<td>{patient.age}</td>
+						</tr>
+					);
+				})} */}
+
+				<tr>
+					<td>Avinash</td>
+					<td>987654321</td>
+					<td>20</td>
+					<td>avinashr@gmail.com</td>
+					<td>complaint----</td>
+					<td>edit</td>
+				</tr>
+				<tr>
+					<td>Karthikeyan</td>
+					<td>9080585673</td>
+					<td>18</td>
+					<td>bkarthi1000@gmail.com</td>
+					<td>complaint----</td>
+					<td>edit</td>
+				</tr>
+				<tr>
+					<td>Karthikeyan</td>
+					<td>9080585673</td>
+					<td>18</td>
+					<td>bkarthi1000@gmail.com</td>
+					<td>complaint </td>
+					<td>edit</td>
+				</tr>
+				<tr>
+					<td>Karthikeyan</td>
+					<td>9080585673</td>
+					<td>18</td>
+					<td>bkarthi1000@gmail.com</td>
+					<td>asfasfasf</td>
+					<td>edit</td>
+				</tr>
+				<tr>
+					<td>Karthikeyan</td>
+					<td>9080585673</td>
+					<td>18</td>
+					<td>bkarthi1000@gmail.com</td>
+					<td>asfasfasf</td>
+					<td>edit</td>
+				</tr>
+				<tr>
+					<td>Karthikeyan</td>
+					<td>9080585673</td>
+					<td>18</td>
+					<td>bkarthi1000@gmail.com</td>
+					<td>asfasfasf</td>
+					<td>edit</td>
+				</tr>
+			</table>
+		</div>
+	);
 }
 
-export default Table
+export default Table;
