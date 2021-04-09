@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Table.css";
 import Header from "./Header";
-
+import {getPatients} from "./utils/index";
 
 function Table() {
     return (
