@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react'
 import "./Table.css";
 import Header from "./Header";
 import {getPatients} from "./utils/index";
 
 function Table() {
+
+    const [patients,setPatients] = useState([]);
+    setPatients(getPatients());
+    
     return (
         <div className="Dashboard">
                 <Header />
+
                 <table>
                     <tr style={{backgroundColor:'black',color:'white'}}>
                         <th>Name</th>
@@ -17,15 +22,20 @@ function Table() {
                         <th>Add</th>
                                             
                     </tr>
-                    <tr>
-                        <td>Tarun kishore</td>
-                        <td>123456789</td>
-                        <td>19</td>
-                        <td>tarun1000@gmail.com</td>
-                        <td>complaint----</td>
-                        <td>edit</td>
+                    
+                    {/*                                                             
+                        {Patients.map(function (Patients) {
+                    
+                        return (
+                            <tr>
+                                <td>Patients.name</td>
+                                <td>Patients.age</td>
+                            </tr>
+                        );
+                    
+                        })}
+                    */}
 
-                    </tr>
                     <tr>
                         <td>Avinash</td>
                         <td>987654321</td>
