@@ -26,63 +26,18 @@ function Table() {
 					<th>Add</th>
 				</tr>
 
-				{/* {patients.map(function (patient) {
+				{patients.map(function (patients) {
 					return (
 						<tr>
-							<td>{patient.name}</td>
-							<td>{patient.age}</td>
+							<td>{patients.Name}</td>
+							<td>{patients.Age}</td>
+							<td>{patients.Age}</td>
+							<td>{patients.email}</td>
 						</tr>
 					);
-				})} */}
+				})} 
 
-				<tr>
-					<td>Avinash</td>
-					<td>987654321</td>
-					<td>20</td>
-					<td>avinashr@gmail.com</td>
-					<td>complaint----</td>
-					<td>edit</td>
-				</tr>
-				<tr>
-					<td>Karthikeyan</td>
-					<td>9080585673</td>
-					<td>18</td>
-					<td>bkarthi1000@gmail.com</td>
-					<td>complaint----</td>
-					<td>edit</td>
-				</tr>
-				<tr>
-					<td>Karthikeyan</td>
-					<td>9080585673</td>
-					<td>18</td>
-					<td>bkarthi1000@gmail.com</td>
-					<td>complaint </td>
-					<td>edit</td>
-				</tr>
-				<tr>
-					<td>Karthikeyan</td>
-					<td>9080585673</td>
-					<td>18</td>
-					<td>bkarthi1000@gmail.com</td>
-					<td>asfasfasf</td>
-					<td>edit</td>
-				</tr>
-				<tr>
-					<td>Karthikeyan</td>
-					<td>9080585673</td>
-					<td>18</td>
-					<td>bkarthi1000@gmail.com</td>
-					<td>asfasfasf</td>
-					<td>edit</td>
-				</tr>
-				<tr>
-					<td>Karthikeyan</td>
-					<td>9080585673</td>
-					<td>18</td>
-					<td>bkarthi1000@gmail.com</td>
-					<td>asfasfasf</td>
-					<td>edit</td>
-				</tr>
+				
 			</table>
 		</div>
 	);
