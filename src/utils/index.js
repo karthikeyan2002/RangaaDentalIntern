@@ -1,6 +1,8 @@
 import * as firebase from "firebase";
 import { firestore } from "../firebase";
 import * as admin from "firebase-admin";
+import _ from "lodash";
+
 const createNewPost = async (data) => {
 	await firestore.collection("patients").add({
 		data,
@@ -21,4 +23,18 @@ const createUser = async (email, password, role) => {
 		});
 };
 
-export { createNewPost, createUser };
+const getPatients = () => {
+	const result = [];
+	firestore
+		.collection("PatientDetails")
+		.get()
+		.then((res) => {
+			res.docs.forEach((doc) => {
+				result.push(doc.data());
+			});
+		})
+		.catch((err) => console.log(err));
+	return result;
+};
+
+export { createNewPost, createUser, getPatients };
