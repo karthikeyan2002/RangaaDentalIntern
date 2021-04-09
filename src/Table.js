@@ -1,29 +1,81 @@
 import React from 'react';
 import "./Table.css";
+import Header from "./Header";
+
 
 function Table() {
     return (
-        <div>
-
-                <Table>
-                    <tr style={{backgroundcolor:"#000",color:"#fff"}}>
+        <div className="Dashboard">
+                <Header />
+                <table>
+                    <tr style={{backgroundColor:'black',color:'white'}}>
                         <th>Name</th>
                         <th>Phone</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Complaint</th>
+                        <th>Add</th>
+                                            
                     </tr>
-                    <tr style={{backgroundcolor:"#eeeeee",color:"#000"}} >
-                        <td>Karthikeyan</td>
-                        <td>9080585673</td>
+                    <tr>
+                        <td>Tarun kishore</td>
+                        <td>123456789</td>
+                        <td>19</td>
+                        <td>tarun1000@gmail.com</td>
+                        <td>complaint----</td>
+                        <td>edit</td>
+
                     </tr>
-                    <tr style={{backgroundcolor:"#ffffff",color:"#000"}}>
-                        <td>Karthikeyan</td>
-                        <td>9080585673</td>
+                    <tr>
+                        <td>Avinash</td>
+                        <td>987654321</td>
+                        <td>20</td>
+                        <td>avinashr@gmail.com</td>
+                        <td>complaint----</td>
+                        <td>edit</td>
                     </tr>
                     <tr>
                         <td>Karthikeyan</td>
                         <td>9080585673</td>
+                        <td>18</td>
+                        <td>bkarthi1000@gmail.com</td>
+                        <td>complaint----</td>
+                        <td>edit</td>
                     </tr>
-                </Table>
-
+                    <tr>
+                        <td>Karthikeyan</td>
+                        <td>9080585673</td>
+                        <td>18</td>
+                        <td>bkarthi1000@gmail.com</td>
+                        <td>complaint </td>
+                        <td>edit</td>
+                    </tr>
+                    <tr>
+                        <td>Karthikeyan</td>
+                        <td>9080585673</td>
+                        <td>18</td>
+                        <td>bkarthi1000@gmail.com</td>
+                        <td>asfasfasf</td>
+                        <td>edit</td>
+                    </tr>
+                    <tr>
+                        <td>Karthikeyan</td>
+                        <td>9080585673</td>
+                        <td>18</td>
+                        <td>bkarthi1000@gmail.com</td>
+                        <td>asfasfasf</td>
+                        <td>edit</td>
+                    </tr>
+                    <tr>
+                        <td>Karthikeyan</td>
+                        <td>9080585673</td>
+                        <td>18</td>
+                        <td>bkarthi1000@gmail.com</td>
+                        <td>asfasfasf</td>
+                        <td>edit</td>
+                    </tr>
+                                       
+                </table>
         </div>
     )
 }
