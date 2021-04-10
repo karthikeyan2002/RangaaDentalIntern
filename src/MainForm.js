@@ -1,7 +1,25 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
+import Button from '@material-ui/core/Button';
+import Radio from  '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		margin: {
+			margin: theme.spacing(1),
+		  },
+	},
+  }));
 
 function MainForm() {
+
+	const classes = useStyles();
 	return (
 		<div className='Container'>
 				<Formik
@@ -75,40 +93,38 @@ function MainForm() {
 					}}
 					onSubmit={(values) => console.log(values)}
 				>
-					<Form className="form">
+					<Form className="classes.root">
 						<label>
 							<h4>
-								Name{" "}
-								<Field
-									className='input'
+								<TextField
 									type='text'
 									name='name'
-									placeholder='name'
-								></Field>
+									label="Name"
+								/>
 							</h4>
 						</label>
 						<br />
 						<label>
 							<h4>
-								Age{" "}
-								<Field
-									className='input'
-									type='number'
-									name='age'
-									placeholder='Age'
-								></Field>
+								<TextField
+          							name='age'
+          							label="Age"
+          							type="number"
+          							InputLabelProps={{
+            							shrink: true,}}
+       							/>
 							</h4>
 						</label>
 						<br />
 						<label>
-							<h4>Gender</h4>
-						</label>
-						<label>
-							Male <Field type='radio' name='gender' value='Male'></Field>
-						</label>
-						<label>
-							Female
-							<Field type='radio' name='gender' value='Female'></Field>
+						<FormControl component="fieldset">
+  							<FormLabel component="legend">Gender</FormLabel>
+  							<RadioGroup aria-label="gender" name="gender1">
+   							<FormControlLabel name="gender" value="female" control={<Radio />} label="Female" />
+    						<FormControlLabel name="gender" value="male" control={<Radio />} label="Male" />
+   							<FormControlLabel name="gender" value="other" control={<Radio />} label="Other" />
+  							</RadioGroup>
+						</FormControl>
 						</label>
 						<br />
 						<label>
@@ -339,9 +355,9 @@ function MainForm() {
 							></Field>
 						</label>
 						<br />
-						<button className='py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75'>
-							Submit
-						</button>
+						<Button color="primary" variant="contained" fullWidth type="submit">
+          				Submit
+        				</Button>
 					</Form>
 				</Formik>
 			</div>
