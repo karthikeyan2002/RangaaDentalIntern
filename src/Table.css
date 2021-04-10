@@ -4,6 +4,7 @@
     background: url("./dental.jpg");
     background-size:cover;
     padding: 1%;
+    font-family:  'Montserrat', sans-serif;
   }
 table{
     margin: 0% auto;
@@ -34,20 +35,33 @@ tr:nth-child(odd){
     color: red !important;
 }
 .patient-search{
-    margin: 2% auto;
+    margin: 2%  auto 3% auto;
 }
 .search{
     border: none;
-    border-bottom: 1px solid black;
-}
-.search ::placeholder{
+    border-bottom: 1px solid white;
     background-color: inherit;
+    color: white;
+    margin-left: 4%;
+    padding-bottom: 4px;
+    padding-left: 5px;
 }
+.search input:focus{
+    border: none !important;
+    color: orange !important;
+}
+::placeholder{
+    color: #ffffff !important;
+}
+
 .Add-btn{
     float: right;
     border: none;
     color:white;
-    background-color: red;
-    padding: 1px 10px 2px 10px;
-    border-radius: 10%;
+    background-color:blue;
+    padding: 3px 10px 3px 10px;
+    border-radius: 5%;
+    margin-right: 4%;
+    font-family:  'Montserrat', sans-serif;
+    font-weight: bold;
 }

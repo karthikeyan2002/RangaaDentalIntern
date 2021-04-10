@@ -16,10 +16,10 @@ function Table() {
 	return (
 		<div className='Dashboard'>
 			<Header />
-			<div className= "patient-search">
-				<input type="search" id="patinet" className="search"></input>
-				<button className="Add-btn">Add</button>
-			</div>
+			{/* <div className= "patient-search">
+				<input type="search" id="patinet" className="search" placeholder="&#128269; Search Patient"></input>
+				<button className="Add-btn">Add Patient</button>
+			</div> */}
 			<table>
 				<tr style={{ backgroundColor: "black", color: "white" }}>
 					<th>Name</th>
