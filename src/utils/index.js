@@ -23,9 +23,9 @@ const createUser = async (email, password, role) => {
 		});
 };
 
-const getPatients = () => {
+const getPatients = async () => {
 	const result = [];
-	firestore
+	await firestore
 		.collection("PatientDetails")
 		.get()
 		.then((res) => {

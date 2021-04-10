@@ -6,8 +6,9 @@ import { getPatients } from "./utils/index";
 function Table() {
 	const [patients, setPatients] = useState([]);
 	useEffect(() => {
-		const data = getPatients();
-		setPatients(data);
+		getPatients()
+			.then((response) => setPatients(response))
+			.catch((err) => console.error(err));
 	}, []);
 
 	console.log(patients);
@@ -25,16 +26,21 @@ function Table() {
 					<th>Complaint</th>
 					<th>Add</th>
 				</tr>
-
-				{/* {patients.map(function (patient) {
-					return (
+				{patients.length > 0 ? (
+					patients.map((patient) => (
 						<tr>
-							<td>{patient.name}</td>
-							<td>{patient.age}</td>
+							<td>{patient.Name}</td>
+							<td>{patient["Phone Number"]}</td>
+							<td>{patient.Age}</td>
+							<td>{patient.email}</td>
+							<td>edit</td>
+							<button>+</button>
 						</tr>
-					);
-				})} */}
-
+					))
+				) : (
+					<h2>Loading</h2>
+				)}
+				{/* 
 				<tr>
 					<td>Avinash</td>
 					<td>987654321</td>
@@ -82,7 +88,7 @@ function Table() {
 					<td>bkarthi1000@gmail.com</td>
 					<td>asfasfasf</td>
 					<td>edit</td>
-				</tr>
+				</tr> */}
 			</table>
 		</div>
 	);
