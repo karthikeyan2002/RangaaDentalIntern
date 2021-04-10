@@ -4,7 +4,6 @@ import { Formik, Form, Field } from "formik";
 function MainForm() {
 	return (
 		<div className='Container'>
-			<div className='p-8 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl'>
 				<Formik
 					initialValues={{
 						name: "",
@@ -76,12 +75,12 @@ function MainForm() {
 					}}
 					onSubmit={(values) => console.log(values)}
 				>
-					<Form>
+					<Form className="form">
 						<label>
 							<h4>
 								Name{" "}
 								<Field
-									className='bg-gray-200 focus:bg-white'
+									className='input'
 									type='text'
 									name='name'
 									placeholder='name'
@@ -93,7 +92,7 @@ function MainForm() {
 							<h4>
 								Age{" "}
 								<Field
-									className='bg-gray-200 focus:bg-white'
+									className='input'
 									type='number'
 									name='age'
 									placeholder='Age'
@@ -116,7 +115,7 @@ function MainForm() {
 							<h4>
 								Mobile Number{" "}
 								<Field
-									className='bg-gray-200 focus:bg-white'
+									className='input'
 									type='text'
 									name='mobileNumber'
 									placeholder='Mobile Number'
@@ -128,7 +127,7 @@ function MainForm() {
 							<label htmlFor='email'>
 								Email
 								<Field
-									className='bg-gray-200 focus:bg-white'
+									className='input'
 									id='email'
 									name='email'
 									placeholder='xyz@rangdent.org'
@@ -346,7 +345,6 @@ function MainForm() {
 					</Form>
 				</Formik>
 			</div>
-		</div>
 	);
 }
 
