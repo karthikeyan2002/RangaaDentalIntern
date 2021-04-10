@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
+.Dashboard{
+    background: url("./dental.jpg");
+    background-size:cover;
+    padding: 1%;
+  }
 table{
     margin: 0% auto;
     opacity: 0.9;
@@ -17,4 +22,32 @@ tr:nth-child(even){
 }
 tr:nth-child(odd){
     background-color: #ffffff;
+}
+.editbtn{
+    border: none;
+    background-color: inherit;
+    font-family:  'Montserrat', sans-serif;
+    color: blue;
+    font-weight: bold;
+}
+.editbtn button :hover{
+    color: red !important;
+}
+.patient-search{
+    margin: 2% auto;
+}
+.search{
+    border: none;
+    border-bottom: 1px solid black;
+}
+.search ::placeholder{
+    background-color: inherit;
+}
+.Add-btn{
+    float: right;
+    border: none;
+    color:white;
+    background-color: red;
+    padding: 1px 10px 2px 10px;
+    border-radius: 10%;
 }

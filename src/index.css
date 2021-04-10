@@ -9,11 +9,7 @@ body {
   padding: 0%;
 }
 
-.Dashboard{
-  background: url("./dental.jpg");
-  background-size: cover;
-  padding: 1%;
-}
+
 /* Header Section */
 
 .header {

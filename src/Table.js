@@ -16,7 +16,10 @@ function Table() {
 	return (
 		<div className='Dashboard'>
 			<Header />
-
+			<div className= "patient-search">
+				<input type="search" id="patinet" className="search"></input>
+				<button className="Add-btn">Add</button>
+			</div>
 			<table>
 				<tr style={{ backgroundColor: "black", color: "white" }}>
 					<th>Name</th>
@@ -33,62 +36,14 @@ function Table() {
 							<td>{patient["Phone Number"]}</td>
 							<td>{patient.Age}</td>
 							<td>{patient.email}</td>
-							<td>edit</td>
-							<button>+</button>
+							<td>Some Complaints</td>
+							<td><button className= "editbtn">Edit</button></td>
 						</tr>
 					))
 				) : (
-					<h2>Loading</h2>
+					<h2 style={{ color : 'white', fontFamily: 'monospace'}}>Loading ....</h2>
 				)}
-				{/* 
-				<tr>
-					<td>Avinash</td>
-					<td>987654321</td>
-					<td>20</td>
-					<td>avinashr@gmail.com</td>
-					<td>complaint----</td>
-					<td>edit</td>
-				</tr>
-				<tr>
-					<td>Karthikeyan</td>
-					<td>9080585673</td>
-					<td>18</td>
-					<td>bkarthi1000@gmail.com</td>
-					<td>complaint----</td>
-					<td>edit</td>
-				</tr>
-				<tr>
-					<td>Karthikeyan</td>
-					<td>9080585673</td>
-					<td>18</td>
-					<td>bkarthi1000@gmail.com</td>
-					<td>complaint </td>
-					<td>edit</td>
-				</tr>
-				<tr>
-					<td>Karthikeyan</td>
-					<td>9080585673</td>
-					<td>18</td>
-					<td>bkarthi1000@gmail.com</td>
-					<td>asfasfasf</td>
-					<td>edit</td>
-				</tr>
-				<tr>
-					<td>Karthikeyan</td>
-					<td>9080585673</td>
-					<td>18</td>
-					<td>bkarthi1000@gmail.com</td>
-					<td>asfasfasf</td>
-					<td>edit</td>
-				</tr>
-				<tr>
-					<td>Karthikeyan</td>
-					<td>9080585673</td>
-					<td>18</td>
-					<td>bkarthi1000@gmail.com</td>
-					<td>asfasfasf</td>
-					<td>edit</td>
-				</tr> */}
+				
 			</table>
 		</div>
 	);
