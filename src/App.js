@@ -1,4 +1,3 @@
-  
 import React from "react";
 import Header from "./Header.js";
 import Login from "./login.js";
@@ -9,6 +8,7 @@ import MySurvey from "../src/surveydisp/surveyone";
 import MainForm from "./MainForm";
 import Table from "./Table";
 import "./utils";
+import TableTest from "./TableTest.js";
 export let islogin = true;
 console.log(islogin);
 createNewPost()
@@ -23,8 +23,8 @@ function App() {
 					<NavigationBar /> */}
 					{/* <MySurvey /> */}
 					{/* <MainForm /> */}
-					
-					<Table />
+					<TableTest />
+					{/* <Table /> */}
 				</>
 			) : (
 				<Login />

@@ -16,9 +16,9 @@ function Table() {
 	return (
 		<div className='Dashboard'>
 			<Header />
-			<div className= "patient-search">
-				<input type="search" id="patinet" className="search"></input>
-				<button className="Add-btn">Add</button>
+			<div className='patient-search'>
+				<input type='search' id='patinet' className='search'></input>
+				<button className='Add-btn'>Add</button>
 			</div>
 			<table>
 				<tr style={{ backgroundColor: "black", color: "white" }}>
@@ -37,13 +37,16 @@ function Table() {
 							<td>{patient.Age}</td>
 							<td>{patient.email}</td>
 							<td>Some Complaints</td>
-							<td><button className= "editbtn">Edit</button></td>
+							<td>
+								<button className='editbtn'>Edit</button>
+							</td>
 						</tr>
 					))
 				) : (
-					<h2 style={{ color : 'white', fontFamily: 'monospace'}}>Loading ....</h2>
+					<h2 style={{ color: "white", fontFamily: "monospace" }}>
+						Loading ....
+					</h2>
 				)}
-				
 			</table>
 		</div>
 	);
