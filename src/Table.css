@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 .Dashboard{
-    background: url("./dental.jpg");
-    background-size:cover;
+    /* background: url("./dental.jpg");
+    background-size:cover; */
+    background: rgb(58,154,245);
+    background: linear-gradient(106deg, rgba(58,154,245,1) 27%, rgba(188,197,251,1) 72%);   
     padding: 1%;
     font-family:  'Montserrat', sans-serif;
   }
+
 table{
     margin: 0% auto;
     opacity: 0.9;
@@ -65,3 +68,4 @@ tr:nth-child(odd){
     font-family:  'Montserrat', sans-serif;
     font-weight: bold;
 }
+
