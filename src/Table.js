@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Table.css";
 import Header from "./Header";
 import { getPatients } from "./utils/index";
-import add from "./add.png";
+import add from "./add-5.png";
+import search from "./search.png";
 
 function Table() {
 	const [patients, setPatients] = useState([]);
@@ -46,14 +47,8 @@ function Table() {
 				)}
 				
 			</table>
-			<img src={add}
-			style={{
-				width:'150px',
-				height: '150px',
-				position: 'fixed',
-				right: '20px',
-				bottom: '20px',
-			}}></img>
+			<img src={add} className="add"></img>
+			<img src={search} className="search"></img>
 		</div>
 	);
 }
