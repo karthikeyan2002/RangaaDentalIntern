@@ -45,6 +45,13 @@ function Table() {
 			</table>
 			<img src={add} className="add"></img>
 			<img src={search} className="search-img"></img>
+			{/* <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script> */}
+			{/* <lord-icon
+				src="https://cdn.lordicon.com/msoeawqm.json"
+				trigger="loop"
+				colors="primary:#a39cf4,secondary:#d1f3fa"
+				style="width:250px;height:250px">
+			</lord-icon> */}
 		</div>
 	);
 }
