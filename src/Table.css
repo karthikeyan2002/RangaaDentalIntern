@@ -37,7 +37,8 @@ tr:nth-child(odd){
 .editbtn button :hover{
     color: red !important;
 }
-
+/* This is not currently used it will be useful incase we have to replace lord icon with img */
+/* 
 .add{
     width:50px;
     height: 50px;
@@ -49,13 +50,13 @@ tr:nth-child(odd){
     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .search-img{
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     float: right;
     position: fixed;
     right: 20px;
     bottom: 100px;
     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+} */
 

@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Table.css";
 import Header from "./Header";
 import { getPatients } from "./utils/index";
-import add from "./add-5.png";
-import search from "./search-2.png";
+// import add from "./add-5.png";
+// import search from "./search-3.png";
+
 
 function Table() {
 	const [patients, setPatients] = useState([]);
@@ -43,17 +44,30 @@ function Table() {
 				)}
 				
 			</table>
-			<img src={add} className="add"></img>
-			<img src={search} className="search-img"></img>
-			{/* <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script> */}
-			{/* <lord-icon
-				src="https://cdn.lordicon.com/msoeawqm.json"
-				trigger="loop"
-				colors="primary:#a39cf4,secondary:#d1f3fa"
-				style="width:250px;height:250px">
-			</lord-icon> */}
-		</div>
-	);
-}
 
-export default Table;
+			{/* This will be usefull if we want to replace lord icon with img */}
+			{/* <img src={add} className="add"></img>
+			<img src={search} className="search-img"></img> */}
+
+			<script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+
+			<lord-icon
+				src="https://cdn.lordicon.com/mecwbjnp.json"
+				trigger="hover"
+				colors="primary:#ee6d66,secondary:#d1faf0"
+				style={{width:'75px',height:'75px',float:'right',position:'fixed',right:'10px',bottom: '120px'}}>
+			</lord-icon>
+
+			<lord-icon
+				src="https://cdn.lordicon.com/msoeawqm.json"
+				trigger="hover"
+				colors="primary:#d1181f,secondary:#ffffff"
+				className="search-img"
+				style={{width:'75px',height:'75px',float:'right',position:'fixed',right:'10px',bottom: '20px'}}>
+			</lord-icon>
+
+			</div>
+		);
+	}
+
+	export default Table;
