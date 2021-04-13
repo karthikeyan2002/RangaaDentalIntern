@@ -3,7 +3,7 @@ import "./Table.css";
 import Header from "./Header";
 import { getPatients } from "./utils/index";
 import add from "./add-5.png";
-import search from "./search.png";
+import search from "./search-2.png";
 
 function Table() {
 	const [patients, setPatients] = useState([]);
@@ -18,15 +18,11 @@ function Table() {
 	return (
 		<div className='Dashboard'>
 			<Header />
-			{/* <div className= "patient-search">
-				<input type="search" id="patinet" className="search" placeholder="&#128269; Search Patient"></input>
-				<button className="Add-btn">Add Patient</button>
-			</div> */}
 			<table>
-				<tr style={{ backgroundColor: "black", color: "white" }}>
+				<tr style={{ backgroundColor: "black", color: "white"}}>
 					<th>Name</th>
-					<th>Phone</th>
 					<th>Age</th>
+					<th>Phone</th>
 					<th>Email</th>
 					<th>Complaint</th>
 					<th>Add</th>
@@ -35,8 +31,8 @@ function Table() {
 					patients.map((patient) => (
 						<tr>
 							<td>{patient.Name}</td>
-							<td>{patient["Phone Number"]}</td>
 							<td>{patient.Age}</td>
+							<td>{patient["Phone Number"]}</td>
 							<td>{patient.email}</td>
 							<td>Some Complaints</td>
 							<td><button className= "editbtn">Edit</button></td>
@@ -48,7 +44,7 @@ function Table() {
 				
 			</table>
 			<img src={add} className="add"></img>
-			<img src={search} className="search"></img>
+			<img src={search} className="search-img"></img>
 		</div>
 	);
 }

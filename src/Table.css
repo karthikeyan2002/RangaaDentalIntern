@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 .Dashboard{
-    /* background: url("./dental.jpg");
-    background-size:cover; */
-    background: rgb(58,154,245);
-    background: linear-gradient(106deg, rgba(58,154,245,1) 27%, rgba(188,197,251,1) 72%);   
-    padding: 1%;
+    background: url("./bg-2.jpg");
+    background-size:cover;
+    /* background: rgb(99,87,241);
+    background: linear-gradient(90deg, rgba(99,87,241,1) 54%, rgba(229,188,252,1) 100%); */
+    padding: 0.5%;
     font-family:  'Montserrat', sans-serif;
   }
 
@@ -37,40 +37,10 @@ tr:nth-child(odd){
 .editbtn button :hover{
     color: red !important;
 }
-.patient-search{
-    margin: 2%  auto 3% auto;
-}
-.search{
-    border: none;
-    border-bottom: 1px solid white;
-    background-color: inherit;
-    color: white;
-    margin-left: 4%;
-    padding-bottom: 4px;
-    padding-left: 5px;
-}
-.search input:focus{
-    border: none !important;
-    color: orange !important;
-}
-::placeholder{
-    color: #ffffff !important;
-}
 
-.Add-btn{
-    float: right;
-    border: none;
-    color:white;
-    background-color:blue;
-    padding: 3px 10px 3px 10px;
-    border-radius: 5%;
-    margin-right: 4%;
-    font-family:  'Montserrat', sans-serif;
-    font-weight: bold;
-}
 .add{
-    width:75px;
-    height: 75px;
+    width:50px;
+    height: 50px;
     border-radius: 50%;
     float: right;
     position: fixed;
@@ -78,13 +48,14 @@ tr:nth-child(odd){
     bottom: 20px;
     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.search{
-    width: 75px;
-    height: 75px;
+.search-img{
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     float: right;
     position: fixed;
     right: 20px;
-    bottom: 120px;
+    bottom: 100px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
