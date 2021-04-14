@@ -31,7 +31,7 @@ body {
 form {
   max-width: 50rem;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 2rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -43,10 +43,6 @@ form {
   background: linear-gradient(-65deg, #78c6da, #ffffff, #ffffff, #caa62e);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-}
-
-Row {
-  border: none;
 }
 
 @keyframes gradient {
