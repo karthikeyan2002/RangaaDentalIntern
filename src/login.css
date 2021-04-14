@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 .login {
-  
   background: url(./img/bg.jpg) center;
   background-size: cover;
   width: 100%;
@@ -15,15 +14,15 @@
   color: black;
   letter-spacing: 1px;
 }
-.login-container {
 
+.login-container {
   width: 35%;
   background: rgb(237,255,236);
   background: linear-gradient(90deg, rgba(237,255,236,1) 45%, rgba(202,247,227,1) 83%);
   padding: 5% 4% 8%;
 } 
+
 .login img{
-  
   border-radius: 50%;
   margin-bottom: 10%;
   height: 125px;
@@ -31,7 +30,6 @@
   border: 1px solid aqua;
 }
 .login input {
-
   margin: 8% 0%;
   border: none;
   background-color: inherit;
@@ -42,16 +40,16 @@
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 1px;
 }
-.login ::placeholder {
 
+.login ::placeholder {
   color: black;
   font-weight: bold;
   margin: 2px;
   font-size: 1em;
   font-family: 'Montserrat', sans-serif;
 }
-.login .btn {
 
+.login .btn {
   border-radius: 20px;
   color: #ffffff;
   font-size: 20px;
@@ -62,13 +60,14 @@
   border: none;
   text-align: center;
   width: 75%;
-  }
-.login input:focus {
+}
 
+.login input:focus {
   outline: none;
   color: black;
   font-size: 1;
 }
+
 /* This will not automatically changes bg color when text is filled */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -78,8 +77,8 @@ input:-webkit-autofill:active {
   -webkit-transition-delay: 9999s;
   transition-delay: 9999s;
 }
-.login .btn:hover {
 
+.login .btn:hover {
   /* background: rgb(16,0,203);
   background: linear-gradient(90deg, rgba(16,0,203,1) 46%, rgba(19,222,220,1) 100%); */
   background-color: orange;
@@ -88,8 +87,8 @@ input:-webkit-autofill:active {
   border: none;
   outline: none;
 }
-.login .btn:focus {
 
+.login .btn:focus {
   border: none;
   outline: none;
 }
