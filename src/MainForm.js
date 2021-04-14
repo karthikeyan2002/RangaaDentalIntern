@@ -168,7 +168,7 @@ function MainForm() {
             <br />
             <br />
             <br />
-            <Row style={{ height: "55px" }} debug>
+            <Row style={{ height: "65px" }} debug>
               <Col debug>
                 <TextField
                   type="text"
