@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Table.css";
 import Header from "./Header";
 import { getPatients } from "./utils/index";
-// import add from "./add-5.png";
-// import search from "./search-3.png";
+// import add from "./img/add-5.png";
+// import search from "./img/search-3.png";
 
 
 function Table() {

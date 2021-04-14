@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 .Dashboard{
-    background: url("./bg-2.jpg");
+    background: url("./img/g-2.jpg");
     background-size:cover;
     /* background: rgb(99,87,241);
     background: linear-gradient(90deg, rgba(99,87,241,1) 54%, rgba(229,188,252,1) 100%); */
