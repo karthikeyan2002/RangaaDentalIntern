@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
   textField: {
     width: "60%",
   },
+  textField1: {
+    width: "99%",
+  },
 }));
 
 function MainForm() {
@@ -171,7 +174,7 @@ function MainForm() {
                   type="text"
                   name="allergy"
                   label="You're allergic To..."
-                  className={classes.textField}
+                  className={classes.textField1}
                 />
               </Col>
             </Row>
@@ -179,7 +182,7 @@ function MainForm() {
             <Row style={{ height: "80px" }} debug>
               <Col xs={12} debug>
                 <TextField
-                  className={classes.textField}
+                  className={classes.textField1}
                   name="complaints"
                   id="standard-textarea"
                   label="Describe your Problem here!"
