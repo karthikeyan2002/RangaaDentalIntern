@@ -24,9 +24,9 @@ function App() {
 					{/* <Header />
 					<NavigationBar /> */}
 					{/* <MySurvey /> */}
-					{/* <MainForm /> */}
+					<MainForm />
 					
-					<Table />
+					{/* <Table /> */}
 				</>
 			) : (
 				<Login />
