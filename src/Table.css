@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 .Dashboard{
-    background: url("./dental.jpg");
-    background-size:cover;
-    padding: 1%;
+    /* background: url("./img/bg-2.jpg");
+    background-size:cover; */
+    /* background: rgb(99,87,241);
+    background: linear-gradient(90deg, rgba(99,87,241,1) 54%, rgba(229,188,252,1) 100%); */
+    padding: 0.5%;
     font-family:  'Montserrat', sans-serif;
+    background-color: #d9e0e7;
   }
+
 table{
-    margin: 0% auto;
-    opacity: 0.9;
+    margin: 2% auto;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 td,th{
     text-align: center;
@@ -34,34 +38,26 @@ tr:nth-child(odd){
 .editbtn button :hover{
     color: red !important;
 }
-.patient-search{
-    margin: 2%  auto 3% auto;
-}
-.search{
-    border: none;
-    border-bottom: 1px solid white;
-    background-color: inherit;
-    color: white;
-    margin-left: 4%;
-    padding-bottom: 4px;
-    padding-left: 5px;
-}
-.search input:focus{
-    border: none !important;
-    color: orange !important;
-}
-::placeholder{
-    color: #ffffff !important;
-}
-
-.Add-btn{
+/* This is not currently used it will be useful incase we have to replace lord icon with img */
+/*
+.add{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
     float: right;
-    border: none;
-    color:white;
-    background-color:blue;
-    padding: 3px 10px 3px 10px;
-    border-radius: 5%;
-    margin-right: 4%;
-    font-family:  'Montserrat', sans-serif;
-    font-weight: bold;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.search-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: right;
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+

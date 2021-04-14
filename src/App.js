@@ -11,9 +11,11 @@ import "./utils";
 import TableTest from "./TableTest.js";
 export let islogin = true;
 console.log(islogin);
+
 createNewPost()
 	.then((res) => console.log(res))
 	.catch((err) => console.log(err));
+
 function App() {
 	return (
 		<>

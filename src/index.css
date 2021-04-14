@@ -20,6 +20,8 @@ body {
   );
   color: black;
   font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .logo {
   float: left;
@@ -29,7 +31,7 @@ body {
 form {
   max-width: 50rem;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 2rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);

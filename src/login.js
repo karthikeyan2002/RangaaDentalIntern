@@ -1,6 +1,6 @@
 import React from "react";
 import "./login.css";
-import logo from "./logo.png";
+import logo from "./img/logo.png";
 
 function login() {
   return (
@@ -25,7 +25,6 @@ function login() {
             LOGIN
           </button>
         </div>
-      
       </div>
     </div>
   );
