@@ -7,12 +7,13 @@
     background: linear-gradient(90deg, rgba(99,87,241,1) 54%, rgba(229,188,252,1) 100%); */
     padding: 0.5%;
     font-family:  'Montserrat', sans-serif;
-    background-color: #d9e0e7;
-  }
+    background-color:  #d9e0e7;
+}
 
 table{
     margin: 2% auto;
     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.9;
 }
 td,th{
     text-align: center;
@@ -39,7 +40,7 @@ tr:nth-child(odd){
     color: red !important;
 }
 /* This is not currently used it will be useful incase we have to replace lord icon with img */
-/*
+
 .add{
     width:50px;
     height: 50px;
@@ -51,13 +52,13 @@ tr:nth-child(odd){
     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .search-img{
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     float: right;
     position: fixed;
     right: 20px;
     bottom: 100px;
     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
+}
 
