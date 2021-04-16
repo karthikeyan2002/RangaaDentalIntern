@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Table.css";
 import Header from "./Header";
 import { getPatients } from "./utils/index";
-// import add from "./img/add-5.png";
-// import search from "./img/search-3.png";
+import add from "./img/add-5.png";
+import search from "./img/search-2.png";
 
 function Table() {
 	const [patients, setPatients] = useState([]);
@@ -18,6 +18,7 @@ function Table() {
 	return (
 		<div className='Dashboard'>
 			<Header />
+			
 			<table>
 				<tr style={{ backgroundColor: "black", color: "white" }}>
 					<th>Name</th>
@@ -45,13 +46,15 @@ function Table() {
 						Loading ....
 					</h2>
 				)}
+				
 			</table>
 
+				
 			{/* This will be usefull if we want to replace lord icon with img */}
-			{/* <img src={add} className="add"></img>
-			<img src={search} className="search-img"></img> */}
+			<img src={add} className="add"></img>
+			<img src={search} className="search-img"></img>
 
-			<script src='https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js'></script>
+			{/* <script src='https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js'></script>
 
 			<lord-icon
 				src='https://cdn.lordicon.com/mecwbjnp.json'
@@ -80,7 +83,7 @@ function Table() {
 					right: "10px",
 					bottom: "20px",
 				}}
-			></lord-icon>
+			></lord-icon> */}
 		</div>
 	);
 }
