@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 .Dashboard{
-    /* background: url("./img/bg-2.jpg");
-    background-size:cover; */
+    background: url(img/bg-5.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     /* background: rgb(99,87,241);
     background: linear-gradient(90deg, rgba(99,87,241,1) 54%, rgba(229,188,252,1) 100%); */
     padding: 0.5%;
     font-family:  'Montserrat', sans-serif;
-    background-color:  #d9e0e7;
+    /* background-color:  #d9e0e7; */
 }
 
 table{

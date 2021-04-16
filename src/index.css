@@ -3,13 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
 
 body {
   margin: 0%;
   padding: 0%;
 }
 
-/* Header Section */
+/* Header Styles */
 
 .header {
   background: rgb(237, 255, 236);
