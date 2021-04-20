@@ -9,6 +9,8 @@ import MainForm from "./MainForm";
 import Table from "./Table";
 import "./utils";
 import TableTest from "./TableTest.js";
+import Formone from "./Formone.js";
+
 export let islogin = true;
 console.log(islogin);
 
@@ -26,7 +28,8 @@ function App() {
 					{/* <MySurvey /> */}
 					{/* <MainForm /> */}
 					{/* <TableTest /> */}
-					<Table />
+					{/* <Table /> */}
+					<Formone />
 				</>
 			) : (
 				<Login />

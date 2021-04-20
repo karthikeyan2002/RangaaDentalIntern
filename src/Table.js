@@ -42,7 +42,7 @@ function Table() {
 						</tr>
 					))
 				) : (
-					<h2 style={{ color: "white", fontFamily: "monospace" }}>
+					<h2 style={{ fontFamily: "monospace" }}>
 						Loading ....
 					</h2>
 				)}

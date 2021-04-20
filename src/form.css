@@ -1,0 +1,8 @@
+.form{
+    background-image: url("/src/img/bg-5.jpg");
+    height: 100% !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1%;
+}
