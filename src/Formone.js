@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage, useFormik } from 'formik';
+import { Formik, Form, Field, ErrorMessage, useFormik , useField , useFormikContext } from 'formik';
 import "./form.css";
 
 const validate = values => {
@@ -34,8 +34,27 @@ const validate = values => {
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = 'Invalid email address';
   }
+  
+  if (!values.city) {
+    errors.city = 'Required';
+  } else if (values.city.length < 3) {
+    errors.city = 'Invalid city name';
+  }
 
   return errors;
+};
+
+const MySelect = ({ label, ...props }) => {
+  const [field, meta] = useField(props);
+  return (
+    <div>
+      <label htmlFor={props.id || props.name}>{label}</label>
+      <select {...field} {...props} />
+      {meta.touched && meta.error ? (
+        <div className="error">{meta.error}</div>
+      ) : null}
+    </div>
+  );
 };
 
 const Formone = () => {
@@ -47,6 +66,7 @@ const Formone = () => {
        age: '',
        phno: '',
        email: '',
+       city:'',
      },
      validate,
      onSubmit: values => {
@@ -69,6 +89,7 @@ return (
           onChange={formik.handleChange}
           value={formik.values.firstName}
           className="appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-4 mb-3"
+          placeholder="Name of the Patient"
         />
           {formik.errors.firstName ? <div className="text-white text-xs">{formik.errors.firstName}</div> : null}
       </div>
@@ -82,6 +103,7 @@ return (
          onChange={formik.handleChange}
          value={formik.values.lastName}
          className="appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-4 mb-3"
+         placeholder="Father's Name / Last Name"
        />
          {formik.errors.lastName ? <div className="text-white text-xs">{formik.errors.lastName}</div> : null}
       </div>
@@ -97,6 +119,7 @@ return (
           onChange={formik.handleChange}
           value={formik.values.age}
           className="appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-4 mb-3"
+          placeholder="Age of the Patient"
         />
         {formik.errors.age ? <div className="text-white text-xs">{formik.errors.age}</div> : null}
       </div>
@@ -109,6 +132,7 @@ return (
           onChange={formik.handleChange}
           value={formik.values.phno}
           className="appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-4 mb-3"
+          placeholder="12345 67890"
         />
         {formik.errors.phno ? <div className="text-white text-xs">{formik.errors.phno}</div> : null}
       </div>
@@ -122,9 +146,41 @@ return (
           onChange={formik.handleChange}
           value={formik.values.email}
           className="appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-4 mb-3"
+          placeholder="Mail-id of the Patient"
         />
         {formik.errors.email ? <div className="text-white text-xs">{formik.errors.email}</div> : null}
       </div>
+   </div>
+
+   
+   <div className="-mx-4 md:flex mb-2">
+      
+      <div className="md:w-1/3 px-3 mb-6 md:mb-0">
+        <label htmlFor="phno" className="block uppercase tracking-wide text-white text-xs font-bold mb-2">city</label>
+        <MySelect label="Job Type" name="jobType">
+             <option value="">Select a job type</option>
+             <option value="designer">Designer</option>
+             <option value="development">Developer</option>
+             <option value="product">Product Manager</option>
+             <option value="other">Other</option>
+           </MySelect>
+      </div>
+
+      <div className="md:w-1/3 px-3 mb-6 md:mb-0">
+        <label htmlFor="phno" className="block uppercase tracking-wide text-white text-xs font-bold mb-2">city</label>
+        <input
+          id="city"
+          name="city"
+          type="city"
+          onChange={formik.handleChange}
+          value={formik.values.city}
+          className="appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-4 mb-3"
+          placeholder="Enter Name of the City"
+        />
+        {formik.errors.city ? <div className="text-white text-xs">{formik.errors.city}</div> : null}
+      </div>
+        
+      
    </div>
         
     <button type="submit" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Submit</button>
