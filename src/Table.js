@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Table.css";
+import "../Styles/Table.css";
 import Header from "./Header";
 import { getPatients } from "./utils/index";
 import add from "./img/add-5.png";
