@@ -9,7 +9,7 @@ import MainForm from "./MainForm";
 import Table from "./Table";
 import "./utils";
 import TableTest from "./TableTest.js";
-import Form from "./Form.js";
+import Formone from "./Formone.js";
 
 export let islogin = true;
 console.log(islogin);
@@ -29,7 +29,7 @@ function App() {
 					{/* <MainForm /> */}
 					{/* <TableTest /> */}
 					{/* <Table /> */}
-					<Form />
+					<Formone />
 				</>
 			) : (
 				<Login />
