@@ -282,7 +282,7 @@ const Formone = () => {
 
 				<button
 					type='submit'
-					class='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-gray-700 py-2 px-4 border border-blue-500 hover:border-transparent rounded'
+					class='bg-blue-500 hover:bg-blue-700 text-white font-bold hover:text-gray-700 py-2 px-4 border border-blue-500 hover:border-transparent rounded'
 				>
 					Submit
 				</button>
