@@ -3,6 +3,7 @@ import { firestore } from "../firebase";
 import * as admin from "firebase-admin";
 import _ from "lodash";
 
+// Add new patient data
 const createNewPost = async (data) => {
 	await firestore.collection("patients").add({
 		data,
@@ -10,6 +11,7 @@ const createNewPost = async (data) => {
 	});
 };
 
+// Creates new user ( This is valid only for admin )
 const createUser = async (email, password, role) => {
 	await firebase.default
 		.auth()
@@ -23,6 +25,7 @@ const createUser = async (email, password, role) => {
 		});
 };
 
+// Retrieves data to display on dashboard
 const getPatients = async () => {
 	const result = [];
 	await firestore
