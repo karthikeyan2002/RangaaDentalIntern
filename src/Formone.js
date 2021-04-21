@@ -275,14 +275,17 @@ const Formone = () => {
 						</label>
 						<textarea
 							className='appearance-none block w-full bg-grey-lighter text-grey border border-grey-lighter rounded py-3 px-4 resize border rounded-md mb-2'
+							name='complaint'
 							placeholder='Type your Complaints ... '
+							value={formik.values.complaint}
+							onChange={formik.handleChange}
 						></textarea>
 					</div>
 				</div>
 
 				<button
 					type='submit'
-					class='bg-blue-500 hover:bg-blue-700 text-white font-bold hover:text-gray-700 py-2 px-4 border border-blue-500 hover:border-transparent rounded'
+					class='bg-gray-700 text-white hover:text-white font-semibold py-2 px-4 border border-gray-500 rounded'
 				>
 					Submit
 				</button>
