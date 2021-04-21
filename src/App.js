@@ -6,18 +6,15 @@ import { NavigationBar } from "./NavigationBar";
 import { createNewPost } from "./utils";
 import MySurvey from "../src/surveydisp/surveyone";
 import Table from "./Table";
-import "./utils";
 import TableTest from "./TableTest.js";
 import Formone from "./Formone.js";
 import Formtwo from "./Formone.js";
 
 export let islogin = true;
 console.log(islogin);
-
-createNewPost()
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err));
-
+getPatients()
+	.then((res) => console.log(res))
+	.catch((err) => console.log(err));
 function App() {
   return (
     <>
