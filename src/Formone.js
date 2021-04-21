@@ -1,6 +1,25 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage, useFormik } from "formik";
 import "./Styles/form.css";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PdfDocument } from "./PdfGenrator";
+import {
+	Page,
+	Text,
+	View,
+	Document,
+	StyleSheet,
+	Image
+  } from "@react-pdf/renderer";
+
+
+const MyDoc = () => (
+	<Document>
+	  <Page>
+		// My document data
+	  </Page>
+	</Document>
+  );
 
 const validate = (values) => {
 	const errors = {};
@@ -289,6 +308,21 @@ const Formone = () => {
 				>
 					Submit
 				</button>
+
+				<PDFDownloadLink document={<MyDoc />} fileName="somename.pdf">
+					{({ blob, url, loading, error }) =>
+						loading ? 'Loading document...' : 'Download now!'
+					}
+				</PDFDownloadLink>
+									
+				{/* <PDFDownloadLink
+						document={<PdfDocument data={movieDetails} />}
+						fileName="movielist.pdf"
+				>
+						{({ blob, url, loading, error }) =>
+							loading ? "Loading document..." : "Download Pdf"
+						}
+        		</PDFDownloadLink> */}
 			</form>
 		</div>
 	);
