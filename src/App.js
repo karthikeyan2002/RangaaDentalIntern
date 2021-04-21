@@ -5,37 +5,37 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { NavigationBar } from "./NavigationBar";
 import { createNewPost } from "./utils";
 import MySurvey from "../src/surveydisp/surveyone";
-import MainForm from "./MainForm";
 import Table from "./Table";
 import "./utils";
 import TableTest from "./TableTest.js";
 import Formone from "./Formone.js";
+import Formtwo from "./Formone.js";
 
 export let islogin = true;
 console.log(islogin);
 
 createNewPost()
-	.then((res) => console.log(res))
-	.catch((err) => console.log(err));
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
 
 function App() {
-	return (
-		<>
-			{islogin ? (
-				<>
-					{/* <Header />
+  return (
+    <>
+      {islogin ? (
+        <>
+          {/* <Header />
 					<NavigationBar /> */}
-					{/* <MySurvey /> */}
-					{/* <MainForm /> */}
-					{/* <TableTest /> */}
-					{/* <Table /> */}
-					<Formone />
-				</>
-			) : (
-				<Login />
-			)}
-		</>
-	);
+          {/* <MySurvey /> */}
+          {/* <TableTest /> */}
+          {/* <Table /> */}
+          {/* <Formone /> */}
+          <Formtwo />
+        </>
+      ) : (
+        <Login />
+      )}
+    </>
+  );
 }
 
 export default App;
