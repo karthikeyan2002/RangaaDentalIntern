@@ -7,7 +7,7 @@ import { createNewPost } from "./utils";
 import Table from "./Table";
 import TableTest from "./TableTest.js";
 import Formone from "./Formone.js";
-import Formtwo from "./Formone.js";
+import Formtwo from "./Formtwo.js";
 import {getPatients} from "./utils/index.ts";
 
 export let islogin = true;
