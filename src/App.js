@@ -4,11 +4,11 @@ import Login from "./login.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { NavigationBar } from "./NavigationBar";
 import { createNewPost } from "./utils";
-import MySurvey from "../src/surveydisp/surveyone";
 import Table from "./Table";
 import TableTest from "./TableTest.js";
 import Formone from "./Formone.js";
 import Formtwo from "./Formone.js";
+import {getPatients} from "./utils/index.ts";
 
 export let islogin = true;
 console.log(islogin);
