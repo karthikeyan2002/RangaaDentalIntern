@@ -13,74 +13,70 @@ import {
   } from "@react-pdf/renderer";
 const styles = StyleSheet.create({
 	page: {
-	  padding:20
+	  	padding:20
 	},
 	pagecontainer: {
-	  backgroundColor: '#f9f6f7',
-	  height:'100%',
-	  width:'100%',
-	  padding:5,
-	  fontSize: '11px',
+		backgroundColor: '#f9f6f7',
+		height:'100%',
+		width:'100%',
+		padding:5,
+		fontSize: '11px',
 	},
 	header: {
-		
 		color: 'red',
-		height:'5%',
+		height:'8%',
+		fontSize:'16px',
 		width: '100%',
 		textAlign: 'center',
 		fontWeight: 'bold',
 		paddingTop: '9px',
-		letterSpacing: '1px'
+		letterSpacing: '1px'	
 	},
-	basicstyles: {
+	BasicDetails: {
 		borderBottom: '1px solid gray',
 		letterSpacing: '1px',
-		lineHeight: '1.5px',
+		lineHeight: '2px',
 		display: "flex",
 		flexDirection: "row",
 	},
-	sectionone: {
-		display: "flex",
-		marginLeft: '5px',
-		
+	box1: {
+		flex:'2',
+	},	
+	box2: {
+		flex:'1',
 	},
-	sectiontwo: {
-		display: "flex",
-		marginLeft: '150px',
-		
-	}
-		
+	box3:{
+		flex:'1',
+	}	
   });
 
 const MyDoc = () => (
 	<Document>
 	  <Page size="A4" style={styles.page}>
 		<View style={styles.pagecontainer}>
+			
 			<view style={styles.header}>
 				<Text>Rangaa Dental</Text>
 			</view>
-			<view style={styles.basicstyles}>
-				<view style={ styles.sectionone }>
-					<Text> Name: Karthikeyan </Text>
-					<Text> Age : 18 </Text>
-					<Text> Gender : Male</Text>
+
+			<view style={styles.BasicDetails}>
+				
+				<view style={ styles.box1 }>
+					<Text> Name : Karthikeyan </Text>
+					<Text> Email : bkarthi1000@gmail.com </Text>
+					<Text> State : Tamil Nadu</Text>
 				</view>	
-				<view style={ styles.sectiontwo }>
-				<Text> Email : bkarthi1000@gmail.com</Text>
+
+				<view style={ styles.box2 }>
+				<Text> Age : 18 </Text>
 				<Text> Phone Number : 9080585673</Text>
-				<Text> Address : 1-11-3/3 chelliah Nagar 1st street, koodal Nagar ,Madurai , 625018</Text>
+				<Text> Visited due to : Fever</Text>
 				</view>
-					<view style={ styles.sectiontwo }>
-				<Text> Visited due to : fever </Text>
+
+				<view style={ styles.box3 }>
+				<Text> Gender : Male </Text>
+				<Text> City : Madurai </Text>
 				</view>
-			</view>
-			<view style={styles.basicstyles}>	
-				<Text> </Text>
-				<Text> </Text>
-				<Text> </Text>
-				<Text> </Text>
-				<Text> </Text>
-				<Text> </Text>
 			</view>
 		</View>
       </Page>
@@ -375,25 +371,22 @@ const Formone = () => {
 				
 				<div className='-mx-4 md:flex mb-4'>
 					<div className='md:w-1/6 px-3 mb-6 md:mb-0'>
-					<button
-						type='submit'
-						class='bg-white text-gray-700 font-bold py-2 px-4 rounded uppercase'
-					>
-						download pdf
-					</button>
-					</div>
-					<div className='md:w-4/6 px-3 mb-6 md:mb-0'>
-						<PDFDownloadLink document={<MyDoc />} fileName="somename.pdf"  style={{
+					<PDFDownloadLink document={<MyDoc />} fileName="somename.pdf"  style={{
 								textDecoration: "none",
 								padding: "10px",
-								color: "#4a4a4a",
-								backgroundColor: "#f2f2f2",
-								border: "1px solid #4a4a4a"
+								backgroundColor: "#fff",
+								border: "2px solid #4a4a4a",
+								borderRadius: '5px',
+								color: "black",
+								fontWeight: "bolder",
 						}}>
 						{({ blob, url, loading, error }) =>
-						loading ? 'Loading document...' : 'Download now!'
+						loading ? 'Loading document...' : 'DOWNLOAD PDF'
 						}
 						</PDFDownloadLink>
+					</div>
+					<div className='md:w-4/6 px-3 mb-6 md:mb-0'>
+						
 					</div>
 
 					<div className='md:w-1/6 px-20 mb-6 md:mb-0'>
