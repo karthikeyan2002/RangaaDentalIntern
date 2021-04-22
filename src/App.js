@@ -8,6 +8,7 @@ import Table from "./Table";
 import TableTest from "./TableTest.js";
 import Formone from "./Formone.js";
 import Formtwo from "./Formtwo.js";
+import Formthree from "./Formthree.js";
 import {getPatients} from "./utils/index.ts";
 
 export let islogin = true;
@@ -25,8 +26,9 @@ function App() {
           {/* <MySurvey /> */}
           {/* <TableTest /> */}
           {/* <Table /> */}
-          <Formone />
+          {/* <Formone /> */}
           {/* <Formtwo /> */}
+          <Formthree />
         </>
       ) : (
         <Login />

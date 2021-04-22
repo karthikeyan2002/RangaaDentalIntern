@@ -15,7 +15,7 @@ const Formtwo = () => {
     <div className="form">
       <form
         onSubmit={formik.handleSubmit}
-        className="bg-blue-300 shadow-md rounded p-10 mb-4 flex flex-col my-2"
+        className="form-container shadow-md rounded p-10 mb-4 flex flex-col my-2"
       >
         <div class="text-center text-2xl">
           <p class="font-black">NURSE DATA ENTRY</p>
@@ -29,12 +29,15 @@ const Formtwo = () => {
             name="pid"
             type="text"
             onChange={formik.handleChange}
-            value={formik.values.firstName}
+            value={formik.values.pid}
             className="appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-4 mb-3"
             placeholder="Patient ID"
           />
         </div>
-        <p class="font-black text-red-600">HABITS OF THE PATIENT</p>
+        <br />
+        <div className="-mx-4 md:flex mb-4">
+          <div className="md:w-1/4 px-3 mb-6 md:mb-0">
+        <p class="font-black text-red-600 text-center">HABITS OF THE PATIENT</p>
         <table class="table-fixed">
           <thead>
             <tr class="text-black hover:text-blue-700 ">
@@ -161,7 +164,9 @@ const Formtwo = () => {
             </tr>
           </tbody>
         </table>
-        <p class="font-black text-red-600">MEDICAL HISTORY OF THE PATIENT</p>
+        </div>
+        <div className="md:w-3/4 px-3 mb-6 md:mb-0">
+        <p class="font-black text-red-600 text-center">MEDICAL HISTORY OF THE PATIENT</p>
         <table class="table-auto">
           <thead>
             <tr class="text-black hover:text-blue-700">
@@ -405,8 +410,9 @@ const Formtwo = () => {
             </tr>
           </tbody>
         </table>
-
-        <div className="-mx-4 md:flex mb-4">
+        </div>
+        </div>
+        <div className="-mx-4 md:flex mb-4 text-center">
           <div className="md:w-full px-3 mb-6 md:mb-0">
             <label
               className="font-black text-red-600"
@@ -425,7 +431,7 @@ const Formtwo = () => {
         </div>
         <button
           type="submit"
-          class="bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold py-2 px-4 border-b-4 border-blue-700 rounded"
+          class="bg-gray-700 text-white font-bold py-2 px-4 hover:bg-gray-600 rounded uppercase"
         >
           SUBMIT
         </button>
