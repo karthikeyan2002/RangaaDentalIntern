@@ -11,6 +11,41 @@ import {
 	StyleSheet,
 	Image
   } from "@react-pdf/renderer";
+const styles = StyleSheet.create({
+	page: {
+	  padding:20
+	},
+	pagecontainer: {
+	  backgroundColor: '#f7f7f7',
+	  height:'100%',
+	  width:'100%',
+	  padding:5,
+	},
+	header: {
+		
+		color: 'red',
+		height:'5%',
+		width: '100%',
+		textAlign: 'center',
+		fontWeight: 'bold',
+		paddingTop: '9px',
+		letterSpacing: '1px'
+	},
+	
+  });
+
+const MyDoc = () => (
+	<Document>
+	  <Page size="A4" style={styles.page}>
+		<View style={styles.pagecontainer}>
+			<view style={styles.header}>
+				<Text>Rangaa Dental</Text>
+			</view>
+		</View>
+      </Page>
+	</Document>
+);
+
 
 
 const validate = (values) => {
@@ -258,7 +293,7 @@ const Formone = () => {
 							<select
 								value={formik.values.state}
 								onChange={formik.handleChange}
-								class='block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+								class='block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
 								id='state'
 							>
 								<option value='Tamil Nadu'>Tamil Nadu</option>
@@ -306,7 +341,17 @@ const Formone = () => {
 					</button>
 					</div>
 					<div className='md:w-4/6 px-3 mb-6 md:mb-0'>
-					
+						<PDFDownloadLink document={<MyDoc />} fileName="somename.pdf"  style={{
+								textDecoration: "none",
+								padding: "10px",
+								color: "#4a4a4a",
+								backgroundColor: "#f2f2f2",
+								border: "1px solid #4a4a4a"
+						}}>
+						{({ blob, url, loading, error }) =>
+						loading ? 'Loading document...' : 'Download now!'
+						}
+						</PDFDownloadLink>
 					</div>
 
 					<div className='md:w-1/6 px-20 mb-6 md:mb-0'>

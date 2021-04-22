@@ -1,5 +1,6 @@
 .form{
-    background-color: #ffc0d0;
+    background: rgb(255,224,224);
+    background: linear-gradient(274deg, rgba(255,224,224,1) 38%, rgba(255,192,208,0.9783263647255778) 93%);
     height: 100% !important;
     background-position: center;
     background-repeat: no-repeat;
@@ -7,6 +8,6 @@
     padding: 3%;
 }
 .form-container{
-    background-color: #ffe0e0;
-    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
