@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
 	  height:'100%',
 	  width:'100%',
 	  padding:5,
+	  fontSize: '11px',
 	},
 	header: {
 		
@@ -31,7 +32,24 @@ const styles = StyleSheet.create({
 		paddingTop: '9px',
 		letterSpacing: '1px'
 	},
-	
+	basicstyles: {
+		borderBottom: '1px solid gray',
+		letterSpacing: '1px',
+		lineHeight: '1.5px',
+		display: "flex",
+		flexDirection: "row",
+	},
+	sectionone: {
+		display: "flex",
+		marginLeft: '5px',
+		
+	},
+	sectiontwo: {
+		display: "flex",
+		marginLeft: '150px',
+		
+	}
+		
   });
 
 const MyDoc = () => (
@@ -40,6 +58,29 @@ const MyDoc = () => (
 		<View style={styles.pagecontainer}>
 			<view style={styles.header}>
 				<Text>Rangaa Dental</Text>
+			</view>
+			<view style={styles.basicstyles}>
+				<view style={ styles.sectionone }>
+					<Text> Name: Karthikeyan </Text>
+					<Text> Age : 18 </Text>
+					<Text> Gender : Male</Text>
+				</view>	
+				<view style={ styles.sectiontwo }>
+				<Text> Email : bkarthi1000@gmail.com</Text>
+				<Text> Phone Number : 9080585673</Text>
+				<Text> Address : 1-11-3/3 chelliah Nagar 1st street, koodal Nagar ,Madurai , 625018</Text>
+				</view>
+					<view style={ styles.sectiontwo }>
+				<Text> Visited due to : fever </Text>
+				</view>
+			</view>
+			<view style={styles.basicstyles}>	
+				<Text> </Text>
+				<Text> </Text>
+				<Text> </Text>
+				<Text> </Text>
+				<Text> </Text>
+				<Text> </Text>
 			</view>
 		</View>
       </Page>
@@ -108,6 +149,7 @@ const Formone = () => {
 				onSubmit={formik.handleSubmit}
 				className='form-container shadow-md rounded p-10 mb-4 flex flex-col my-2'
 			>
+				<h1 className="block uppercase tracking-wide text-gray-700 font-bold mb-10 text-center text-xl">patient regiteration</h1>
 		
 				<div className='-mx-4 md:flex mb-4'>
 					<div className='md:w-1/2 px-3 mb-6 md:mb-0'>
@@ -225,7 +267,7 @@ const Formone = () => {
 
 				<div className='-mx-4 md:flex mb-4'>
 					<div className='md:w-1/3 px-3 mb-6 md:mb-0'>
-						<p class='text-gray-700 uppercase font-bold'>Gender</p>
+						<p class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>Gender</p>
 						<label class='inline-flex items-center'>
 							<input
 								type='radio'
