@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 	  padding:20
 	},
 	pagecontainer: {
-	  backgroundColor: '#f7f7f7',
+	  backgroundColor: '#f9f6f7',
 	  height:'100%',
 	  width:'100%',
 	  padding:5,
