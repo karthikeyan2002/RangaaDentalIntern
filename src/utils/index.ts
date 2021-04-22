@@ -40,7 +40,7 @@ const updatePatientData = async (
 
 // Retrieves data to display on dashboard
 const getPatients = async (): Promise<Array<Object>> => {
-	const result: any[] = [];
+	const result: Array<Object> = [];
 	await firestore
 		.collection("PatientDetails")
 		.get()
