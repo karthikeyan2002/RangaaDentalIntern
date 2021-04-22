@@ -13,14 +13,6 @@ import {
   } from "@react-pdf/renderer";
 
 
-const MyDoc = () => (
-	<Document>
-	  <Page>
-		// My document data
-	  </Page>
-	</Document>
-  );
-
 const validate = (values) => {
 	const errors = {};
 
@@ -79,11 +71,9 @@ const Formone = () => {
 		<div className='form'>
 			<form
 				onSubmit={formik.handleSubmit}
-				className='bg-blue-300 shadow-md rounded p-10 mb-4 flex flex-col my-2'
+				className='form-container shadow-md rounded p-10 mb-4 flex flex-col my-2'
 			>
-				<div class="text-center text-2xl">
-          <p class="font-black">PATIENT REGISTRATION PORTAL</p>
-        </div>
+		
 				<div className='-mx-4 md:flex mb-4'>
 					<div className='md:w-1/2 px-3 mb-6 md:mb-0'>
 						<label
@@ -304,28 +294,30 @@ const Formone = () => {
 						></textarea>
 					</div>
 				</div>
+				
+				
+				<div className='-mx-4 md:flex mb-4'>
+					<div className='md:w-1/6 px-3 mb-6 md:mb-0'>
+					<button
+						type='submit'
+						class='bg-white text-gray-700 font-bold py-2 px-4 rounded uppercase'
+					>
+						download pdf
+					</button>
+					</div>
+					<div className='md:w-4/6 px-3 mb-6 md:mb-0'>
+					
+					</div>
 
-				<button
-					type='submit'
-					class='bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold py-2 px-4 border-b-4 border-blue-700 rounded'
-				>
-					SUBMIT
-				</button>
-
-				<PDFDownloadLink document={<MyDoc />} fileName="somename.pdf">
-					{({ blob, url, loading, error }) =>
-						loading ? 'Loading document...' : 'Download now!'
-					}
-				</PDFDownloadLink>
-									
-				{/* <PDFDownloadLink
-						document={<PdfDocument data={movieDetails} />}
-						fileName="movielist.pdf"
-				>
-						{({ blob, url, loading, error }) =>
-							loading ? "Loading document..." : "Download Pdf"
-						}
-        		</PDFDownloadLink> */}
+					<div className='md:w-1/6 px-20 mb-6 md:mb-0'>
+					<button
+						type='submit'
+						class='bg-gray-700 text-white font-bold py-2 px-4 rounded uppercase'
+					>
+						submit
+					</button>
+					</div>	
+				</div>
 			</form>
 		</div>
 	);

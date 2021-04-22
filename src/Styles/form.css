@@ -1,8 +1,12 @@
 .form{
-    background-image: url("/src/img/bg-3.jpg");
+    background-color: #ffc0d0;
     height: 100% !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 4%;
+    padding: 3%;
+}
+.form-container{
+    background-color: #ffe0e0;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
