@@ -149,7 +149,7 @@ const Formone = () => {
 				onSubmit={formik.handleSubmit}
 				className='form-container shadow-md rounded p-10 mb-4 flex flex-col my-2'
 			>
-				<h1 className="block uppercase tracking-wide text-gray-700 font-bold mb-10 text-center text-xl">patient regiteration</h1>
+				<h1 className="block uppercase tracking-wide text-gray-700 font-bold mb-10 text-center text-xl">patient registration</h1>
 		
 				<div className='-mx-4 md:flex mb-4'>
 					<div className='md:w-1/2 px-3 mb-6 md:mb-0'>
