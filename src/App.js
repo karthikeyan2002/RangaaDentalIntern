@@ -8,7 +8,8 @@ import Table from "./Table";
 import TableTest from "./TableTest.js";
 import Formone from "./Formone.js";
 import Formtwo from "./Formtwo.js";
-import { getPatients } from "./utils/index.ts";
+import Formthree from "./Formthree.js";
+import {getPatients} from "./utils/index.ts";
 
 export let islogin = true;
 console.log(islogin);
@@ -22,17 +23,18 @@ function App() {
 				<>
 					{/* <Header />
 					<NavigationBar /> */}
-					{/* <MySurvey /> */}
-					{/* <TableTest /> */}
-					{/* <Table /> */}
-					<Formone />
-					{/* <Formtwo /> */}
-				</>
-			) : (
-				<Login />
-			)}
-		</>
-	);
+          {/* <MySurvey /> */}
+          {/* <TableTest /> */}
+          {/* <Table /> */}
+           {/* <Formone /> */}
+          {/* <Formtwo />  */}
+          <Formthree />
+        </>
+      ) : (
+        <Login />
+      )}
+    </>
+  );
 }
 
 export default App;
