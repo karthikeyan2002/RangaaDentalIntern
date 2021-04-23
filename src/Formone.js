@@ -14,6 +14,7 @@ import {
 	Image,
 } from "@react-pdf/renderer";
 import GetPDF from "./GetPDF";
+import { values } from "lodash";
 const styles = StyleSheet.create({
 	page: {
 		padding: 20,
@@ -370,7 +371,7 @@ const Formone = () => {
 					<div className='md:w-1/6 px-3 mb-6 md:mb-0'>
 						<PDFDownloadLink
 							document={<GetPDF data={formik.values} styles={styles} />}
-							fileName='somename.pdf'
+							fileName={`${formik.values.firstName}_${formik.values.lastName}_${formik.values.age}`}
 							style={{
 								textDecoration: "none",
 								padding: "10px",

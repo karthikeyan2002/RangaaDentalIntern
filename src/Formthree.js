@@ -14,7 +14,7 @@ const Formthree = () => {
     },
   });
   return (
-    <div className="form">
+    <div className="form3">
 
       <div className="mb-5">
 				<FontAwesomeIcon icon={faArrowLeft} className="text-blue-200" size="lg" ></FontAwesomeIcon>

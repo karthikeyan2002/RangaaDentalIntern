@@ -1,0 +1,5 @@
+.TableTest{
+    background: rgb(254,162,137);
+    background: linear-gradient(137deg, rgba(254,162,137,1) 16%, rgba(253,161,136,1) 71%);
+    padding: 2%;
+}
