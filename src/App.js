@@ -26,9 +26,9 @@ function App() {
           {/* <MySurvey /> */}
           {/* <TableTest /> */}
           {/* <Table /> */}
-           <Formone />
-          {/* <Formtwo /> */}
-          {/* <Formthree /> */}
+           {/* <Formone /> */}
+          {/* <Formtwo />  */}
+          <Formthree />
         </>
       ) : (
         <Login />

@@ -1,5 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage, useFormik } from "formik";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPowerOff , faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 const validate = (values) => {};
 
@@ -13,6 +15,12 @@ const Formthree = () => {
   });
   return (
     <div className="form">
+
+      <div className="mb-5">
+				<FontAwesomeIcon icon={faArrowLeft} className="text-blue-200" size="lg" ></FontAwesomeIcon>
+				<FontAwesomeIcon icon={faPowerOff} className="float-right text-white" size="lg"></FontAwesomeIcon>
+			</div>
+
       <form
         onSubmit={formik.handleSubmit}
         className="form-container shadow-md rounded p-10 mb-4 flex flex-col my-2"

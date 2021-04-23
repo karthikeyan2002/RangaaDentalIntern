@@ -1,6 +1,8 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage, useFormik } from "formik";
 import "./Styles/form.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPowerOff , faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import { PdfDocument } from "./PdfGenrator";
 import {
@@ -148,6 +150,11 @@ const validate = (values) => {
 		errors.age = "Invalid Age";
 	}
 
+	if (!values.phno) {
+		errors.phno = "Required";
+	} else if (values.phno != 10) {
+		errors.phno = "Invalid Age";
+	}
 	if (!values.email) {
 		errors.email = "Required";
 	} else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -183,6 +190,13 @@ const Formone = () => {
 	});
 	return (
 		<div className='form'>
+			
+			<div className="mb-5">
+				<FontAwesomeIcon icon={faArrowLeft} className="text-blue-200" size="lg" ></FontAwesomeIcon>
+				<FontAwesomeIcon icon={faPowerOff} className="float-right text-white" size="lg"></FontAwesomeIcon>
+			</div>
+		
+			
 			<form
 				onSubmit={formik.handleSubmit}
 				className='form-container shadow-md rounded p-10 mb-4 flex flex-col my-2'
@@ -208,7 +222,7 @@ const Formone = () => {
 							placeholder='Name of the Patient'
 						/>
 						{formik.errors.firstName ? (
-							<div className='text-gray-700 text-xs'>
+							<div className='text-red-700 text-xs'>
 								{formik.errors.firstName}
 							</div>
 						) : null}
@@ -232,7 +246,7 @@ const Formone = () => {
 							placeholder="Father's Name / Last Name"
 						/>
 						{formik.errors.lastName ? (
-							<div className='text-gray-700 text-xs'>
+							<div className='text-red-700 text-xs'>
 								{formik.errors.lastName}
 							</div>
 						) : null}
@@ -257,7 +271,7 @@ const Formone = () => {
 							placeholder='Age of the Patient'
 						/>
 						{formik.errors.age ? (
-							<div className='text-gray-700 text-xs'>{formik.errors.age}</div>
+							<div className='text-red-700 text-xs'>{formik.errors.age}</div>
 						) : null}
 					</div>
 					<div className='md:w-1/3 px-3 mb-6 md:mb-0'>
@@ -277,7 +291,7 @@ const Formone = () => {
 							placeholder='12345 67890'
 						/>
 						{formik.errors.phno ? (
-							<div className='text-gray-700 text-xs'>{formik.errors.phno}</div>
+							<div className='text-red-700 text-xs'>{formik.errors.phno}</div>
 						) : null}
 					</div>
 
@@ -298,7 +312,7 @@ const Formone = () => {
 							placeholder='Mail-id of the Patient'
 						/>
 						{formik.errors.email ? (
-							<div className='text-gray-700 text-xs'>{formik.errors.email}</div>
+							<div className='text-red-700 text-xs'>{formik.errors.email}</div>
 						) : null}
 					</div>
 				</div>
@@ -343,7 +357,7 @@ const Formone = () => {
 
 					<div className='md:w-1/3 px-3 mb-6 md:mb-0'>
 						<label
-							htmlFor='phno'
+							htmlFor='city'
 							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
 						>
 							city
@@ -358,7 +372,7 @@ const Formone = () => {
 							placeholder='Enter Name of the City'
 						/>
 						{formik.errors.city ? (
-							<div className='text-gray-700 text-xs'>{formik.errors.city}</div>
+							<div className='text-red-700 text-xs'>{formik.errors.city}</div>
 						) : null}
 					</div>
 
@@ -428,7 +442,7 @@ const Formone = () => {
 						</PDFDownloadLink>
 					</div>
 					<div className='md:w-4/6 px-3 mb-6 md:mb-0'>
-						
+					
 					</div>
 
 					<div className='md:w-1/6 px-20 mb-6 md:mb-0'>
