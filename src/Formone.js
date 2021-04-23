@@ -9,17 +9,14 @@ import {
 	View,
 	Document,
 	StyleSheet,
-	Image
-  } from "@react-pdf/renderer";
-
+	Image,
+} from "@react-pdf/renderer";
 
 const MyDoc = () => (
 	<Document>
-	  <Page>
-		// My document data
-	  </Page>
+		<Page>// My document data</Page>
 	</Document>
-  );
+);
 
 const validate = (values) => {
 	const errors = {};
@@ -79,11 +76,11 @@ const Formone = () => {
 		<div className='form'>
 			<form
 				onSubmit={formik.handleSubmit}
-				className='bg-blue-300 shadow-md rounded p-10 mb-4 flex flex-col my-2'
+				className='bg-gray-50 shadow-md rounded p-10 mb-4 flex flex-col my-2'
 			>
-				<div class="text-center text-2xl">
-          <p class="font-black">PATIENT REGISTRATION PORTAL</p>
-        </div>
+				<div class='text-center text-2xl'>
+					<p class='font-black'>PATIENT REGISTRATION PORTAL</p>
+				</div>
 				<div className='-mx-4 md:flex mb-4'>
 					<div className='md:w-1/2 px-3 mb-6 md:mb-0'>
 						<label
@@ -312,12 +309,12 @@ const Formone = () => {
 					SUBMIT
 				</button>
 
-				<PDFDownloadLink document={<MyDoc />} fileName="somename.pdf">
+				<PDFDownloadLink document={<MyDoc />} fileName='somename.pdf'>
 					{({ blob, url, loading, error }) =>
-						loading ? 'Loading document...' : 'Download now!'
+						loading ? "Loading document..." : "Download now!"
 					}
 				</PDFDownloadLink>
-									
+
 				{/* <PDFDownloadLink
 						document={<PdfDocument data={movieDetails} />}
 						fileName="movielist.pdf"
