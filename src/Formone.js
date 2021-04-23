@@ -13,6 +13,7 @@ import {
 	StyleSheet,
 	Image,
 } from "@react-pdf/renderer";
+import GetPDF from "./GetPDF";
 const styles = StyleSheet.create({
 	page: {
 		padding: 20,
@@ -59,65 +60,6 @@ const styles = StyleSheet.create({
 		flex: "1",
 	},
 });
-
-const MyDoc = () => (
-	<Document>
-		<Page size='A4' style={styles.page}>
-			<View style={styles.pagecontainer}>
-				<view style={styles.header}>
-					<Text>Rangaa Dental</Text>
-				</view>
-
-				<view style={styles.subheading}>
-					<Text>Patient Details</Text>
-				</view>
-
-				<view style={styles.BasicDetails}>
-					<view style={styles.box1}>
-						<Text> Name : Karthikeyan </Text>
-						<Text> Email : bkarthi1000@gmail.com </Text>
-						<Text> State : Tamil Nadu</Text>
-					</view>
-
-					<view style={styles.box2}>
-						<Text> Age : 18 </Text>
-						<Text> Phone Number : 9080585673</Text>
-						<Text> Visited due to : Fever</Text>
-					</view>
-
-					<view style={styles.box3}>
-						<Text> Gender : Male </Text>
-						<Text> City : Madurai </Text>
-					</view>
-				</view>
-
-				<view style={styles.subheading}>
-					<Text>Medical History</Text>
-				</view>
-
-				<view style={styles.BasicDetails}>
-					<view style={styles.box1}>
-						<Text> Allergy : NM </Text>
-						<Text> Diabetes : UM </Text>
-						<Text> Epilepsy : NM </Text>
-					</view>
-
-					<view style={styles.box2}>
-						<Text> Hypertension : UM</Text>
-						<Text> Bleeding Disorder : NM</Text>
-						<Text> Anticoagulant therapy : NM </Text>
-					</view>
-
-					<view style={styles.box3}>
-						<Text> Ischemic cardiac diseases : NM </Text>
-						<Text> UM - Under Medication </Text>
-						<Text> NM - Not Under Medication </Text>
-					</view>
-				</view>
-			</View>
-		</Page>
-	</Document>
-);
 
 const validate = (values) => {
 	const errors = {};
@@ -427,7 +369,7 @@ const Formone = () => {
 				<div className='-mx-4 md:flex mb-4'>
 					<div className='md:w-1/6 px-3 mb-6 md:mb-0'>
 						<PDFDownloadLink
-							document={<MyDoc />}
+							document={<GetPDF data={formik.values} styles={styles} />}
 							fileName='somename.pdf'
 							style={{
 								textDecoration: "none",
