@@ -84,8 +84,8 @@ const validate = (values) => {
 
 	if (!values.phno) {
 		errors.phno = "Required";
-	} else if (values.phno != 10) {
-		errors.phno = "Invalid Age";
+	} else if (values.phno.length !== 10) {
+		errors.phno = "Invalid Phone number";
 	}
 	if (!values.email) {
 		errors.email = "Required";
@@ -224,7 +224,7 @@ const Formone = () => {
 						<input
 							id='phno'
 							name='phno'
-							type='number'
+							type='text'
 							onChange={formik.handleChange}
 							value={formik.values.phno}
 							className='appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-4 mb-3'
