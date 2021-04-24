@@ -14,6 +14,7 @@ import {
 	Image,
 } from "@react-pdf/renderer";
 import GetPDF from "./GetPDF";
+import { values } from "lodash";
 const styles = StyleSheet.create({
 	page: {
 		padding: 20,

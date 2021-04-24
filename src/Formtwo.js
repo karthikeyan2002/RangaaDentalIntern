@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage, useFormik } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPowerOff, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
+
 const validate = (values) => {};
 
 const Formtwo = () => {
@@ -27,7 +28,7 @@ const Formtwo = () => {
 		},
 	});
 	return (
-		<div className='form'>
+		<div className='form2'>
 			<div className='mb-5'>
 				<FontAwesomeIcon
 					icon={faArrowLeft}
@@ -193,11 +194,12 @@ const Formtwo = () => {
 							</tbody>
 						</table>
 					</div>
+					<br />
 					<div className='md:w-3/4 px-3 mb-6 md:mb-0'>
 						<p class='font-black text-red-600 text-center'>
 							MEDICAL HISTORY OF THE PATIENT
 						</p>
-						<table class='table-auto'>
+						<table class='table-auto w-full'>
 							<thead>
 								<tr class='text-black hover:text-blue-700'>
 									<th class='px-4 py-2'>Name of the Disease</th>
