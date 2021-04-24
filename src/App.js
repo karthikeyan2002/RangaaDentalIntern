@@ -27,7 +27,7 @@ function App() {
 					{/* <TableTest /> */}
 					{/* <Table /> */}
 					<Formone />
-					{/* <Formtwo />  */}
+					{/* <Formtwo /> */}
 					{/* <Formthree /> */}
 				</>
 			) : (

@@ -84,8 +84,8 @@ const validate = (values) => {
 
 	if (!values.phno) {
 		errors.phno = "Required";
-	} else if (values.phno != 10) {
-		errors.phno = "Invalid Age";
+	} else if (values.phno.length !== 10) {
+		errors.phno = "Invalid phone number";
 	}
 	if (!values.email) {
 		errors.email = "Required";
@@ -224,7 +224,7 @@ const Formone = () => {
 						<input
 							id='phno'
 							name='phno'
-							type='number'
+							type='text'
 							onChange={formik.handleChange}
 							value={formik.values.phno}
 							className='appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-4 mb-3'
@@ -370,7 +370,7 @@ const Formone = () => {
 					<div className='md:w-1/6 px-3 mb-6 md:mb-0'>
 						<PDFDownloadLink
 							document={<GetPDF data={formik.values} styles={styles} />}
-							fileName='somename.pdf'
+							fileName={`${formik.values.firstName}_${formik.values.lastName}_${formik.values.age}`}
 							style={{
 								textDecoration: "none",
 								padding: "10px",
