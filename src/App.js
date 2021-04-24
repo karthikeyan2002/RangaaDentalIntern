@@ -24,10 +24,10 @@ function App() {
 					{/* <Header />
 					<NavigationBar /> */}
 					{/* <MySurvey /> */}
-					  <TableTest />  
+					  {/* <TableTest />   */}
 					{/* <Table />  */}
 					{/* <Formone /> */}
-					 {/* <Formtwo />   */}
+					 <Formtwo />  
 					{/* <Formthree /> */}
 				</>
 			) : (

@@ -631,7 +631,7 @@ const Formthree = () => {
             </table>
           </div>
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-            <table class="table-auto">
+            <table class="table-auto w-full">
               <thead>
                 <tr class="text-black hover:text-blue-700">
                   <th class="px-4 py-2">Tooth Problem</th>
@@ -846,7 +846,7 @@ const Formthree = () => {
             </table>
             <br />
             <p class="font-black text-red-600 text-center">MUCOSAL LESIONS</p>
-            <table class="table-auto">
+            <table class="table-auto w-full">
               <thead>
                 <tr class="text-black hover:text-blue-700">
                   <th class="px-4 py-2"></th>
@@ -1052,7 +1052,7 @@ const Formthree = () => {
             </table>
           </div>
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-            <table class="table-auto">
+            <table class="table-auto w-full">
               <thead>
                 <tr class="text-black hover:text-blue-700">
                   <th class="px-4 py-2">Treatment</th>
