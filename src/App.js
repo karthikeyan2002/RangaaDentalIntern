@@ -11,7 +11,7 @@ import Formtwo from "./Formtwo.js";
 import Formthree from "./Formthree.js";
 import { getPatients } from "./utils/index.ts";
 
-export let islogin = false;
+export let islogin = true;
 console.log(islogin);
 getPatients()
 	.then((res) => console.log(res))

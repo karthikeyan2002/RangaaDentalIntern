@@ -23,27 +23,34 @@ function TableTest() {
                     <table class="min-w-full">
                         <thead>
                             <tr>
-                                <th class="px-6 py-3 border-b-2 border-gray-300 text-center leading-4 text-blue-500 tracking-wider">Full Name</th>
-                                <th class="px-6 py-3 border-b-2 border-gray-300 text-center text-sm leading-4 text-blue-500 tracking-wider">Age</th>
-                                <th class="px-6 py-3 border-b-2 border-gray-300 text-center text-sm leading-4 text-blue-500 tracking-wider">Phone</th>
-                                <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">Email</th>
-                                <th class="px-6 py-3 border-b-2 border-gray-300 text-center text-sm leading-4 text-blue-500 tracking-wider">Status</th>
-                                <th class="px-6 py-3 border-b-2 border-gray-300 text-center text-sm leading-4 text-blue-500 tracking-wider">Details</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider uppercase">Full Name</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-300 text-center text-sm leading-4 text-blue-500 tracking-wider uppercase">Age</th>
+								<th class="px-6 py-3 border-b-2 border-gray-300 text-center text-sm leading-4 text-blue-500 tracking-wider uppercase">Gender</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-300 text-center text-sm leading-4 text-blue-500 tracking-wider uppercase">Phone</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider uppercase">Email</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-300 text-center text-sm leading-4 text-blue-500 tracking-wider uppercase">Status</th>
+                                <th class="px-6 py-3 border-b-2 border-gray-300 text-center text-sm leading-4 text-blue-500 tracking-wider uppercase">Details</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white">
 						{patients.length > 0 ? (
 							patients.map((patient) => (
 								<tr>
-									 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-center">
+									 {/* <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-center">
                                         <div class="flex items-center">
                                             <div>
                                                 <div class="text-sm leading-5 text-gray-800">{patient.Name}</div>
                                             </div>
                                         </div>
+                                    </td> */}
+									<td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-left">
+                                        <div class="text-sm leading-5 text-blue-900 font-bold">{patient.Name}</div>
                                     </td>
 									<td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-center">
                                         <div class="text-sm leading-5 text-blue-900">{patient.Age}</div>
+                                    </td>
+									<td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-center">
+                                        <div class="text-sm leading-5 text-blue-900">{patient.Gender}</div>
                                     </td>
 									<td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5 text-center">{patient["Phone Number"]}</td>
 									<td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5 text-left">{patient.email}</td>
