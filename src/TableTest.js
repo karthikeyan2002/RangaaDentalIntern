@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { getPatients } from "./utils/index";
 import Header from "./Header";
-import Nav from "./Nav";
+import NavigationBar from "./NavigationBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPowerOff, faBars , faSearch , faChevronLeft , faChevronRight , faUserPlus} from "@fortawesome/free-solid-svg-icons";
 import "./Styles/TableTest.css"
@@ -48,7 +48,7 @@ function TableTest() {
 
 				<p className="patient"> Number of patients visited : 200 </p>
 			</div>
-			
+			<NavigationBar />		
 <div className="section2">
 
 	<div className="w-1/6 float-right search-icon">
