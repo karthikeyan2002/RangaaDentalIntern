@@ -4,6 +4,7 @@ import "./Styles/form.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPowerOff, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { PDFDownloadLink } from "@react-pdf/renderer";
+import { useDispatch, useSelector } from "react-redux";
 import { PdfDocument } from "./PdfGenrator";
 import {
 	Page,
@@ -15,6 +16,8 @@ import {
 } from "@react-pdf/renderer";
 import GetPDF from "./GetPDF";
 import { values } from "lodash";
+import { updateAllDetails } from "./redux/actions";
+import { createNewPost } from "./utils";
 const styles = StyleSheet.create({
 	page: {
 		padding: 20,
@@ -104,6 +107,9 @@ const validate = (values) => {
 };
 
 const Formone = () => {
+	const dispatch = useDispatch();
+	const state = useSelector((state) => state.state);
+	console.log(state);
 	const formik = useFormik({
 		initialValues: {
 			firstName: "",
@@ -118,7 +124,8 @@ const Formone = () => {
 		},
 		validate,
 		onSubmit: (values) => {
-			alert(JSON.stringify(values, null, 2));
+			console.log(values);
+			createNewPost(values);
 		},
 	});
 	return (
@@ -403,4 +410,4 @@ const Formone = () => {
 	);
 };
 
-export default Formone;
+export default React.memo(Formone);

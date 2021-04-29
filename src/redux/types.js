@@ -5,3 +5,5 @@ export const GENDER = "GENDER";
 export const DIABETES = "DIABETES";
 export const HYPERTENSION = "HYPERTENSION";
 export const EPILSEPSY = "EPILEPSY";
+
+export const PATIENT_DETAILS = "PATIENT_DETAILS"

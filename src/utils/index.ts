@@ -6,7 +6,7 @@ import _ from "lodash";
 // Add new patient data
 const createNewPost = async (data: any) => {
 	await firestore.collection("patients").add({
-		data,
+		...data,
 		created: firebase.default.firestore.FieldValue.serverTimestamp(),
 	});
 };
@@ -35,7 +35,7 @@ const updatePatientData = async (
 	data: firebase.default.firestore.DocumentData,
 	patientID: string
 ): Promise<void> => {
-	await firestore.collection("PatientDetails").doc(patientID).update(data);
+	await firestore.collection("patients").doc(patientID).update(data);
 };
 
 // Retrieves data to display on dashboard

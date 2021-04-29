@@ -2,11 +2,14 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage, useFormik } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPowerOff, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-
+import { useDispatch } from "react-redux";
+import { updateAllDetails } from "./redux/actions";
+import { updatePatientData } from "./utils";
 
 const validate = (values) => {};
 
 const Formtwo = () => {
+	const dispatch = useDispatch();
 	const formik = useFormik({
 		initialValues: {
 			pid: "",
@@ -24,7 +27,7 @@ const Formtwo = () => {
 		},
 		validate,
 		onSubmit: (values) => {
-			alert(JSON.stringify(values, null, 2));
+			updatePatientData(values, "QB7YYpwpNECJOGAxXZ1C");
 		},
 	});
 	return (
@@ -128,7 +131,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Thumb'
+											name='thumb'
 											value='yes'
 											checked={formik.values.thumb === "yes"}
 											onChange={formik.handleChange}
@@ -138,7 +141,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Thumb'
+											name='thumb'
 											value='no'
 											checked={formik.values.thumb === "no"}
 											onChange={formik.handleChange}
@@ -151,7 +154,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Tongue'
+											name='tongue'
 											value='yes'
 											checked={formik.values.tongue === "yes"}
 											onChange={formik.handleChange}
@@ -161,7 +164,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Tongue'
+											name='tongue'
 											value='no'
 											checked={formik.values.tongue === "no"}
 											onChange={formik.handleChange}
@@ -174,7 +177,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Mouth'
+											name='mouth'
 											value='yes'
 											checked={formik.values.mouth === "yes"}
 											onChange={formik.handleChange}
@@ -184,7 +187,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Mouth'
+											name='mouth'
 											value='no'
 											checked={formik.values.mouth === "no"}
 											onChange={formik.handleChange}
@@ -215,7 +218,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Allergy'
+											name='allergy'
 											value='undermed'
 											checked={formik.values.allergy === "undermed"}
 											onChange={formik.handleChange}
@@ -225,7 +228,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Allergy'
+											name='allergy'
 											value='notundermed'
 											checked={formik.values.allergy === "notundermed"}
 											onChange={formik.handleChange}
@@ -235,9 +238,9 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Allergy'
+											name='allergy'
 											value='unknown'
-											checked={formik.values.Allergy === "unknown"}
+											checked={formik.values.allergy === "unknown"}
 											onChange={formik.handleChange}
 										></input>
 									</td>
@@ -281,7 +284,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Epilepsy'
+											name='epilepsy'
 											value='undermed'
 											checked={formik.values.epilepsy === "undermed"}
 											onChange={formik.handleChange}
@@ -291,7 +294,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Epilepsy'
+											name='epilepsy'
 											value='notundermed'
 											checked={formik.values.epilepsy === "notundermed"}
 											onChange={formik.handleChange}
@@ -301,7 +304,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Epilepsy'
+											name='epilepsy'
 											value='unknown'
 											checked={formik.values.epilepsy === "unknown"}
 											onChange={formik.handleChange}
@@ -347,7 +350,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Bleeding'
+											name='bleeding'
 											value='undermed'
 											checked={formik.values.bleeding === "undermed"}
 											onChange={formik.handleChange}
@@ -357,7 +360,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Bleeding'
+											name='bleeding'
 											value='notundermed'
 											checked={formik.values.bleeding === "notundermed"}
 											onChange={formik.handleChange}
@@ -367,7 +370,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Bleeding'
+											name='bleeding'
 											value='unknown'
 											checked={formik.values.bleeding === "unknown"}
 											onChange={formik.handleChange}
@@ -380,7 +383,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Anticoagulant'
+											name='anticoagulant'
 											value='undermed'
 											checked={formik.values.anticoagulant === "undermed"}
 											onChange={formik.handleChange}
@@ -390,7 +393,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Anticoagulant'
+											name='anticoagulant'
 											value='notundermed'
 											checked={formik.values.anticoagulant === "notundermed"}
 											onChange={formik.handleChange}
@@ -400,7 +403,7 @@ const Formtwo = () => {
 										<input
 											type='radio'
 											class='form-radio'
-											name='Anticoagulant'
+											name='anticoagulant'
 											value='unknown'
 											checked={formik.values.anticoagulant === "unknown"}
 											onChange={formik.handleChange}

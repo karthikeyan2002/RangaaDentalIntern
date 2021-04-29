@@ -2,15 +2,21 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage, useFormik } from "formik";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPowerOff , faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import {useDispatch} from 'react-redux';
+import { updateAllDetails } from "./redux/actions";
+
+
+
 
 const validate = (values) => {};
 
 const Formthree = () => {
+  const dispatch = useDispatch()
   const formik = useFormik({
     initialValues: {},
     validate,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      dispatch(updateAllDetails(values))
     },
   });
   return (

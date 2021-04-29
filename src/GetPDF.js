@@ -46,9 +46,9 @@ const GetPDF = ({ data, styles }) => (
 
 				<view style={styles.BasicDetails}>
 					<view style={styles.box1}>
-						<Text> Allergy : NM </Text>
-						<Text> Diabetes : UM </Text>
-						<Text> Epilepsy : NM </Text>
+						<Text> Allergy : {data.allergy} </Text>
+						<Text> Diabetes : {data.diabetes} </Text>
+						<Text> Epilepsy : {data.epilepsy} </Text>
 					</view>
 
 					<view style={styles.box2}>

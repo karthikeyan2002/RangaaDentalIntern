@@ -10,6 +10,7 @@ import Formone from "./Formone.js";
 import Formtwo from "./Formtwo.js";
 import Formthree from "./Formthree.js";
 import { getPatients } from "./utils/index.ts";
+import { useSelector } from "react-redux";
 
 export let islogin = true;
 console.log(islogin);
@@ -17,6 +18,8 @@ getPatients()
 	.then((res) => console.log(res))
 	.catch((err) => console.log(err));
 function App() {
+	const state = useSelector((state) => state.state);
+	console.log(state);
 	return (
 		<>
 			{islogin ? (
@@ -24,8 +27,8 @@ function App() {
 					{/* <Header />
 					<NavigationBar /> */}
 					{/* <MySurvey /> */}
-					{/* <TableTest />   */}
-					{/* <Table />  */}
+					{/* <TableTest /> */}
+					{/* <Table /> */}
 					{/* <Formone /> */}
 					<Formtwo />
 					{/* <Formthree /> */}
