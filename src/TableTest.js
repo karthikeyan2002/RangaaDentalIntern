@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { getPatients } from "./utils/index";
 import Header from "./Header";
+import Nav from "./Nav";
 import "./Styles/TableTest.css"
 function TableTest() {
 	const [patients, setPatients] = useState([]);

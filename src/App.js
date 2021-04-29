@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./Header.js";
+import Nav from "./Nav.js";
 import Login from "./login.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { NavigationBar } from "./NavigationBar";
 import { createNewPost } from "./utils";
 import Table from "./Table";
 import TableTest from "./TableTest.js";
@@ -22,8 +22,7 @@ function App() {
 			{islogin ? (
 				<>
 					{/* <Header />
-					<NavigationBar /> */}
-					{/* <MySurvey /> */}
+				     */}
 					  <TableTest />  
 					{/* <Table />  */}
 					 {/* <Formone />  */}
