@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 .login {
-  background: url(../img/bg.jpg) center;
+  background: url(../img/bg-7.jpg) center;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -19,8 +19,11 @@
   width: 35%;
   background: rgb(237,255,236);
   background: linear-gradient(90deg, rgba(237,255,236,1) 45%, rgba(202,247,227,1) 83%);
-  padding: 5% 4% 8%;
-} 
+  padding: 5% 2% 8%;
+  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius:4%;
+}
+
 
 .login img{
   border-radius: 50%;
@@ -28,6 +31,7 @@
   height: 125px;
   width: 125px;
   border: 1px solid aqua;
+  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .login input {
   margin: 8% 0%;
@@ -51,15 +55,30 @@
 
 .login .btn {
   border-radius: 20px;
-  color: #ffffff;
+  color: #fff;
   font-size: 20px;
-  background-color: red;
+  background: rgb(68,10,103);
+  background: linear-gradient(142deg, rgba(68,10,103,1) 38%, rgba(147,50,158,1) 71%);
   padding: 10px 10px 10px 20px; 
   text-decoration: none;
-  margin-top: 15px;
+  margin-top: 20px;
   border: none;
   text-align: center;
   width: 75%;
+}
+
+.login .btn:hover {
+  background: rgb(147,50,158);
+  background: linear-gradient(142deg, rgba(147,50,158,1) 38%, rgba(68,10,103,1) 71%);
+  color: white !important;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.login .btn:focus {
+  border: none;
+  outline: none;
 }
 
 .login input:focus {
@@ -78,17 +97,6 @@ input:-webkit-autofill:active {
   transition-delay: 9999s;
 }
 
-.login .btn:hover {
-  /* background: rgb(16,0,203);
-  background: linear-gradient(90deg, rgba(16,0,203,1) 46%, rgba(19,222,220,1) 100%); */
-  background-color: orange;
-  color: white !important;
-  text-decoration: none;
-  border: none;
-  outline: none;
-}
 
-.login .btn:focus {
-  border: none;
-  outline: none;
-}
+
+

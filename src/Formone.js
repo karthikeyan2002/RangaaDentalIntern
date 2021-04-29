@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
 		fontWeight: "bold",
 		marginBottom: "10px",
 		marginTop: "4px",
+		letterSpacing: "1px",
 	},
 	box1: {
 		flex: "2",

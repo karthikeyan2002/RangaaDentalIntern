@@ -27,11 +27,11 @@ function App() {
 					{/* <Header />
 					<NavigationBar /> */}
 					{/* <MySurvey /> */}
-					{/* <TableTest /> */}
-					{/* <Table /> */}
-					{/* <Formone /> */}
-					<Formtwo />
-					{/* <Formthree /> */}
+					<TableTest />
+					{/* <Table />  */}
+					{/* <Formone />  */}
+					{/* <Formtwo />   */}
+					{/* <Formthree />  */}
 				</>
 			) : (
 				<Login />
