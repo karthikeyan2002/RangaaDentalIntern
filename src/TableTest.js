@@ -4,7 +4,7 @@ import { getPatients } from "./utils/index";
 import Header from "./Header";
 import NavigationBar from "./NavigationBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPowerOff, faBars , faSearch , faChevronLeft , faChevronRight , faUserPlus , faChevronCircleUp} from "@fortawesome/free-solid-svg-icons";
+import { faPowerOff, faBars , faSearch , faChevronLeft , faChevronRight , faUserPlus , faChevronCircleUp , faPen} from "@fortawesome/free-solid-svg-icons";
 import "./Styles/TableTest.css"
 import { divide } from "lodash";
 import { Button } from "react-bootstrap";
@@ -21,22 +21,32 @@ function TableTest() {
 	return (
 		<>
 
-			
-			<div className="TableTest">
+		<div className="TableTest">
 			
 			<div className="heading">
+			
+				<div className="dropdown">
+					<Button class="dropbtn">
+						<FontAwesomeIcon
+							icon={faBars}
+							className='float-left text-white'
+							size='lg'
+						></FontAwesomeIcon>
+					</Button>
+					<div class="dropdown-content">
+						<a href="#">Nurse</a>
+						<a href="#">Doctor</a>
+						<a href="#">Medicine</a>
+					</div>			
+				</div>
+
 				
 				<FontAwesomeIcon
-					icon={faBars}
-					className='float-left text-white'
-					size='lg'
-				></FontAwesomeIcon>
-
-				<FontAwesomeIcon
 					icon={faPowerOff}
-					className='float-right text-white'
+					className='float-right text-white absolute right-20'
 					size='lg'
 				></FontAwesomeIcon>
+							
 			
 				<div className="text">
 					<h1>RANGAA DENTAL</h1>
@@ -57,21 +67,23 @@ function TableTest() {
 				></FontAwesomeIcon>
 				</a>
 				
-			</div>
-			{/* <NavigationBar />		 */}
+		</div>
+
+			{/* <NavigationBar />*/}
+
 <div className="section2" id="section2">
 
 	<div className="w-1/6 float-right search-icon">
-	<div class="p-8">
-	<div class="bg-white flex items-center rounded-full shadow-xl w-full h-12">
-		<input class="rounded-l-full w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none border-none" id="search" type="text" placeholder="Search">
+	<div className="p-8">
+	<div className="bg-white flex items-center rounded-full shadow-xl w-full h-12">
+		<input className="rounded-l-full w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none border-none" id="search" type="text" placeholder="Search">
 		</input>
-		<div class="p-4">
-		<button class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-6 h-6 flex items-center justify-center">
+		<div className="p-4">
+		<button className="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-6 h-6 flex items-center justify-center">
 		<FontAwesomeIcon
 						icon={faSearch}
 						className='float-right text-white'
-			></FontAwesomeIcon>
+		></FontAwesomeIcon>
 		</button>
 		</div>
 		</div>
@@ -96,6 +108,7 @@ function TableTest() {
                                 <th className="py-4 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">Status</th>
                                 <th className="py-4 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">Details</th>
 								<th className="py-4 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">PDF</th>
+								<th className="py-4 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">Edit</th>
 							</tr>
                         </thead>
                         <tbody className="bg-white">
@@ -133,7 +146,15 @@ function TableTest() {
 									<td className="py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center">
                                         <button className="px-2 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">Download</button>
                                     </td>
-																		
+									<td className="py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center">
+									<a>
+									<FontAwesomeIcon
+										icon={faPen}
+									></FontAwesomeIcon>
+									</a>
+									</td>
+								
+																
 								</tr>
 							))
 						) : (
