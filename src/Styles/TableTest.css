@@ -6,6 +6,9 @@
     padding: 2%; 
     background-color: #7868e6;
 } */
+html{
+    scroll-behavior: smooth;
+}
 .TableTest{
     position: relative;
 }
@@ -44,7 +47,7 @@
 }
 
 .section2{
-    background-color: #e4fbff;
+    background-color: #c0fefc;
     width: 100%;
     padding: 2% 5%;
 }
@@ -66,9 +69,12 @@
 }
 .patienttabel tr:nth-child(even)
 {
-    background-color: #f6f6f6;
+    background-color: #ddfffa;
 }
-
+.patienttabel tr:nth-child(odd)
+{
+    background-color: #white;
+}
 @keyframes number{
     0% { left: 500px;}
     100% {left: 16px;}
