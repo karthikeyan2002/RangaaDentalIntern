@@ -11,7 +11,7 @@ import Formthree from "./Formthree.js";
 import { getPatients } from "./utils/index.ts";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
-export let islogin = true;
+export let islogin = false;
 console.log(islogin);
 getPatients()
   .then((res) => console.log(res))
