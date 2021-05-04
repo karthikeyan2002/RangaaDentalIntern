@@ -1,17 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
 import { getPatients } from "./utils/index";
-import Header from "./Header";
-import NavigationBar from "./NavigationBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPowerOff, faBars , faSearch , faChevronLeft , faChevronRight , faUserPlus , faChevronCircleUp , faPen} from "@fortawesome/free-solid-svg-icons";
-import "./Styles/TableTest.css"
-import { divide } from "lodash";
-import { Button } from "react-bootstrap";
+import { faPowerOff, faSearch , faChevronLeft , faChevronRight , faUserPlus , faChevronCircleUp , faPen} from "@fortawesome/free-solid-svg-icons";
+import "./Styles/Dashboard.css"
 
-let today = new Date().toLocaleString();
-
-function TableTest() {
+function Dashboard() {
 	const [patients, setPatients] = useState([]);
 	useEffect(() => {
 		getPatients()
@@ -21,32 +15,24 @@ function TableTest() {
 	return (
 		<>
 
-		<div className="TableTest">
+		<div className="Dashboard">
 			
 			<div className="heading">
 			
 				<div className="dropdown">
-					<Button class="dropbtn">
+					<a>
 						<FontAwesomeIcon
-							icon={faBars}
-							className='float-left text-white'
+							icon={faPowerOff}
+							className='position-absolute right-0 text-white'
 							size='lg'
 						></FontAwesomeIcon>
-					</Button>
+					</a	>
 					<div class="dropdown-content">
-						<a href="#">Nurse</a>
-						<a href="#">Doctor</a>
-						<a href="#">Medicine</a>
+						<a href="#">Log out</a>
 					</div>			
 				</div>
 
-				
-				<FontAwesomeIcon
-					icon={faPowerOff}
-					className='float-right text-white absolute right-20'
-					size='lg'
-				></FontAwesomeIcon>
-							
+								
 			
 				<div className="text">
 					<h1>RANGAA DENTAL</h1>
@@ -69,8 +55,7 @@ function TableTest() {
 				
 		</div>
 
-			{/* <NavigationBar />*/}
-
+		
 <div className="section2" id="section2">
 
 	<div className="w-1/6 float-right search-icon">
@@ -115,13 +100,6 @@ function TableTest() {
 						{patients.length > 0 ? (
 							patients.map((patient) => (
 								<tr>
-									 {/* <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-center">
-                                        <div className="flex items-center">
-                                            <div>
-                                                <div className="text-sm leading-5 text-gray-800">{patient.Name}</div>
-                                            </div>
-                                        </div>
-                                    </td>  */}
 									<td className="pl-4 py-4 whitespace-no-wrap border-b border-gray-500 text-left font-semibold">
                                         <div className="text-sm leading-5 font-bold">{patient.Name}</div>
                                     </td>
@@ -132,7 +110,6 @@ function TableTest() {
                                         <div className="text-sm leading-5">{patient.Gender}</div>
                                     </td>
 									<td className="py-4 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center font-semibold">{patient["Phone Number"]}</td>
-									{/* <td className="py-4 pr-0 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-left font-semibold">{patient.email}</td> */}
 									<td className="py-4 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center font-semibold">{patient.complaints}</td>
 									<td className="py-4 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center">
                                         <span className="relative inline-block px-3 py-1 font-semibold leading-1 text-center">
@@ -178,7 +155,7 @@ function TableTest() {
 				></FontAwesomeIcon>
 				</button>
 
-				<input type="date" name="date" className="border-none p-2 rounded-lg bg-blue-500 text-white"></input>
+				<input type="date" name="date" className="border-none p-2  text-center rounded-lg bg-blue-500 text-white"></input>
 				
 				<button className="border-none bg-blue-500 p-2 mx-3 rounded-lg">
 				<FontAwesomeIcon
@@ -207,4 +184,4 @@ function TableTest() {
 	);
 }
 
-export default TableTest;
+export default Dashboard;
