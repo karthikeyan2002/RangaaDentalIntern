@@ -16,6 +16,7 @@ console.log(islogin);
 getPatients()
 	.then((res) => console.log(res))
 	.catch((err) => console.log(err));
+// sendMail("Seafarers_19IT112_55_120", "D:\\Downloads\\Seafarers_19IT112_55_120");
 function App() {
 <<<<<<< HEAD
 	return (
@@ -28,15 +29,14 @@ function App() {
 						{/* <TableTest /> */}
 						{/* <Table />  */}
 						{/* <Formone />  */}
-						{/* <Formtwo />   */}
-						{/* <Formthree />  */}
-						<Switch>
+						<Formtwo />
+						{/* <Formthree /> */}
+						{/* <Switch>
 							<Route exact path='/' component={TableTest} />
 							<Route path='/Receptionist' component={Formone} />
 							<Route path='/Nurse' component={Formtwo} />
 							<Route path='/Doctor' component={Formthree} />
-							{/* <Route  exact path='/Medical' component={}/> */}
-						</Switch>
+						</Switch> */}
 					</>
 				) : (
 					<Login />
