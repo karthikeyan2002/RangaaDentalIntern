@@ -18,7 +18,7 @@ getPatients()
 	.catch((err) => console.log(err));
 // sendMail("Seafarers_19IT112_55_120", "D:\\Downloads\\Seafarers_19IT112_55_120");
 function App() {
-<<<<<<< HEAD
+
 	return (
 		<>
 			{" "}
@@ -26,7 +26,7 @@ function App() {
 				{islogin ? (
 					<>
 						{/* <Header />*/}
-						{/* <TableTest /> */}
+						{/* <Dashboard /> */}
 						{/* <Table />  */}
 						{/* <Formone />  */}
 						<Formtwo />
@@ -44,32 +44,5 @@ function App() {
 			</BrowserRouter>
 		</>
 	);
-=======
-  return (
-    <>
-      {" "}
-      <BrowserRouter>
-        {islogin ? (
-          <>
-            {/* <Dashboard /> */}
-            {/* <Formone />  */}
-            {/* <Formtwo />   */}
-            {/* <Formthree />  */}
-            <Switch>
-              <Route exact path="/" component={Dashboard} />
-              <Route path="/Receptionist" component={Formone} />
-              <Route path="/Nurse" component={Formtwo} />
-              <Route path="/Doctor" component={Formthree} />
-              {/* <Route  exact path='/Medical' component={}/> */}
-            </Switch>
-          </>
-        ) : (
-          <Login />
-        )}
-      </BrowserRouter>
-    </>
-  );
->>>>>>> 6c515854bf9a69c915e4e825087abbbdd178d47d
 }
-
 export default App;
