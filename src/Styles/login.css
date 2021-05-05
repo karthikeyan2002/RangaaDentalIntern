@@ -15,10 +15,9 @@
 }
 
 .login-container {
-  width: 35%;
+  width: 30%;
   background: rgb(237,255,236);
   background: linear-gradient(90deg, rgba(237,255,236,1) 45%, rgba(202,247,227,1) 83%);
-  padding: 5% 2% 8%;
   box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius:4%;
 }
