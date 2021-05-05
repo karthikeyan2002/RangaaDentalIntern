@@ -8,7 +8,7 @@ import Dashboard from "./Dashboard.js";
 import Formone from "./Formone.js";
 import Formtwo from "./Formtwo.js";
 import Formthree from "./Formthree.js";
-import { getPatients } from "./utils/index.ts";
+import { getPatients, sendMail } from "./utils/index.ts";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 export let islogin = false;
@@ -16,9 +16,7 @@ console.log(islogin);
 getPatients()
 	.then((res) => console.log(res))
 	.catch((err) => console.log(err));
-// sendMail("Seafarers_19IT112_55_120", "D:\\Downloads\\Seafarers_19IT112_55_120");
 function App() {
-
 	return (
 		<>
 			{" "}
