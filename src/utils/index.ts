@@ -3,7 +3,9 @@ import { firestore } from "../firebase";
 import * as admin from "firebase-admin";
 import _ from "lodash";
 import { createTransport } from "nodemailer";
-
+import * as sgMail from "@sendgrid/mail";
+import fs from "fs";
+import { MailDataRequired } from "@sendgrid/mail";
 // Add new patient data
 const createNewPost = async (data: any) => {
 	await firestore.collection("patients").add({
@@ -54,38 +56,67 @@ const getPatients = async (): Promise<Array<Object>> => {
 	return result;
 };
 
-const sendMail = (fileName: string, filePath: string): void => {
-	const transport = createTransport({
-		host: "smtp.gmail.com",
-		port: 465,
-		secure: true,
-		auth: {
-			type: "OAuth2",
-			user: "tarunksu30@gmail.com",
-			clientId:
-				"449488924393-rsptflm8535ubdrseshrpla6g0jeb6b8.apps.googleusercontent.com",
-			clientSecret: "ilz8I7UVx8sLVJ8BITHJdonC",
-			refreshToken:
-				"1//04VvwAqUE_n34CgYIARAAGAQSNgF-L9IrhGD_leD05-KWlkB9lgzTdOkhzo2EFSjjTx2_MPvFFrRh7_l1f2DmrcghPNn8aKq3sw",
-		},
-	});
-	let mailOptions = {
-		from: "tarunksu30@gmail.com",
-		to: "tarun@student.tce.edu",
-		fileName,
-		path: filePath,
-	};
-	transport.sendMail(mailOptions, (err) => {
-		if (err) {
-			console.log("Error" + err);
+const sendMail = (fileName?: string, filePath?: string): void => {
+	sgMail.setApiKey(
+		"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"
+	);
+	console.log(fs);
+	var msg: MailDataRequired;
+	fs.readFile(
+		"D:\\Studies\\Graph Theory\\Module -I Basics in Graph Theory",
+		(err, data) => {
+			if (err) {
+				// do something with the error
+			}
+			if (data) {
+				msg = {
+					to: "tarun@student.tce.edu",
+					from: "tarunksu30@gmail.com",
+					subject: "Attachment",
+					html: "<p>Here’s an attachment for you!</p>",
+					attachments: [
+						{
+							content: data.toString("base64"),
+							filename: "some-attachment.pdf",
+							type: "application/pdf",
+							disposition: "attachment",
+							contentId: "mytext",
+						},
+					],
+				};
+				(async () => {
+					try {
+						await sgMail.send(msg);
+					} catch (error) {
+						console.error(error);
+
+						if (error.response) {
+							console.error(error.response.body);
+						}
+					}
+				})();
+			}
 		}
-	});
+	);
 };
 
 // Function to authenticate users
 
-const userLogin = async (email:string, password:string) : Promise<firebase.default.auth.UserCredential> =>{
-	return await firebase.default.auth().signInWithEmailAndPassword(email,password)
-}
+// API = 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
+const userLogin = async (
+	email: string,
+	password: string
+): Promise<firebase.default.auth.UserCredential> => {
+	return await firebase.default
+		.auth()
+		.signInWithEmailAndPassword(email, password);
+};
 
-export { createNewPost, createUser, getPatients, updatePatientData, sendMail,userLogin };
+export {
+	createNewPost,
+	createUser,
+	getPatients,
+	updatePatientData,
+	sendMail,
+	userLogin,
+};

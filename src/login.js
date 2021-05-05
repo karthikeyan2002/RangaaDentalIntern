@@ -35,7 +35,11 @@ function Login() {
 					<button
 						type='submit'
 						className='btn'
-						onClick={() => userLogin(email, password)}
+						onClick={() =>
+							userLogin(email, password)
+								.then((res) => console.log(res))
+								.catch((err) => console.log(err))
+						}
 					>
 						LOGIN
 					</button>
