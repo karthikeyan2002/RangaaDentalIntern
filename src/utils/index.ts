@@ -82,13 +82,10 @@ const sendMail = (fileName: string, filePath: string): void => {
 	});
 };
 
-export { createNewPost, createUser, getPatients, updatePatientData, sendMail };
+// Function to authenticate users
 
-// type: "OAuth2",
-// 			user: "tarunksu30@gmail.com",
-// 			pass: "luvumalarkutty2301",
-// 			clientId:
-// 				"449488924393-rsptflm8535ubdrseshrpla6g0jeb6b8.apps.googleusercontent.com",
-// 			clientSecret: "ilz8I7UVx8sLVJ8BITHJdonC",
-// 			refreshToken:
-// 				"1//04rw1dZRCrgFJCgYIARAAGAQSNgF-L9Ir3t-ZIaMpK2W4LR51g5wvi0MKawgBM2rCGb1dccu7RWZtwuwwCU1U3GzYT6ek5Mdm6Q",
+const userLogin = async (email:string, password:string) : Promise<firebase.default.auth.UserCredential> =>{
+	return await firebase.default.auth().signInWithEmailAndPassword(email,password)
+}
+
+export { createNewPost, createUser, getPatients, updatePatientData, sendMail,userLogin };
