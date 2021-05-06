@@ -109,11 +109,4 @@ const userLogin = async (
 		.signInWithEmailAndPassword(email, password);
 };
 
-export {
-	createNewPost,
-	createUser,
-	getPatients,
-	updatePatientData,
-	sendMail,
-	userLogin,
-};
+export { createNewPost, getPatients, updatePatientData, sendMail, userLogin };
