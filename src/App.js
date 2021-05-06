@@ -4,8 +4,10 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Formtwo from "./Formtwo.js";
 import { getPatients } from "./utils/index.ts";
 import { BrowserRouter } from "react-router-dom";
+import Dashboard from "./Dashboard";
 
-export let islogin = false;
+export let islogin = true;
+
 console.log(islogin);
 getPatients()
 	.then((res) => console.log(res))
@@ -18,10 +20,10 @@ function App() {
 				{islogin ? (
 					<>
 						{/* <Header />*/}
-						{/* <Dashboard /> */}
+						<Dashboard />
 						{/* <Table />  */}
 						{/* <Formone />  */}
-						<Formtwo />
+						{/* <Formtwo /> */}
 						{/* <Formthree /> */}
 						{/* <Switch>
 							<Route exact path='/' component={TableTest} />
