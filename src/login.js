@@ -9,40 +9,50 @@ function Login() {
 	return (
 		<div>
 			<div className='login'>
-				<div className='login-container'>
-					<img src={logo} alt='logo'></img>
-					<p>Admin Login</p>
+			
+			<div className='login-container'>
+					
+			<p style={{textAlign:'center'}}>Login Page</p>
+			<hr />
+
+				<div className="input-container">
 					<label>
+						<p>USER NAME</p>
 						<input
 							type='text'
 							name='username'
-							placeholder='Enter User Name'
+							placeholder='username@example.com'
 							onChange={(e) => setEmail(e.target.value)}
 						/>
 					</label>
 					<br />
 
 					<label>
+						<p>PASSWORD</p>
 						<input
 							type='password'
 							name='password'
-							placeholder='Enter Password'
+							placeholder='Password'
 							onChange={(e) => setPassword(e.target.value)}
 						/>
 					</label>
 					<br />
 
-					<button
-						type='submit'
-						className='btn'
-						onClick={() =>
-							userLogin(email, password)
-								.then((res) => console.log(res))
-								.catch((err) => console.log(err))
-						}
-					>
-						LOGIN
-					</button>
+				</div>
+			
+				<div className="btn-container">
+				<button
+					type='submit'
+					className='btn'
+					onClick={() =>
+						userLogin(email, password)
+							.then((res) => console.log(res))
+							.catch((err) => console.log(err))
+					}
+				>
+					LOGIN
+				</button>
+				</div>
 				</div>
 			</div>
 		</div>
@@ -50,3 +60,6 @@ function Login() {
 }
 
 export default Login;
+
+{/* <img src={logo}></img>
+					<p>Admin Login</p> */}
