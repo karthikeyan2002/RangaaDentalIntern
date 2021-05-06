@@ -1,6 +1,5 @@
 import React from "react";
 import "./Styles/login.css";
-import logo from "./img/logo.png";
 import { userLogin } from "./utils/index";
 
 function Login() {
@@ -22,6 +21,7 @@ function Login() {
 							type='text'
 							name='username'
 							placeholder='username@example.com'
+							className="typing-demo"
 							onChange={(e) => setEmail(e.target.value)}
 						/>
 					</label>
@@ -33,6 +33,7 @@ function Login() {
 							type='password'
 							name='password'
 							placeholder='Password'
+							className="typing-demo"
 							onChange={(e) => setPassword(e.target.value)}
 						/>
 					</label>
@@ -60,6 +61,3 @@ function Login() {
 }
 
 export default Login;
-
-{/* <img src={logo}></img>
-					<p>Admin Login</p> */}

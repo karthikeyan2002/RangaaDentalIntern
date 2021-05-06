@@ -104,17 +104,18 @@ input:-webkit-autofill:active {
   transition-delay: 9999s;
 }
 
-/* background: url(../img/bg-1.jpg) center;
-  background-size: cover; */
+/* Typewritting Effect */
+.typing-demo {
+  width: 22ch;
+  animation: typing 2.5s steps(20);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+}
 
-/* background: rgb(237,255,236);
-  background: linear-gradient(90deg, rgba(237,255,236,1) 45%, rgba(202,247,227,1) 83%); */
-
-  /* .login img{
-    border-radius: 50%;
-    margin-bottom: 10%;
-    height: 125px;
-    width: 125px;
-    border: 1px solid #f6dfeb;
-    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  } */
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
