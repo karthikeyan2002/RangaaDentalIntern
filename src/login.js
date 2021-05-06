@@ -10,7 +10,7 @@ function Login() {
 		<div>
 			<div className='login'>
 				<div className='login-container'>
-					<img src={logo}></img>
+					<img src={logo} alt='logo'></img>
 					<p>Admin Login</p>
 					<label>
 						<input

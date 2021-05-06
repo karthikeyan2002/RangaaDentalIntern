@@ -8,7 +8,6 @@ import { updatePatientData } from "./utils";
 const validate = (values) => {};
 
 const Formtwo = () => {
-	const dispatch = useDispatch();
 	const formik = useFormik({
 		initialValues: {
 			pid: "",

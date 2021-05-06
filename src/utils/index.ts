@@ -1,11 +1,9 @@
-import * as firebase from "firebase";
-import { firestore } from "../firebase";
-import * as admin from "firebase-admin";
-import _ from "lodash";
-import { createTransport } from "nodemailer";
 import * as sgMail from "@sendgrid/mail";
-import fs from "fs";
 import { MailDataRequired } from "@sendgrid/mail";
+import * as firebase from "firebase";
+import * as admin from "firebase-admin";
+import fs from "fs";
+import { firestore } from "../firebase";
 // Add new patient data
 const createNewPost = async (data: any) => {
 	await firestore.collection("patients").add({
