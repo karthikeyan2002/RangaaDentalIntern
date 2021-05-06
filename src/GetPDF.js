@@ -1,13 +1,5 @@
+import { Document, Page, Text, View } from "@react-pdf/renderer";
 import React from "react";
-import { PdfDocument } from "./PdfGenrator";
-import {
-	Page,
-	Text,
-	View,
-	Document,
-	StyleSheet,
-	Image,
-} from "@react-pdf/renderer";
 
 const GetPDF = ({ data, styles }) => (
 	<Document>
@@ -16,7 +8,7 @@ const GetPDF = ({ data, styles }) => (
 				<view style={styles.header}>
 					<Text>Rangaa Dental</Text>
 				</view>
-			{/* Basic Details */}
+				{/* Basic Details */}
 				<view style={styles.subheading}>
 					<Text>Patient Details</Text>
 				</view>
@@ -39,7 +31,7 @@ const GetPDF = ({ data, styles }) => (
 						<Text> City : {data.city} </Text>
 					</view>
 				</view>
-			{/* Habits */}
+				{/* Habits */}
 				<view style={styles.subheading}>
 					<Text>Habits</Text>
 				</view>
@@ -51,16 +43,15 @@ const GetPDF = ({ data, styles }) => (
 					</view>
 
 					<view style={styles.box2}>
-						<Text> Thumb sucking  : </Text>
+						<Text> Thumb sucking : </Text>
 						<Text> Moth Breathing :</Text>
-						
 					</view>
 
 					<view style={styles.box3}>
 						<Text> Tounge Thrusting : </Text>
 					</view>
 				</view>
-			{/* Medical History */}
+				{/* Medical History */}
 				<view style={styles.subheading}>
 					<Text>Medical History</Text>
 				</view>
@@ -75,17 +66,21 @@ const GetPDF = ({ data, styles }) => (
 					<view style={styles.box2}>
 						<Text> Hypertension : UM</Text>
 						<Text> Bleeding Disorder : NM</Text>
-						<Text style={{fontSize:'8px',color: 'green'}}>UM - Under Medication</Text>
+						<Text style={{ fontSize: "8px", color: "green" }}>
+							UM - Under Medication
+						</Text>
 					</view>
-					
+
 					<view style={styles.box3}>
 						<Text> Ischemic cardiac diseases : NM </Text>
 						<Text> Anticoagulant therapy : NM </Text>
-						<Text style={{fontSize:'8px',color: 'green'}}>NM - Not Under Medication</Text>
+						<Text style={{ fontSize: "8px", color: "green" }}>
+							NM - Not Under Medication
+						</Text>
 					</view>
 				</view>
 
-			{/* Diagnosis */}
+				{/* Diagnosis */}
 				<view style={styles.subheading}>
 					<Text>Diagnosis</Text>
 				</view>
@@ -93,7 +88,7 @@ const GetPDF = ({ data, styles }) => (
 				<view style={styles.BasicDetails}>
 					<view style={styles.box1}>
 						<Text> Decayed : </Text>
-						<Text> Filled  : </Text>
+						<Text> Filled : </Text>
 						<Text> Missing : </Text>
 						<Text> Fractured : </Text>
 					</view>
@@ -104,15 +99,15 @@ const GetPDF = ({ data, styles }) => (
 						<Text> Periapical abscess : </Text>
 						<Text> Caries with apical periondontities : </Text>
 					</view>
-					
+
 					<view style={styles.box3}>
 						<Text> Mobile :</Text>
-						<Text> Infected root stumps :  </Text>
+						<Text> Infected root stumps : </Text>
 						<Text> Abrasion / abfraction : </Text>
 						<Text> Retained deciduous teeth : </Text>
 					</view>
 				</view>
-			{/* Tooth Problems */}
+				{/* Tooth Problems */}
 				<view style={styles.subheading}>
 					<Text>Tooth Problem</Text>
 				</view>
@@ -120,7 +115,7 @@ const GetPDF = ({ data, styles }) => (
 				<view style={styles.BasicDetails}>
 					<view style={styles.box1}>
 						<Text> Calcus : </Text>
-						<Text> Mouth Ulcer  : </Text>
+						<Text> Mouth Ulcer : </Text>
 						<Text> Bad Breath : </Text>
 						<Text> U/L edentulous: </Text>
 					</view>
@@ -131,11 +126,11 @@ const GetPDF = ({ data, styles }) => (
 						<Text> Periondontitis : </Text>
 						<Text> Gingivitis : </Text>
 					</view>
-					
+
 					<view style={styles.box3}>
 						<Text> Orofacial pain :</Text>
 						<Text> MUCOSAL LESIONS : </Text>
-						<Text> Lichen Planes :  </Text>
+						<Text> Lichen Planes : </Text>
 						<Text> Leukoplakiat : </Text>
 					</view>
 				</view>
@@ -147,14 +142,11 @@ const GetPDF = ({ data, styles }) => (
 				<view style={styles.BasicDetails}>
 					<view style={styles.box1}>
 						<Text> Lichen Planes : </Text>
-						
 					</view>
 
 					<view style={styles.box2}>
 						<Text> Leukoplakiat : </Text>
-					
 					</view>
-					
 				</view>
 
 				<view style={styles.subheading}>
@@ -171,9 +163,7 @@ const GetPDF = ({ data, styles }) => (
 					<view style={styles.box2}>
 						<Text> Rooot canal Treatment : </Text>
 						<Text> Bleaching :</Text>
-					
 					</view>
-					
 				</view>
 			</View>
 		</Page>

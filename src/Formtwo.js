@@ -1,9 +1,8 @@
-import React from "react";
-import { Formik, Form, Field, ErrorMessage, useFormik } from "formik";
+import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPowerOff, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { useFormik } from "formik";
+import React from "react";
 import { useDispatch } from "react-redux";
-import { updateAllDetails } from "./redux/actions";
 import { updatePatientData } from "./utils";
 
 const validate = (values) => {};

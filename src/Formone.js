@@ -1,22 +1,11 @@
-import React from "react";
-import { Formik, Form, Field, ErrorMessage, useFormik } from "formik";
-import "./Styles/form.css";
+import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPowerOff, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFDownloadLink, StyleSheet } from "@react-pdf/renderer";
+import { useFormik } from "formik";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { PdfDocument } from "./PdfGenrator";
-import {
-	Page,
-	Text,
-	View,
-	Document,
-	StyleSheet,
-	Image,
-} from "@react-pdf/renderer";
 import GetPDF from "./GetPDF";
-import { values } from "lodash";
-import { updateAllDetails } from "./redux/actions";
+import "./Styles/form.css";
 import { createNewPost } from "./utils";
 const styles = StyleSheet.create({
 	page: {
