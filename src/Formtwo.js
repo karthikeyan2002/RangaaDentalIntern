@@ -2,7 +2,6 @@ import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFormik } from "formik";
 import React from "react";
-import { useDispatch } from "react-redux";
 import { updatePatientData } from "./utils";
 
 const validate = (values) => {};
