@@ -6,7 +6,7 @@ import { getPatients } from "./utils/index.ts";
 import { BrowserRouter } from "react-router-dom";
 import Dashboard from "./Dashboard";
 
-export let islogin = true;
+export let islogin = false;
 
 console.log(islogin);
 getPatients()
