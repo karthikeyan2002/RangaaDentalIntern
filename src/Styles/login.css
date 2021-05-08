@@ -112,7 +112,7 @@ input:-webkit-autofill:active {
 }
 
 /* Typewritting Effect */
-.typing-demo {
+/* .typing-demo {
   width: 22ch;
   animation: typing 1s steps(20);
   white-space: nowrap;
@@ -125,4 +125,4 @@ input:-webkit-autofill:active {
   from {
     width: 0
   }
-}
+} */
