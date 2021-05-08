@@ -107,7 +107,7 @@ input:-webkit-autofill:active {
 /* Typewritting Effect */
 .typing-demo {
   width: 22ch;
-  animation: typing 2.5s steps(20);
+  animation: typing 1.5s steps(20);
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;

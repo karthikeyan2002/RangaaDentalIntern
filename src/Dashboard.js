@@ -9,7 +9,7 @@ import {
 	faChevronLeft,
 	faChevronRight,
 	faUserPlus,
-	faChevronCircleUp,
+	faPencilAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Styles/Dashboard.css";
 
@@ -22,41 +22,31 @@ function Dashboard() {
 	}, []);
 	return (
 		<>
-			<div className='TableTest'>
-				<div className='heading'>
+			<div className='navbar'>
 					<FontAwesomeIcon
 						icon={faBars}
-						className='float-left text-white'
-						size='lg'
+						className='float-left mb-2'
 					></FontAwesomeIcon>
-
-					<FontAwesomeIcon
-						icon={faPowerOff}
-						className='float-right text-white'
-						size='lg'
-					></FontAwesomeIcon>
-
-					<div className='text'>
-						<h1>RANGAA DENTAL</h1>
-						<h2> PATIENT DETAILS </h2>
-					</div>
-
-					<p className='date'>{new Date().toLocaleString() + ""}</p>
-
-					<p className='patient'> Number of patients visited : 200 </p>
-
-					<a href='#section2'>
+					<h2 className="text-center">PATIENT DETAILS</h2>
+					<div class="dropdown">
+						<a>
 						<FontAwesomeIcon
-							icon={faChevronCircleUp}
-							className='text-white absolute -bottom-3 right-4'
-							size='2x'
+							icon={faPowerOff}
+							className='float-right mb-2'
 						></FontAwesomeIcon>
-					</a>
-				</div>
-				{/* <NavigationBar />		 */}
-				<div className='section2' id='section2'>
+						</a>
+						<div class="dropdown-content">
+							<a href="#">Log out</a>
+						</div>
+					</div>
+			</div>
+
+			<div className='Dashboard'>
+				
+
+{/* 				
 					<div className='w-1/6 float-right search-icon'>
-						<div class='p-8'>
+						<div class='p-4'>
 							<div class='bg-white flex items-center rounded-full shadow-xl w-full h-12'>
 								<input
 									class='rounded-l-full w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none border-none'
@@ -74,7 +64,7 @@ function Dashboard() {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> */}
 
 					<div className='-my-2 py-2 overflow-x-hidden sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both'>
 						<div className='align-middle inline-block min-w-full shadow overflow-hidden shadow-dashboard rounded-bl-lg rounded-br-lg'>
@@ -105,6 +95,9 @@ function Dashboard() {
 										</th>
 										<th className='py-4 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase'>
 											PDF
+										</th>
+										<th className='py-4 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase'>
+											Edit
 										</th>
 									</tr>
 								</thead>
@@ -160,6 +153,11 @@ function Dashboard() {
 														Download
 													</button>
 												</td>
+												<td className='whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center'>
+												<FontAwesomeIcon
+													icon={faPencilAlt}
+												></FontAwesomeIcon>
+												</td>
 											</tr>
 										))
 									) : (
@@ -193,8 +191,7 @@ function Dashboard() {
 							</button>
 						</div>
 					</div>
-				</div>
-
+				
 				<FontAwesomeIcon
 					icon={faUserPlus}
 					className='text-blue-700 userplus'
