@@ -1,7 +1,9 @@
 import { combineReducers } from "redux";
 import * as types from "../types";
 
-const intialState = {};
+const intialState = {
+	login: false,
+};
 
 const state = (state = intialState, action) => {
 	if (action.type === undefined) {
@@ -12,6 +14,11 @@ const state = (state = intialState, action) => {
 			return {
 				...state,
 				details: action.payload,
+			};
+		case types.LOGIN:
+			return {
+				...state,
+				login: true,
 			};
 		default:
 			return state;

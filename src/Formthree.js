@@ -2,18 +2,16 @@ import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFormik } from "formik";
 import React from "react";
-import { useDispatch } from "react-redux";
-import { updateAllDetails } from "./redux/actions";
+import { updatePatientData } from "./utils";
 
 const validate = (values) => {};
 
-const Formthree = () => {
-	const dispatch = useDispatch();
+const Formthree = ({ pid }) => {
 	const formik = useFormik({
 		initialValues: {},
 		validate,
 		onSubmit: (values) => {
-			dispatch(updateAllDetails(values));
+			updatePatientData(values, pid);
 		},
 	});
 	return (
@@ -1153,4 +1151,4 @@ const Formthree = () => {
 	);
 };
 
-export default Formthree;
+export default React.memo(Formthree);

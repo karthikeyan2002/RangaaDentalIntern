@@ -4,15 +4,15 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 // import Formtwo from "./Formtwo.js";
 import { getPatients } from "./utils/index.ts";
 import { BrowserRouter } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Dashboard from "./Dashboard";
 
-export let islogin = true;
-
-console.log(islogin);
 getPatients()
 	.then((res) => console.log(res))
 	.catch((err) => console.log(err));
 function App() {
+	const islogin = useSelector((state) => state.state.login);
+	console.log(islogin);
 	return (
 		<>
 			{" "}
