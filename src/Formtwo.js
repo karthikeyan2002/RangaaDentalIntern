@@ -6,7 +6,7 @@ import { updatePatientData } from "./utils";
 
 const validate = (values) => {};
 
-const Formtwo = () => {
+const Formtwo = ({ pid }) => {
 	const formik = useFormik({
 		initialValues: {
 			pid: "",
@@ -24,7 +24,7 @@ const Formtwo = () => {
 		},
 		validate,
 		onSubmit: (values) => {
-			updatePatientData(values, "QB7YYpwpNECJOGAxXZ1C");
+			updatePatientData(values, pid);
 		},
 	});
 	return (
@@ -469,4 +469,4 @@ const Formtwo = () => {
 	);
 };
 
-export default Formtwo;
+export default React.memo(Formtwo);

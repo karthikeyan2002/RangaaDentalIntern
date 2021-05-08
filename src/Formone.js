@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PDFDownloadLink, StyleSheet } from "@react-pdf/renderer";
 import { useFormik } from "formik";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import GetPDF from "./GetPDF";
 import "./Styles/form.css";
 import { createNewPost } from "./utils";
@@ -97,7 +97,6 @@ const validate = (values) => {
 };
 
 const Formone = () => {
-	const dispatch = useDispatch();
 	const state = useSelector((state) => state.state);
 	console.log(state);
 	const formik = useFormik({
@@ -114,7 +113,6 @@ const Formone = () => {
 		},
 		validate,
 		onSubmit: (values) => {
-			console.log(values);
 			createNewPost(values);
 		},
 	});

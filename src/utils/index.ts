@@ -11,24 +11,6 @@ const createNewPost = async (data: any) => {
 	});
 };
 
-// Creates new user ( This is valid only for admin )
-// const createUser = async (email: string, password: string, role: object) => {
-// 	await firebase.default
-// 		.auth()
-// 		.createUserWithEmailAndPassword(email, password)
-// 		.then((uid) => {
-// 			if (uid.user != null) {
-// 				return admin
-// 					.auth()
-// 					.setCustomUserClaims(uid.user.uid, role)
-// 					.then((res) => console.log(res))
-// 					.catch((err) => console.log(err));
-// 			} else {
-// 				console.error("User cannot be null");
-// 			}
-// 		});
-// };
-
 // Update patient data
 
 const updatePatientData = async (
