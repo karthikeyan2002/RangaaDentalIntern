@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faPowerOff,
 	faBars,
-	faSearch,
+	// faSearch,
 	faChevronLeft,
 	faChevronRight,
 	faUserPlus,
