@@ -29,6 +29,13 @@ hr{
   height: 1px;
   background: blue;
   width: 45%;
+  animation: hr;
+  animation-duration: 2s;
+}
+
+@keyframes hr {
+  0%{width: 2%;}
+  100%{width: 45%;}
 }
 
 .input-container{
@@ -107,7 +114,7 @@ input:-webkit-autofill:active {
 /* Typewritting Effect */
 .typing-demo {
   width: 22ch;
-  animation: typing 1.5s steps(20);
+  animation: typing 1s steps(20);
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
