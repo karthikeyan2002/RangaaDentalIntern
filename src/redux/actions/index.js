@@ -3,6 +3,7 @@ import {
 	EPILSEPSY,
 	GENDER,
 	HYPERTENSION,
+	LOGIN,
 	PATIENT_AGE,
 	PATIENT_DETAILS,
 	PATIENT_NAME,
@@ -62,5 +63,11 @@ export const updateAllDetails = (details) => {
 	return {
 		type: PATIENT_DETAILS,
 		payload: details,
+	};
+};
+
+export const login = () => {
+	return {
+		type: LOGIN,
 	};
 };
