@@ -134,7 +134,7 @@ function Dashboard() {
         <div className="-my-2 py-2 overflow-x-hidden sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both">
           <div className="align-middle inline-block min-w-full shadow overflow-hidden shadow-dashboard rounded-bl-lg rounded-br-lg">
             <table className="min-w-full">
-              <thead className="text-white">
+              <thead className="text-black">
                 <tr>
                   <th className="pl-4 py-4 border-b-2 border-gray-300 text-left leading-4  tracking-wider uppercase">
                     Full Name
