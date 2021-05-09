@@ -255,7 +255,31 @@ function Dashboard() {
 							</button>
 						</div>
           </div>
-        </div>
+
+            </div>
+            <div className='p-10 text-center'>
+							<button className='bg-blue-500 border-none p-2 mx-3 rounded-lg'>
+								<FontAwesomeIcon
+									icon={faChevronLeft}
+									className='text-white'
+									size='lg'
+								></FontAwesomeIcon>
+							</button>
+
+							<input
+								type='date'
+								name='date'
+								className='border-none p-2 rounded-lg bg-blue-500 text-white'
+							></input>
+
+							<button className='border-none bg-blue-500 p-2 mx-3 rounded-lg'>
+								<FontAwesomeIcon
+									icon={faChevronRight}
+									className='text-white'
+									size='lg'
+								></FontAwesomeIcon>
+							</button>
+						</div>
 
         <FontAwesomeIcon
           icon={faUserPlus}
