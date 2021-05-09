@@ -7,6 +7,7 @@ import {
 	PATIENT_AGE,
 	PATIENT_DETAILS,
 	PATIENT_NAME,
+	LOGOUT,
 	PHONE_NUMBER,
 } from "../types";
 
@@ -63,6 +64,12 @@ export const updateAllDetails = (details) => {
 	return {
 		type: PATIENT_DETAILS,
 		payload: details,
+	};
+};
+
+export const logout = () => {
+	return {
+		type: LOGOUT,
 	};
 };
 

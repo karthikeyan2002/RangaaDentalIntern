@@ -82,14 +82,26 @@ const sendMail = (fileName?: string, filePath?: string): void => {
 // Function to authenticate users
 
 // API = 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
-const userLogin = async (
-	email: string,
-	password: string
-): Promise<firebase.default.auth.UserCredential> => {
+const userLogin = async (email: string, password: string): Promise<void> => {
 	return await firebase.default
 		.auth()
-		.signInWithEmailAndPassword(email, password);
+		.setPersistence(firebase.default.auth.Auth.Persistence.SESSION)
+		.then(() => {
+			firebase.default.auth().signInWithEmailAndPassword(email, password);
+		})
+		.catch((err) => console.log(err));
+};
+
+const userLogout = async (): Promise<void> => {
+	return await firebase.default.auth().signOut();
 };
 
 // 1//0g1slxpjR79hVCgYIARAAGBASNgF-L9Ir8ERV5PSHYf1JMLgaMpwv08eHYXU393LjK6P_xFqUp0QNBUzempnbz2zfnEHCoWuoEA
-export { createNewPost, getPatients, updatePatientData, sendMail, userLogin };
+export {
+	createNewPost,
+	getPatients,
+	updatePatientData,
+	sendMail,
+	userLogin,
+	userLogout,
+};

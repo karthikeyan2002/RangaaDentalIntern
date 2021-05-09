@@ -6,4 +6,5 @@ export const DIABETES = "DIABETES";
 export const HYPERTENSION = "HYPERTENSION";
 export const EPILSEPSY = "EPILEPSY";
 export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
 export const PATIENT_DETAILS = "PATIENT_DETAILS";

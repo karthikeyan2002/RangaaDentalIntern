@@ -20,6 +20,11 @@ const state = (state = intialState, action) => {
 				...state,
 				login: true,
 			};
+		case types.LOGOUT:
+			return {
+				...state,
+				login: false,
+			};
 		default:
 			return state;
 	}
