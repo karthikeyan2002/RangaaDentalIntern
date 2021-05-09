@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFormik } from "formik";
 import React from "react";
 import { updatePatientData } from "./utils";
+import "./Styles/form.css";
 
 const validate = (values) => {};
 
