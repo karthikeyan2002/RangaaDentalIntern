@@ -85,7 +85,7 @@ const sendMail = (fileName?: string, filePath?: string): void => {
 const userLogin = async (email: string, password: string): Promise<void> => {
 	return await firebase.default
 		.auth()
-		.setPersistence(firebase.default.auth.Auth.Persistence.SESSION)
+		.setPersistence(firebase.default.auth.Auth.Persistence.LOCAL)
 		.then(() => {
 			firebase.default.auth().signInWithEmailAndPassword(email, password);
 		})
