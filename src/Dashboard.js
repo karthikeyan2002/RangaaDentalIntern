@@ -48,13 +48,13 @@ function Dashboard() {
         <div className="flex-1 flex justify-between sm:hidden">
           <a
             href="#"
-            className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-500"
+            className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-500"
           >
             Previous
           </a>
           <a
             href="#"
-            className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-500"
+            className="ml-3 inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-500"
           >
             Next
           </a>
@@ -231,30 +231,7 @@ function Dashboard() {
                 )}
               </tbody>
             </table>
-			<div className='p-10 text-center'>
-							<button className='bg-blue-500 border-none p-2 mx-3 rounded-lg'>
-								<FontAwesomeIcon
-									icon={faChevronLeft}
-									className='text-white'
-									size='lg'
-								></FontAwesomeIcon>
-							</button>
-
-							<input
-								type='date'
-								name='date'
-								className='border-none p-2 rounded-lg bg-blue-500 text-white'
-							></input>
-
-							<button className='border-none bg-blue-500 p-2 mx-3 rounded-lg'>
-								<FontAwesomeIcon
-									icon={faChevronRight}
-									className='text-white'
-									size='lg'
-								></FontAwesomeIcon>
-							</button>
-						</div>
-          </div>
+         </div>
 
             </div>
             <div className='p-10 text-center'>
