@@ -76,7 +76,7 @@ function Dashboard() {
 						</div>
         </div>
 
-        <div className="-my-2 py-4 overflow-x-hidden sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both mt-12">
+        <div className="-my-6 py-4 overflow-x-hidden sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both mt-12">
           <div className="align-middle inline-block min-w-full shadow overflow-hidden shadow-dashboard rounded-bl-lg rounded-br-lg">
             <table className="min-w-full">
               <thead className="text-gray-700">

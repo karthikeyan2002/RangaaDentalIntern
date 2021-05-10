@@ -14,6 +14,8 @@ html {
 .Dashboard {
 	background-color: #edffec;
 	padding: 0% 4%;
+	height: 93vh;
+	
 }
 /* Dropdown Styles */
 .dropdown-content {
