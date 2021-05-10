@@ -7,11 +7,25 @@ import { userLogin } from "./utils/index";
 function Login() {
 	const [email, setEmail] = React.useState("");
 	const [password, setPassword] = React.useState("");
+	const [error, setError] = React.useState(false);
 	const dispatch = useDispatch();
 	return (
 		<div>
 			<div className='login'>
 				<div className='login-container'>
+					{error ? (
+						<div
+							class='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative'
+							role='alert'
+						>
+							<strong class='font-bold'>Incorrect email/password </strong>
+							<span class='block sm:inline font-light'>
+								Please check your credentials
+							</span>
+						</div>
+					) : (
+						<></>
+					)}
 					<p style={{ textAlign: "center" }}>Login Page</p>
 					<hr />
 
@@ -48,7 +62,7 @@ function Login() {
 							onClick={() =>
 								userLogin(email, password)
 									.then((res) => dispatch(login()))
-									.catch((err) => console.log(err))
+									.catch((err) => setError(true))
 							}
 						>
 							LOGIN

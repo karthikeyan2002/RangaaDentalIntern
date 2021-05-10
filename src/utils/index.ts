@@ -84,14 +84,13 @@ const sendMail = (fileName?: string, filePath?: string): void => {
 // Function to authenticate users
 
 // API = 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
-const userLogin = async (email: string, password: string): Promise<void> => {
+const userLogin = async (
+	email: string,
+	password: string
+): Promise<firebase.default.auth.UserCredential> => {
 	return await firebase.default
 		.auth()
-		.setPersistence(firebase.default.auth.Auth.Persistence.SESSION)
-		.then(() => {
-			firebase.default.auth().signInWithEmailAndPassword(email, password);
-		})
-		.catch((err) => console.log(err));
+		.signInWithEmailAndPassword(email, password);
 };
 
 const userLogout = async (): Promise<void> => {
