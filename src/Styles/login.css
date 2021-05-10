@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 .login {
-  background-color: #7579e7;
+  background-color: #fcf5ee;
   width: 100%;
   height: 100vh;
   font-weight: bold;
@@ -15,7 +15,7 @@
 }
 
 .login-container {
-  background-color: #edffec;
+  background-color: #fbe8e7;
   padding: 3%;
   box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 40px;
@@ -43,7 +43,7 @@ hr{
 }
 
 .login input {
-  color: rebeccapurple;
+  color: #7579e7;
   margin: 10% 0%;
   border: none;
   background-color: inherit;
@@ -55,7 +55,7 @@ hr{
 }
 
 .login ::placeholder {
- color: blue;
+ color: #ffc4d0;
  font-family: 'Merriweather', serif;
  letter-spacing: 1px;
 }
