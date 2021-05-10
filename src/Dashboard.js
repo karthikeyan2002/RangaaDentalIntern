@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
-import { getPatients } from "./utils/index";
+import { getPatients, userLogout } from "./utils/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPowerOff,
@@ -13,9 +13,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Styles/Dashboard.css";
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
+import { logout } from "./redux/actions";
+import {useDispatch} from 'react-redux'
 
 function Dashboard() {
   const [patients, setPatients] = useState([]);
+  const dispatch = useDispatch();
   useEffect(() => {
     getPatients()
       .then((response) => setPatients(response))
@@ -37,7 +40,7 @@ function Dashboard() {
             ></FontAwesomeIcon>
           </a>
           <div class="dropdown-content">
-            <a href="#">Log out</a>
+            <a href="#" onClick={()=>userLogout().then(()=>dispatch(logout()))}>Log out</a>
           </div>
         </div>
       </div>
