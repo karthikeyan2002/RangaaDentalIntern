@@ -3,6 +3,8 @@ import { MailDataRequired } from "@sendgrid/mail";
 import * as firebase from "firebase";
 import fs from "fs";
 import { firestore } from "../firebase";
+import { login } from "../redux/actions";
+import { store } from "../redux/store";
 // Add new patient data
 const createNewPost = async (data: any) => {
 	await firestore.collection("patients").add({
@@ -85,7 +87,7 @@ const sendMail = (fileName?: string, filePath?: string): void => {
 const userLogin = async (email: string, password: string): Promise<void> => {
 	return await firebase.default
 		.auth()
-		.setPersistence(firebase.default.auth.Auth.Persistence.LOCAL)
+		.setPersistence(firebase.default.auth.Auth.Persistence.SESSION)
 		.then(() => {
 			firebase.default.auth().signInWithEmailAndPassword(email, password);
 		})
@@ -96,6 +98,26 @@ const userLogout = async (): Promise<void> => {
 	return await firebase.default.auth().signOut();
 };
 
+const monitorUser = (): void => {
+	firebase.default.auth().onAuthStateChanged((user) => {
+		if (user?.email) {
+			store.dispatch(login());
+		}
+	});
+};
+
+const userSignedIn = (): boolean => {
+	let user = firebase.default.auth().currentUser;
+	if (user != null) {
+		return true;
+	}
+	return false;
+};
+
+console.log(userSignedIn());
+
+monitorUser();
+
 // 1//0g1slxpjR79hVCgYIARAAGBASNgF-L9Ir8ERV5PSHYf1JMLgaMpwv08eHYXU393LjK6P_xFqUp0QNBUzempnbz2zfnEHCoWuoEA
 export {
 	createNewPost,
@@ -104,4 +126,5 @@ export {
 	sendMail,
 	userLogin,
 	userLogout,
+	userSignedIn,
 };
