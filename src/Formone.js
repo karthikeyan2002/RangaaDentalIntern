@@ -6,7 +6,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import GetPDF from "./GetPDF";
 import "./Styles/form.css";
-import { createNewPost } from "./utils";
+import { createNewPost, userLogout } from "./utils";
 const styles = StyleSheet.create({
 	page: {
 		padding: 20,
@@ -124,11 +124,13 @@ const Formone = () => {
 					className='text-blue-200'
 					size='lg'
 				></FontAwesomeIcon>
-				<FontAwesomeIcon
-					icon={faPowerOff}
-					className='float-right text-white'
-					size='lg'
-				></FontAwesomeIcon>
+				<span onClick={() => userLogout().then(() => dispatch(logout()))}>
+					<FontAwesomeIcon
+						icon={faPowerOff}
+						className='float-right text-white'
+						size='lg'
+					></FontAwesomeIcon>
+				</span>
 			</div>
 
 			<form

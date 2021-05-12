@@ -39,7 +39,7 @@ const getPatients = async (): Promise<Array<Object>> => {
 
 const sendMail = (fileName?: string, filePath?: string): void => {
 	sgMail.setApiKey(
-		"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"
+		"APIKEY"
 	);
 	console.log(fs);
 	var msg: MailDataRequired;
