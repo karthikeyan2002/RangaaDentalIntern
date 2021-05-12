@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 .login {
-  background-color: #faf6e9;
+  background-color: #f7aef8;
   width: 100%;
   height: 100vh;
   font-weight: bold;
@@ -17,7 +17,7 @@
 
 .login-container {
   color: #7579e7;
-  background-color: #fffdf6;
+  background-color: #fff;
   padding: 3%;
   box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 40px;
@@ -29,7 +29,7 @@
 
 hr{
   height: 1px;
-  background: blue;
+  background:#7579e7;
   width: 45%;
   animation: hr;
   animation-duration: 2s;
@@ -44,8 +44,11 @@ hr{
   margin-top: 40px;
 }
 
-.login input {
+.login p{
   color: #7579e7;
+}
+
+.login input {
   margin: 10% 0%;
   border: none;
   background-color: inherit;
@@ -57,15 +60,15 @@ hr{
 }
 
 .login ::placeholder {
- color: #ece8d9;
- font-family: 'Merriweather', serif;
- letter-spacing: 1px;
+ color: pink;
+ font-family: 'Rubik', sans-serif;
+ letter-spacing: 0.2px;
+ font-weight:600;
 }
-
 
 .login input:focus {
   outline: none;
-  color: #ece8d9;
+  color: #000;
   font-size: 1;
 }
 

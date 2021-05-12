@@ -15,13 +15,13 @@ function Login() {
 				<div className='login-container'>
 					{error ? (
 						<div
-							className='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative'
+							className='bg-red-100 border border-red-400 text-red-700 px-2 py-3 mb-4 rounded relative text-center'
 							role='alert'
 						>
-							<strong className='font-bold'>Incorrect email/password </strong>
-							<span className='block sm:inline font-light'>
-								Please check your credentials
-							</span>
+							<p><strong className='font-semibold text-red-700'>Incorrect credentials </strong></p>
+							{/* <span className='block sm:inline font-light'>
+								Please check credentials
+							</span> */}
 						</div>
 					) : (
 						<></>
@@ -35,7 +35,7 @@ function Login() {
 							<input
 								type='text'
 								name='username'
-								placeholder='username@example.com'
+								placeholder='Enter your username'
 								className='typing-demo'
 								onChange={(e) => setEmail(e.target.value)}
 							/>
@@ -47,7 +47,7 @@ function Login() {
 							<input
 								type='password'
 								name='password'
-								placeholder='Password'
+								placeholder='Enter Password here'
 								className='typing-demo'
 								onChange={(e) => setPassword(e.target.value)}
 							/>

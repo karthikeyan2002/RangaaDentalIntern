@@ -65,12 +65,14 @@ function Dashboard() {
 								placeholder='Search'
 							></input>
 						  <div class='p-4'>
-						  	<button class='bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-6 h-6 flex items-center justify-center'>
-								<FontAwesomeIcon
+						  	{/* <button class='bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-6 h-6 flex items-center justify-center'> */}
+								<a className="text-blue-900 hover:text-blue-600">
+                <FontAwesomeIcon
 										icon={faSearch}
-											className='float-right text-white'
-										></FontAwesomeIcon>
-									</button>
+											className='float-right'
+								></FontAwesomeIcon>
+                </a>
+								{/* </button> */}
 							</div>
 						</div>
 						</div>
