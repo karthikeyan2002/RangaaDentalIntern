@@ -15,11 +15,11 @@ function Login() {
 				<div className='login-container'>
 					{error ? (
 						<div
-							class='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative'
+							className='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative'
 							role='alert'
 						>
-							<strong class='font-bold'>Incorrect email/password </strong>
-							<span class='block sm:inline font-light'>
+							<strong className='font-bold'>Incorrect email/password </strong>
+							<span className='block sm:inline font-light'>
 								Please check your credentials
 							</span>
 						</div>
