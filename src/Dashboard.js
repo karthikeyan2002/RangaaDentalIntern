@@ -52,12 +52,12 @@ function Dashboard() {
                 <input
                   type='date'
                   name='date'
-                  className='border-none p-2 m-2'
+                  className='p-2 m-2 shadow-xl border-none'
                 ></input>
           </div>
           
           <div class='float-right'>
-						<div class='bg-white flex items-center rounded-full shadow-xl w-full h-12'>
+						<div class='bg-white flex items-center  border-12 shadow-xl w-full h-12'>
 							<input
 								class='rounded-l-full w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none border-none'
 								id='search'
@@ -76,7 +76,7 @@ function Dashboard() {
 						</div>
         </div>
 
-        <div className="-my-2 py-2 overflow-x-hidden sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both mt-2">
+        <div className="-my-6 py-4 overflow-x-hidden sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both mt-12">
           <div className="align-middle inline-block min-w-full shadow overflow-hidden shadow-dashboard rounded-bl-lg rounded-br-lg">
             <table className="min-w-full">
               <thead className="text-gray-700">
@@ -163,10 +163,11 @@ function Dashboard() {
                         </button>
                       </td>
                       <td className="whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center">
+                        <a href="" className="text-green-900  hover:text-cyan-600">
                         <FontAwesomeIcon
                           icon={faPencilAlt}
-                          className="hover:red-700"
                         ></FontAwesomeIcon>
+                        </a>
                       </td>
                     </tr>
                   ))
@@ -205,7 +206,7 @@ function Dashboard() {
           </div>
           <div>
             <nav
-              className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
+              className="relative z-0 inline-flex rounded-md shadow-xl -space-x-px"
               aria-label="Pagination"
             >
               <a
@@ -245,13 +246,14 @@ function Dashboard() {
         </div>
       </div>
 	  </div>
-          
 
+      <a href="" className="text-blue-700  hover:text-cyan-900">  
         <FontAwesomeIcon
           icon={faUserPlus}
-          className="text-blue-700 userplus"
-          size="2x"
+          className="userplus"
+          size="lg"
         ></FontAwesomeIcon>
+      </a>
       </div>
     </>
   );
