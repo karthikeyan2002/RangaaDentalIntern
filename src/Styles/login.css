@@ -16,8 +16,9 @@
 }
 
 .login-container {
-  color: #7579e7;
-  background-color: #edffec;
+  /* color: #7579e7; */
+  color: #000;
+  background-color: white;
   padding: 3%;
   box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 40px;
@@ -45,7 +46,7 @@ hr{
 }
 
 .login p{
-  color: #7579e7;
+  color: #000;
 }
 
 .login input {
@@ -57,6 +58,7 @@ hr{
   font-weight: bold;
   font-family: 'Rubik', sans-serif;
   letter-spacing: 1px;
+  color: #7579e7;
 }
 
 .login ::placeholder {
@@ -68,7 +70,7 @@ hr{
 
 .login input:focus {
   outline: none;
-  color: #000;
+  color: #7579e7;
   font-size: 1;
 }
 
