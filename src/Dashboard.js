@@ -47,7 +47,7 @@ function Dashboard() {
 	    <div className="Dashboard">  
     				      				
 				<div className="p-4">
-          <div className='float-left'>
+          <div className='float-left Date'>
             <label>Date : </label>
                 <input
                   type='date'
@@ -56,7 +56,7 @@ function Dashboard() {
                 ></input>
           </div>
           
-          <div class='float-right'>
+          <div class='float-right Search'>
 						<div class='bg-white flex items-center  border-12 shadow-xl w-full h-12'>
 							<input
 								class='rounded-l-full w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none border-none'
@@ -78,27 +78,27 @@ function Dashboard() {
 						</div>
         </div>
 
-        <div className="-my-6 py-4 overflow-x-hidden sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both mt-12">
+        <div className="-my-6 py-4 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both mt-12">
           <div className="align-middle inline-block min-w-full shadow overflow-hidden shadow-dashboard rounded-bl-lg rounded-br-lg">
-            <table className="min-w-full">
+            <table className="min-w-full overflow-x-auto">
               <thead className="text-gray-700">
                 <tr>
                   <th className="pl-4 py-4 border-b-2 border-gray-300   leading-4  tracking-widest uppercase">
                     Full Name
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase Age">
                     Age
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase Gender">
                     Gender
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase Phone">
                     Phone
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase Complaint">
                     Complaint
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase Status">
                     Status
                   </th>
                   <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
@@ -122,28 +122,27 @@ function Dashboard() {
                                                 <div className="text-sm leading-5 text-gray-800">{patient.Name}</div>
                                             </div>
                                         </div>
-                                    </td>  */}
+                      </td>  */}
                       <td className="pl-4 py-2.5 whitespace-no-wrap border-b border-gray-500 text-left font-semibold">
                         <div className="text-sm leading-5 font-bold">
                           {patient.Name}
                         </div>
                       </td>
-                      <td className="py-3 whitespace-no-wrap border-b border-gray-500 text-center font-semibold">
+                      <td className="py-3 whitespace-no-wrap border-b border-gray-500 text-center font-semibold Age">
                         <div className="text-sm leading-5">{patient.Age}</div>
                       </td>
-                      <td className="py-3 whitespace-no-wrap border-b border-gray-500 text-center font-semibold">
+                      <td className="py-3 whitespace-no-wrap border-b border-gray-500 text-center font-semibold Gender">
                         <div className="text-sm leading-5">
                           {patient.Gender}
                         </div>
                       </td>
-                      <td className="py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center font-semibold">
+                      <td className="py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center font-semibold Phone">
                         {patient["Phone Number"]}
                       </td>
-                      {/* <td className="py-4 pr-0 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-left font-semibold">{patient.email}</td> */}
-                      <td className="py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center font-semibold">
+                      <td className="py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center font-semibold Complaint">
                         {patient.complaints}
                       </td>
-                      <td className="py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center">
+                      <td className="py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center Status">
                         <span className="relative inline-block px-3 py-1 font-semibold leading-1 text-center">
                           <span
                             aria-hidden
@@ -154,9 +153,14 @@ function Dashboard() {
                           </span>
                         </span>
                       </td>
-                      <td className="py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center">
+                      <td className="py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center Deatils-big">
                         <button className="px-2 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">
                           View Details
+                        </button>
+                      </td>
+                      <td className="py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center Deatils-small">
+                        <button className="px-2 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">
+                          View
                         </button>
                       </td>
                       <td className="py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center">
