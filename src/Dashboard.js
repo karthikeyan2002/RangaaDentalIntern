@@ -25,12 +25,12 @@ function Dashboard() {
 
   return (
     <>
-      <div className="navbar bg-blue-700 text-white">
+      <div className="navbar text-white">
         <FontAwesomeIcon
           icon={faBars}
           className="float-left mb-2"
         ></FontAwesomeIcon>
-        <h2 className="text-center">PATIENT DETAILS</h2>
+        <h3 className="text-center">PATIENT DETAILS</h3>
         <div class="dropdown">
           <a>
             <FontAwesomeIcon
@@ -82,32 +82,32 @@ function Dashboard() {
           <div className="align-middle inline-block min-w-full shadow overflow-hidden shadow-dashboard rounded-bl-lg rounded-br-lg">
             <table className="min-w-full">
               <thead className="text-gray-700">
-                <tr className="bg-blue-700">
-                  <th className="pl-2 py-4 border-b-2 border-gray-300 text-left leading-4  tracking-wider uppercase">
+                <tr>
+                  <th className="pl-4 py-4 border-b-2 border-gray-300   leading-4  tracking-widest uppercase">
                     Full Name
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
                     Age
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
                     Gender
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
                     Phone
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
                     Complaint
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
                     Status
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
                     Details
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
                     PDF
                   </th>
-                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase">
+                  <th className="py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase">
                     Edit
                   </th>
                 </tr>

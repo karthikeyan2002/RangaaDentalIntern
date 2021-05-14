@@ -7,6 +7,8 @@ import { useSelector } from "react-redux";
 import GetPDF from "./GetPDF";
 import "./Styles/form.css";
 import { createNewPost, userLogout } from "./utils";
+
+
 const styles = StyleSheet.create({
 	page: {
 		padding: 20,

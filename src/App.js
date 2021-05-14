@@ -1,7 +1,7 @@
 import React from "react";
 import Login from "./login.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-// import Formtwo from "./Formtwo.js";
+import Formone from "./Formone.js";
 import { getPatients } from "./utils/index.ts";
 import { BrowserRouter } from "react-router-dom";
 import { useSelector } from "react-redux";
