@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PDFDownloadLink, StyleSheet } from "@react-pdf/renderer";
 import { useFormik } from "formik";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import GetPDF from "./GetPDF";
+import { logout } from "./redux/actions";
 import "./Styles/form.css";
 import { createNewPost, userLogout } from "./utils";
 const styles = StyleSheet.create({
@@ -98,6 +99,7 @@ const validate = (values) => {
 
 const Formone = () => {
 	const state = useSelector((state) => state.state);
+	const dispatch = useDispatch();
 	console.log(state);
 	const formik = useFormik({
 		initialValues: {
