@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 .login {
-  background-color: #bae8e8;
+  background-color: #caf7e3;
   width: 100%;
   height: 100vh;
   font-weight: bold;
@@ -16,8 +16,9 @@
 }
 
 .login-container {
-  color: #7579e7;
-  background-color: #e3f6f5;
+  /* color: #7579e7; */
+  color: #000;
+  background-color: white;
   padding: 3%;
   box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 40px;
@@ -29,7 +30,7 @@
 
 hr{
   height: 1px;
-  background: blue;
+  background:#7579e7;
   width: 45%;
   animation: hr;
   animation-duration: 2s;
@@ -44,8 +45,11 @@ hr{
   margin-top: 40px;
 }
 
+.login p{
+  color: #000;
+}
+
 .login input {
-  color: #7579e7;
   margin: 10% 0%;
   border: none;
   background-color: inherit;
@@ -54,18 +58,19 @@ hr{
   font-weight: bold;
   font-family: 'Rubik', sans-serif;
   letter-spacing: 1px;
+  color: #7579e7;
 }
 
 .login ::placeholder {
- color: #a58faa;
- font-family: 'Merriweather', serif;
- letter-spacing: 1px;
+ color: pink;
+ font-family: 'Rubik', sans-serif;
+ letter-spacing: 0.2px;
+ font-weight:600;
 }
-
 
 .login input:focus {
   outline: none;
-  color: #907fa4;
+  color: #7579e7;
   font-size: 1;
 }
 
@@ -103,6 +108,16 @@ hr{
   outline: none;
 }
 
+@media only screen and (max-width : 725px) {
+  .login-container{
+    padding: 5%;
+  }
+}
+@media only screen and (max-width : 470px) {
+  .login-container{
+    padding: 7%;
+  }
+}
 /* This will not automatically changes bg color when text is filled */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

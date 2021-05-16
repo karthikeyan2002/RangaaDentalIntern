@@ -8,6 +8,9 @@ import GetPDF from "./GetPDF";
 import { logout } from "./redux/actions";
 import "./Styles/form.css";
 import { createNewPost, userLogout } from "./utils";
+import { logout } from "./redux/actions";
+import {useDispatch} from 'react-redux';
+
 const styles = StyleSheet.create({
 	page: {
 		padding: 20,
@@ -98,6 +101,7 @@ const validate = (values) => {
 };
 
 const Formone = () => {
+	const dispatch = useDispatch();
 	const state = useSelector((state) => state.state);
 	const dispatch = useDispatch();
 	console.log(state);
@@ -120,7 +124,7 @@ const Formone = () => {
 	});
 	return (
 		<div className='form'>
-			<div className='mb-5'>
+			<div className='mb-4'>
 				<FontAwesomeIcon
 					icon={faArrowLeft}
 					className='text-blue-200'
@@ -137,14 +141,14 @@ const Formone = () => {
 
 			<form
 				onSubmit={formik.handleSubmit}
-				className='form-container shadow-md rounded p-10 mb-4 flex flex-col my-2'
+				className='form-container shadow-md rounded px-10 py-3 mb-2 flex flex-col my-2'
 			>
 				<h1 className='block uppercase tracking-wide text-gray-700 font-bold mb-10 text-center text-xl'>
 					patient registration
 				</h1>
 
-				<div className='-mx-4 md:flex mb-4'>
-					<div className='md:w-1/2 px-3 mb-6 md:mb-0'>
+				<div className='-mx-4 md:flex mb-2'>
+					<div className='md:w-1/2 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='firstName'
 							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
@@ -168,7 +172,7 @@ const Formone = () => {
 						) : null}
 					</div>
 
-					<div className='md:w-1/2 px-3 mb-6 md:mb-0'>
+					<div className='md:w-1/2 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='lastName'
 							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
@@ -193,8 +197,8 @@ const Formone = () => {
 					</div>
 				</div>
 
-				<div className='-mx-4 md:flex mb-4'>
-					<div className='md:w-1/3 px-3 mb-6 md:mb-0'>
+				<div className='-mx-4 md:flex mb-2'>
+					<div className='md:w-1/3 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='age'
 							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
@@ -214,7 +218,7 @@ const Formone = () => {
 							<div className='text-red-700 text-xs'>{formik.errors.age}</div>
 						) : null}
 					</div>
-					<div className='md:w-1/3 px-3 mb-6 md:mb-0'>
+					<div className='md:w-1/3 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='phno'
 							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
@@ -235,7 +239,7 @@ const Formone = () => {
 						) : null}
 					</div>
 
-					<div className='md:w-1/3 px-3 mb-6 md:mb-0'>
+					<div className='md:w-1/3 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='email'
 							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
@@ -257,8 +261,8 @@ const Formone = () => {
 					</div>
 				</div>
 
-				<div className='-mx-4 md:flex mb-4'>
-					<div className='md:w-1/3 px-3 mb-6 md:mb-0'>
+				<div className='-mx-4 md:flex mb-2'>
+					<div className='md:w-1/3 px-3 mb-2 md:mb-0'>
 						<p class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
 							Gender
 						</p>
@@ -297,7 +301,7 @@ const Formone = () => {
 						</label>
 					</div>
 
-					<div className='md:w-1/3 px-3 mb-6 md:mb-0'>
+					<div className='md:w-1/3 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='city'
 							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
@@ -318,7 +322,7 @@ const Formone = () => {
 						) : null}
 					</div>
 
-					<div class='w-full md:w-1/3 px-3 mb-6 md:mb-0'>
+					<div class='w-full md:w-1/3 px-3 mb-2 md:mb-0'>
 						<label
 							class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
 							for='state'
@@ -348,8 +352,8 @@ const Formone = () => {
 					</div>
 				</div>
 
-				<div className='-mx-4 md:flex mb-4'>
-					<div className='md:w-full px-3 mb-6 md:mb-0'>
+				<div className='-mx-4 md:flex mb-2'>
+					<div className='md:w-full px-3 mb-2 md:mb-0'>
 						<label
 							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
 							for='grid-city'
@@ -366,8 +370,8 @@ const Formone = () => {
 					</div>
 				</div>
 
-				<div className='-mx-4 md:flex mb-4'>
-					<div className='md:w-1/6 px-3 mb-6 md:mb-0'>
+				<div className='-mx-4 md:flex mb-2'>
+					<div className='md:w-1/6 px-3 mb-2 md:mb-0'>
 						<PDFDownloadLink
 							document={<GetPDF data={formik.values} styles={styles} />}
 							fileName={`${formik.values.firstName}_${formik.values.lastName}_${formik.values.age}`}
@@ -386,9 +390,9 @@ const Formone = () => {
 							}
 						</PDFDownloadLink>
 					</div>
-					<div className='md:w-4/6 px-3 mb-6 md:mb-0'></div>
+					<div className='md:w-4/6 px-3 mb-2 md:mb-0'></div>
 
-					<div className='md:w-1/6 px-20 mb-6 md:mb-0'>
+					<div className='md:w-1/6 px-20 mb-2 md:mb-0'>
 						<button
 							type='submit'
 							class='bg-gray-700 text-white font-bold py-2 px-4 rounded uppercase'

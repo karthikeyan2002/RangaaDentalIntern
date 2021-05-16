@@ -13,6 +13,7 @@ import "./Styles/Dashboard.css";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 import { logout } from "./redux/actions";
 import { useDispatch } from "react-redux";
+import moment from "moment";
 
 function Dashboard() {
 	const [patients, setPatients] = useState([]);
@@ -22,15 +23,14 @@ function Dashboard() {
 			.then((response) => setPatients(response))
 			.catch((err) => console.error(err));
 	}, []);
-
 	return (
 		<>
-			<div className='navbar bg-blue-700 text-white'>
+			<div className='navbar text-white'>
 				<FontAwesomeIcon
 					icon={faBars}
 					className='float-left mb-2'
 				></FontAwesomeIcon>
-				<h2 className='text-center'>PATIENT DETAILS</h2>
+				<h3 className='text-center'>PATIENT DETAILS</h3>
 				<div class='dropdown'>
 					<a>
 						<FontAwesomeIcon
@@ -51,16 +51,17 @@ function Dashboard() {
 
 			<div className='Dashboard'>
 				<div className='p-4'>
-					<div className='float-left'>
+					<div className='float-left Date'>
 						<label>Date : </label>
 						<input
 							type='date'
 							name='date'
 							className='p-2 m-2 shadow-xl border-none'
+							defaultValue={moment().format("DD,MM,YYYY")}
 						></input>
 					</div>
 
-					<div class='float-right'>
+					<div class='float-right Search'>
 						<div class='bg-white flex items-center  border-12 shadow-xl w-full h-12'>
 							<input
 								class='rounded-l-full w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none border-none'
@@ -69,47 +70,49 @@ function Dashboard() {
 								placeholder='Search'
 							></input>
 							<div class='p-4'>
-								<button class='bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-6 h-6 flex items-center justify-center'>
+								{/* <button class='bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-6 h-6 flex items-center justify-center'> */}
+								<a className='text-blue-900 hover:text-blue-600'>
 									<FontAwesomeIcon
 										icon={faSearch}
-										className='float-right text-white'
+										className='float-right'
 									></FontAwesomeIcon>
-								</button>
+								</a>
+								{/* </button> */}
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div className='-my-6 py-4 overflow-x-hidden sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both mt-12'>
+				<div className='-my-6 py-4 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both mt-12'>
 					<div className='align-middle inline-block min-w-full shadow overflow-hidden shadow-dashboard rounded-bl-lg rounded-br-lg'>
-						<table className='min-w-full'>
+						<table className='min-w-full overflow-x-auto'>
 							<thead className='text-gray-700'>
-								<tr className='bg-blue-700'>
-									<th className='pl-2 py-4 border-b-2 border-gray-300 text-left leading-4  tracking-wider uppercase'>
+								<tr>
+									<th className='pl-4 py-4 border-b-2 border-gray-300   leading-4  tracking-widest uppercase'>
 										Full Name
 									</th>
-									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase'>
+									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase Age'>
 										Age
 									</th>
-									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase'>
+									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase Gender'>
 										Gender
 									</th>
-									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase'>
+									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase Phone'>
 										Phone
 									</th>
-									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase'>
+									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase Complaint'>
 										Complaint
 									</th>
-									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase'>
+									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase Status'>
 										Status
 									</th>
-									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase'>
+									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase'>
 										Details
 									</th>
-									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase'>
+									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase'>
 										PDF
 									</th>
-									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-wider uppercase'>
+									<th className='py-2 border-b-2 border-gray-300 text-center text-sm leading-4 tracking-widest uppercase'>
 										Edit
 									</th>
 								</tr>
@@ -124,28 +127,27 @@ function Dashboard() {
                                                 <div className="text-sm leading-5 text-gray-800">{patient.Name}</div>
                                             </div>
                                         </div>
-                                    </td>  */}
+                      </td>  */}
 											<td className='pl-4 py-2.5 whitespace-no-wrap border-b border-gray-500 text-left font-semibold'>
 												<div className='text-sm leading-5 font-bold'>
 													{patient.Name}
 												</div>
 											</td>
-											<td className='py-3 whitespace-no-wrap border-b border-gray-500 text-center font-semibold'>
+											<td className='py-3 whitespace-no-wrap border-b border-gray-500 text-center font-semibold Age'>
 												<div className='text-sm leading-5'>{patient.Age}</div>
 											</td>
-											<td className='py-3 whitespace-no-wrap border-b border-gray-500 text-center font-semibold'>
+											<td className='py-3 whitespace-no-wrap border-b border-gray-500 text-center font-semibold Gender'>
 												<div className='text-sm leading-5'>
 													{patient.Gender}
 												</div>
 											</td>
-											<td className='py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center font-semibold'>
+											<td className='py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center font-semibold Phone'>
 												{patient["Phone Number"]}
 											</td>
-											{/* <td className="py-4 pr-0 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-left font-semibold">{patient.email}</td> */}
-											<td className='py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center font-semibold'>
+											<td className='py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center font-semibold Complaint'>
 												{patient.complaints}
 											</td>
-											<td className='py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center'>
+											<td className='py-3 whitespace-no-wrap border-b border-gray-500 text-sm leading-5 text-center Status'>
 												<span className='relative inline-block px-3 py-1 font-semibold leading-1 text-center'>
 													<span
 														aria-hidden
@@ -156,9 +158,14 @@ function Dashboard() {
 													</span>
 												</span>
 											</td>
-											<td className='py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center'>
+											<td className='py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center Deatils-big'>
 												<button className='px-2 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none'>
 													View Details
+												</button>
+											</td>
+											<td className='py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center Deatils-small'>
+												<button className='px-2 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none'>
+													View
 												</button>
 											</td>
 											<td className='py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center'>

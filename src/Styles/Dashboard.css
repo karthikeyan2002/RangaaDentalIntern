@@ -1,21 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-
-html {
-	scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 .navbar {
-	font-family: "Roboto", sans-serif;
+	font-family: 'Rubik', sans-serif;
 	width: 100%;
 	height: 50px;
 	Padding-bottom: 1%;
 	z-index: 2;
+	letter-spacing: 1px;
+	background-color: #7579e7;
 }
 .Dashboard {
-	background-color: #edffec;
+	/* background-color: #fcf5ee; */
+	background-color: #caf7e3;
+	font-family: 'Rubik', sans-serif;
 	padding: 0% 4%;
-	height: 93vh;
-	
+	height: 100% !important;	
 }
 /* Dropdown Styles */
 .dropdown-content {
@@ -44,32 +44,8 @@ html {
 .dropdown:hover .dropbtn {
 	background-color: #3e8e41;
 }
-/* Num patients and date */
-/* .patient{
-    letter-spacing: 1px;
-    position:absolute;
-    bottom:30px;
-    left:34px;
-    animation: number;
-    animation-duration: 5s;
-}
-.date{
-    letter-spacing: 1px;
-    position:absolute;
-    bottom:30px;
-    right:34px;
-    animation: date;
-    animation-duration: 5s;
-} */
-
-/* Section-2 */
-
-.patienttabel {
-	animation: patienttable;
-	animation-duration: 5s;
-}
 .patienttabel thead {
-	background-color: #7868e6;
+	background-color: #7579e7;
 	color: white;
 }
 .userplus {
@@ -79,11 +55,64 @@ html {
 	animation: usericon;
 	animation-duration: 5s;
 }
-
-/* Additional Styles for Table */
 tbody tr:nth-child(even) {
-	background-color: #caf7e3;
+	background-color: #edffec;
 }
 tbody tr:nth-child(odd) {
 	background-color: white;
+}
+.Deatils-small{
+	display: none;
+}
+@media only screen and (max-width : 826px) {
+	.Phone{
+		display: none;
+	}
+	.Gender{
+	 	display: none;
+	}
+}
+@media only screen and (max-width : 710px) {
+	.Complaint{
+		display: none;
+	}
+	.Dashboard{
+		overflow-x: scroll;
+	}
+	.Deatils-small{
+		display: block;
+	}
+	.Deatils-big{
+		display: none;
+	}
+}
+@media only screen and (max-width:607px) {
+	.Search{
+		float: none;
+		clear: both;
+		margin-right: 3em;
+	}
+}
+@media only screen and (max-width : 562px) {
+	.Age{
+		display: none;
+	}
+	.Status{
+		display: none;
+	}
+	.patienttabel{
+		margin-left: 1em;
+	}
+	.Date{
+		text-align: center;
+	}
+}
+@media only screen and (max-width : 340px) {
+	.patienttabel{
+		margin-left: 0em;
+	}
+	.Search{
+		margin-right: 0px;
+	}
+	
 }
