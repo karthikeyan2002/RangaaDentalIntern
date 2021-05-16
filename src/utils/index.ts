@@ -5,7 +5,10 @@ import fs from "fs";
 import { firestore } from "../firebase";
 import { login } from "../redux/actions";
 import { store } from "../redux/store";
-// Add new patient data
+/**
+ * Create new paient with unique ID and store it in DB
+ * @param data
+ */
 const createNewPost = async (data: any) => {
 	await firestore.collection("patients").add({
 		...data,
@@ -13,7 +16,11 @@ const createNewPost = async (data: any) => {
 	});
 };
 
-// Update patient data
+/**
+ * Function that updates patients data. Use this to update not create
+ * @param data
+ * @param patientID
+ */
 
 const updatePatientData = async (
 	data: firebase.default.firestore.DocumentData,
@@ -22,7 +29,10 @@ const updatePatientData = async (
 	await firestore.collection("patients").doc(patientID).update(data);
 };
 
-// Retrieves data to display on dashboard
+/**
+ * Function to get all patients data for displaying in dashboard
+ * @returns
+ */
 const getPatients = async (): Promise<Array<Object>> => {
 	const result: Array<Object> = [];
 	await firestore
@@ -38,9 +48,7 @@ const getPatients = async (): Promise<Array<Object>> => {
 };
 
 const sendMail = (fileName?: string, filePath?: string): void => {
-	sgMail.setApiKey(
-		"APIKEY"
-	);
+	sgMail.setApiKey("APIKEY");
 	console.log(fs);
 	var msg: MailDataRequired;
 	fs.readFile(
@@ -81,9 +89,12 @@ const sendMail = (fileName?: string, filePath?: string): void => {
 	);
 };
 
-// Function to authenticate users
-
-// API = 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
+/**
+ * Function to authenticate an user using email password
+ * @param email
+ * @param password
+ * @returns
+ */
 const userLogin = async (
 	email: string,
 	password: string
@@ -93,10 +104,17 @@ const userLogin = async (
 		.signInWithEmailAndPassword(email, password);
 };
 
+/**
+ * Logs out an user
+ * @returns Promise
+ */
 const userLogout = async (): Promise<void> => {
 	return await firebase.default.auth().signOut();
 };
 
+/**
+ * Keeps track of user's auth state
+ */
 const monitorUser = (): void => {
 	firebase.default.auth().onAuthStateChanged((user) => {
 		if (user?.email) {
@@ -105,6 +123,10 @@ const monitorUser = (): void => {
 	});
 };
 
+/**
+ * Returns a boolean based on user's auth state
+ * @returns boolean
+ */
 const userSignedIn = (): boolean => {
 	let user = firebase.default.auth().currentUser;
 	if (user != null) {
