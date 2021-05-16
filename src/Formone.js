@@ -1,62 +1,65 @@
 import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { PDFDownloadLink, StyleSheet } from "@react-pdf/renderer";
+import { 
+	//PDFDownloadLink,
+	//StyleSheet 
+} from "@react-pdf/renderer";
 import { useFormik } from "formik";
 import React from "react";
 import { useSelector } from "react-redux";
-import GetPDF from "./GetPDF";
+//import GetPDF from "./GetPDF";
 import "./Styles/form.css";
 import { createNewPost, userLogout } from "./utils";
 import { logout } from "./redux/actions";
 import {useDispatch} from 'react-redux';
 
-const styles = StyleSheet.create({
-	page: {
-		padding: 20,
-	},
-	pagecontainer: {
-		backgroundColor: "#f9f6f7",
-		height: "100%",
-		width: "100%",
-		padding: 5,
-		fontSize: "11px",
-	},
-	header: {
-		color: "red",
-		height: "8%",
-		fontSize: "16px",
-		width: "100%",
-		textAlign: "center",
-		fontWeight: "bold",
-		paddingTop: "9px",
-		letterSpacing: "1px",
-	},
-	BasicDetails: {
-		borderBottom: "1px solid gray",
-		letterSpacing: "1px",
-		lineHeight: "2px",
-		display: "flex",
-		flexDirection: "row",
-	},
-	subheading: {
-		display: "block",
-		color: "red",
-		fontSize: "14px",
-		fontWeight: "bold",
-		marginBottom: "10px",
-		marginTop: "4px",
-		letterSpacing: "1px",
-	},
-	box1: {
-		flex: "2",
-	},
-	box2: {
-		flex: "1",
-	},
-	box3: {
-		flex: "1",
-	},
-});
+// const styles = StyleSheet.create({
+// 	page: {
+// 		padding: 20,
+// 	},
+// 	pagecontainer: {
+// 		backgroundColor: "#f9f6f7",
+// 		height: "100%",
+// 		width: "100%",
+// 		padding: 5,
+// 		fontSize: "11px",
+// 	},
+// 	header: {
+// 		color: "red",
+// 		height: "8%",
+// 		fontSize: "16px",
+// 		width: "100%",
+// 		textAlign: "center",
+// 		fontWeight: "bold",
+// 		paddingTop: "9px",
+// 		letterSpacing: "1px",
+// 	},
+// 	BasicDetails: {
+// 		borderBottom: "1px solid gray",
+// 		letterSpacing: "1px",
+// 		lineHeight: "2px",
+// 		display: "flex",
+// 		flexDirection: "row",
+// 	},
+// 	subheading: {
+// 		display: "block",
+// 		color: "red",
+// 		fontSize: "14px",
+// 		fontWeight: "bold",
+// 		marginBottom: "10px",
+// 		marginTop: "4px",
+// 		letterSpacing: "1px",
+// 	},
+// 	box1: {
+// 		flex: "2",
+// 	},
+// 	box2: {
+// 		flex: "1",
+// 	},
+// 	box3: {
+// 		flex: "1",
+// 	},
+// });
 
 const validate = (values) => {
 	const errors = {};
@@ -125,13 +128,13 @@ const Formone = () => {
 			<div className='mb-4'>
 				<FontAwesomeIcon
 					icon={faArrowLeft}
-					className='text-blue-200'
+					className='text-blue-700'
 					size='lg'
 				></FontAwesomeIcon>
 				<span onClick={() => userLogout().then(() => dispatch(logout()))}>
 					<FontAwesomeIcon
 						icon={faPowerOff}
-						className='float-right text-white'
+						className='float-right text-blue-700'
 						size='lg'
 					></FontAwesomeIcon>
 				</span>
@@ -368,9 +371,14 @@ const Formone = () => {
 					</div>
 				</div>
 
-				<div className='-mx-4 md:flex mb-2'>
-					<div className='md:w-1/6 px-3 mb-2 md:mb-0'>
-						<PDFDownloadLink
+				<div className="text-center">
+					<button
+						type='submit'
+						className='bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase w-1/7 hover:bg-gray-600 border-none'
+					> 
+						submit
+					</button>
+						{/* <PDFDownloadLink
 							document={<GetPDF data={formik.values} styles={styles} />}
 							fileName={`${formik.values.firstName}_${formik.values.lastName}_${formik.values.age}`}
 							style={{
@@ -386,19 +394,8 @@ const Formone = () => {
 							{({ blob, url, loading, error }) =>
 								loading ? "Loading document..." : "DOWNLOAD PDF"
 							}
-						</PDFDownloadLink>
-					</div>
-					<div className='md:w-4/6 px-3 mb-2 md:mb-0'></div>
-
-					<div className='md:w-1/6 px-20 mb-2 md:mb-0'>
-						<button
-							type='submit'
-							class='bg-gray-700 text-white font-bold py-2 px-4 rounded uppercase'
-						>
-							submit
-						</button>
-					</div>
-				</div>
+						</PDFDownloadLink> */}
+				</div>	
 			</form>
 		</div>
 	);
