@@ -3,12 +3,23 @@ import "./Styles/login.css";
 import { useDispatch } from "react-redux";
 import { login } from "./redux/actions";
 import { userLogin } from "./utils/index";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+
+
 
 function Login() {
 	const [email, setEmail] = React.useState("");
 	const [password, setPassword] = React.useState("");
 	const [error, setError] = React.useState(false);
 	const dispatch = useDispatch();
+
+	const eye = <FontAwesomeIcon icon={faEye} className="position-absolute bottom-8 right-1 text-green-300" />;
+	const [passwordShown, setPasswordShown] = React.useState(false);
+	const togglePasswordVisiblity = () => {
+		setPasswordShown(passwordShown ? false : true);
+	  };
+
 	return (
 		<div>
 			<div className='login'>
@@ -45,12 +56,21 @@ function Login() {
 						<label>
 							<p>PASSWORD</p>
 							<input
-								type='password'
+								// type='password'
+								type={passwordShown ? "text" : "password"}
 								name='password'
+								id='Password'
 								placeholder='Enter Password here'
 								className='typing-demo'
 								onChange={(e) => setPassword(e.target.value)}
 							/>
+							<i onClick={togglePasswordVisiblity}>{eye}</i>
+							{/* <FontAwesomeIcon
+								icon={faEye}
+								className='position-absolute right-1 bottom-8'
+								id="eye"
+								onClick={togglePasswordVisiblity}
+							></FontAwesomeIcon> */}
 						</label>
 						<br />
 					</div>
