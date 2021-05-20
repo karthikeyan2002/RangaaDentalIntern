@@ -6,12 +6,11 @@ import //PDFDownloadLink,
 import { useFormik } from "formik";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import GetPDF from "./GetPDF";
+//import GetPDF from "./GetPDF";
 import { logout } from "./redux/actions";
 import "./Styles/form.css";
 import { createNewPost, userLogout } from "./utils";
-import { logout } from "./redux/actions";
-import { useDispatch } from "react-redux";
+
 
 // const styles = StyleSheet.create({
 // 	page: {
@@ -105,7 +104,6 @@ const validate = (values) => {
 const Formone = () => {
 	const dispatch = useDispatch();
 	const state = useSelector((state) => state.state);
-	const dispatch = useDispatch();
 	console.log(state);
 	const formik = useFormik({
 		initialValues: {
@@ -126,19 +124,29 @@ const Formone = () => {
 	});
 	return (
 		<div className='form'>
-			<div className='mb-4'>
+			<div className='mb-10'>
 				<FontAwesomeIcon
 					icon={faArrowLeft}
-					className='text-blue-700'
+					className='text-blue-700 float-left'
 					size='lg'
 				></FontAwesomeIcon>
-				<span onClick={() => userLogout().then(() => dispatch(logout()))}>
-					<FontAwesomeIcon
-						icon={faPowerOff}
-						className='float-right text-blue-700'
-						size='lg'
-					></FontAwesomeIcon>
-				</span>
+				<div class='dropdown'>
+					<span>
+						<FontAwesomeIcon
+							icon={faPowerOff}
+							className='float-right text-blue-700'
+							size="lg"
+						></FontAwesomeIcon>
+					</span>
+					<div class='dropdown-content'>
+						<span
+							href='#'
+							onClick={() => userLogout().then(() => dispatch(logout()))}
+						>
+							Log out
+						</span>
+					</div>
+				</div>
 			</div>
 
 			<form

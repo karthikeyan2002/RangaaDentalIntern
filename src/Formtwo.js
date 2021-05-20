@@ -4,10 +4,16 @@ import { useFormik } from "formik";
 import "./Styles/form.css";
 import React from "react";
 import { updatePatientData } from "./utils";
+import { useDispatch, useSelector } from "react-redux";
+import { userLogout } from "./utils";
+import { logout } from "./redux/actions";
 
 const validate = (values) => {};
 
 const Formtwo = ({ pid }) => {
+	const dispatch = useDispatch();
+	const state = useSelector((state) => state.state);
+	console.log(state);
 	const formik = useFormik({
 		initialValues: {
 			pid: "",
@@ -30,17 +36,29 @@ const Formtwo = ({ pid }) => {
 	});
 	return (
 		<div className='form2'>
-			<div className='mb-5'>
+			<div className='mb-10'>
 				<FontAwesomeIcon
 					icon={faArrowLeft}
-					className='text-blue-200'
+					className='text-blue-700 float-left'
 					size='lg'
 				></FontAwesomeIcon>
-				<FontAwesomeIcon
-					icon={faPowerOff}
-					className='float-right text-white'
-					size='lg'
-				></FontAwesomeIcon>
+				<div class='dropdown'>
+					<span>
+						<FontAwesomeIcon
+							icon={faPowerOff}
+							className='float-right text-blue-700'
+							size="lg"
+						></FontAwesomeIcon>
+					</span>
+					<div class='dropdown-content'>
+						<span
+							href='#'
+							onClick={() => userLogout().then(() => dispatch(logout()))}
+						>
+							Log out
+						</span>
+					</div>
+				</div>
 			</div>
 
 			<form
@@ -51,7 +69,7 @@ const Formtwo = ({ pid }) => {
 					<p class='font-black'>NURSE DATA ENTRY</p>
 				</div>
 				<div className='md:w-full px-3 mb-6 md:mb-0'>
-					<label className='font-black text-red-600'>PATIENT ID</label>
+					<label className='font-black text-blue-600'>PATIENT ID</label>
 					<input
 						id='pid'
 						name='pid'
@@ -65,7 +83,7 @@ const Formtwo = ({ pid }) => {
 				<br />
 				<div className='-mx-4 md:flex mb-4'>
 					<div className='md:w-1/4 px-3 mb-6 md:mb-0'>
-						<p class='font-black text-red-600 text-center'>
+						<p class='font-black text-blue-600 text-center'>
 							HABITS OF THE PATIENT
 						</p>
 						<table class='table-fixed'>
@@ -197,7 +215,7 @@ const Formtwo = ({ pid }) => {
 					</div>
 					<br />
 					<div className='md:w-3/4 px-3 mb-6 md:mb-0'>
-						<p class='font-black text-red-600 text-center'>
+						<p class='font-black text-blue-600 text-center'>
 							MEDICAL HISTORY OF THE PATIENT
 						</p>
 						<table class='table-auto w-full'>
@@ -447,7 +465,7 @@ const Formtwo = ({ pid }) => {
 				</div>
 				<div className='-mx-4 md:flex mb-4 text-center'>
 					<div className='md:w-full px-3 mb-6 md:mb-0'>
-						<label className='font-black text-red-600' for='grid-city'>
+						<label className='font-black text-blue-600' for='grid-city'>
 							COMMENTS IF ANY
 						</label>
 						<textarea
@@ -459,12 +477,14 @@ const Formtwo = ({ pid }) => {
 						></textarea>
 					</div>
 				</div>
-				<button
-					type='submit'
-					class='bg-gray-700 text-white font-bold py-2 px-4 hover:bg-gray-600 rounded uppercase'
-				>
-					SUBMIT
-				</button>
+				<div className="text-center">
+					<button
+						type='submit'
+						className='bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase w-1/7 hover:bg-gray-600 border-none'
+					>
+						submit
+					</button>
+				</div>
 			</form>
 		</div>
 	);
