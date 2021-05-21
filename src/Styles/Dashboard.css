@@ -39,7 +39,7 @@ tbody tr:nth-child(odd) {
 }
 
 /* RESPONSIVENESS */
-@media only screen and (min-width : 1200px) {
+@media only screen and (min-width : 2000px) {
 	.Dashboard{
 		height: 93.05vh !important;		
 	}
