@@ -1,64 +1,11 @@
 import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import //PDFDownloadLink,
-//StyleSheet
-"@react-pdf/renderer";
 import { useFormik } from "formik";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-//import GetPDF from "./GetPDF";
 import { logout } from "./redux/actions";
 import "./Styles/form.css";
 import { createNewPost, userLogout } from "./utils";
-
-
-// const styles = StyleSheet.create({
-// 	page: {
-// 		padding: 20,
-// 	},
-// 	pagecontainer: {
-// 		backgroundColor: "#f9f6f7",
-// 		height: "100%",
-// 		width: "100%",
-// 		padding: 5,
-// 		fontSize: "11px",
-// 	},
-// 	header: {
-// 		color: "red",
-// 		height: "8%",
-// 		fontSize: "16px",
-// 		width: "100%",
-// 		textAlign: "center",
-// 		fontWeight: "bold",
-// 		paddingTop: "9px",
-// 		letterSpacing: "1px",
-// 	},
-// 	BasicDetails: {
-// 		borderBottom: "1px solid gray",
-// 		letterSpacing: "1px",
-// 		lineHeight: "2px",
-// 		display: "flex",
-// 		flexDirection: "row",
-// 	},
-// 	subheading: {
-// 		display: "block",
-// 		color: "red",
-// 		fontSize: "14px",
-// 		fontWeight: "bold",
-// 		marginBottom: "10px",
-// 		marginTop: "4px",
-// 		letterSpacing: "1px",
-// 	},
-// 	box1: {
-// 		flex: "2",
-// 	},
-// 	box2: {
-// 		flex: "1",
-// 	},
-// 	box3: {
-// 		flex: "1",
-// 	},
-// });
 
 const validate = (values) => {
 	const errors = {};
@@ -387,23 +334,6 @@ const Formone = () => {
 					>
 						submit
 					</button>
-					{/* <PDFDownloadLink
-							document={<GetPDF data={formik.values} styles={styles} />}
-							fileName={`${formik.values.firstName}_${formik.values.lastName}_${formik.values.age}`}
-							style={{
-								textDecoration: "none",
-								padding: "10px",
-								backgroundColor: "#fff",
-								border: "2px solid #4a4a4a",
-								borderRadius: "5px",
-								color: "black",
-								fontWeight: "bolder",
-							}}
-						>
-							{({ blob, url, loading, error }) =>
-								loading ? "Loading document..." : "DOWNLOAD PDF"
-							}
-						</PDFDownloadLink> */}
 				</div>
 			</form>
 		</div>

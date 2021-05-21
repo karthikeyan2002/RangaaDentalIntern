@@ -15,20 +15,20 @@ const GetPDF = ({ data, styles }) => (
 
 				<view style={styles.BasicDetails}>
 					<view style={styles.box1}>
-						<Text> Name : {`${data.firstName}  ${data.lastName}`} </Text>
-						<Text> Email : {data.email} </Text>
-						<Text> State : {data.state}</Text>
+						<Text> Name :  Karthikeyan</Text>
+						<Text> Email : bkarthi1000@gmail.com </Text> 
+						<Text> State : TN</Text>
 					</view>
 
 					<view style={styles.box2}>
-						<Text> Age : {data.age} </Text>
-						<Text> Phone Number : {data.phno}</Text>
+						<Text> Age :  18 </Text>
+						<Text> Phone Number : 9080585673</Text>
 						<Text> Visited due to : Fever</Text>
 					</view>
 
 					<view style={styles.box3}>
-						<Text> Gender : {data.gender} </Text>
-						<Text> City : {data.city} </Text>
+						<Text> Gender : Male </Text>
+						<Text> City : Madurai </Text>
 					</view>
 				</view>
 				{/* Habits */}
@@ -58,9 +58,9 @@ const GetPDF = ({ data, styles }) => (
 
 				<view style={styles.BasicDetails}>
 					<view style={styles.box1}>
-						<Text> Allergy : {data.allergy} </Text>
-						<Text> Diabetes : {data.diabetes} </Text>
-						<Text> Epilepsy : {data.epilepsy} </Text>
+						<Text> Allergy : </Text>
+						<Text> Diabetes : </Text>
+						<Text> Epilepsy : </Text>
 					</view>
 
 					<view style={styles.box2}>
