@@ -39,9 +39,9 @@ tbody tr:nth-child(odd) {
 }
 
 /* RESPONSIVENESS */
-@media only screen and (min-width:1300px) {
+@media only screen and (min-width : 1200px) {
 	.Dashboard{
-		height: 100vh;
+		height: 100vh !important;		
 	}
 }
 @media only screen and (max-width : 826px) {
