@@ -139,12 +139,12 @@ const Formone = () => {
 						></FontAwesomeIcon>
 					</span>
 					<div class='dropdown-content'>
-						<span
+						<a
 							href='#'
 							onClick={() => userLogout().then(() => dispatch(logout()))}
 						>
 							Log out
-						</span>
+						</a>
 					</div>
 				</div>
 			</div>

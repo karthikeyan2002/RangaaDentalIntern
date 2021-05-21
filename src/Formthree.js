@@ -24,11 +24,23 @@ const Formthree = ({ pid }) => {
 					className='text-blue-200'
 					size='lg'
 				></FontAwesomeIcon>
-				<FontAwesomeIcon
-					icon={faPowerOff}
-					className='float-right text-white'
-					size='lg'
-				></FontAwesomeIcon>
+				<div class='dropdown'>
+					<span>
+						<FontAwesomeIcon
+							icon={faPowerOff}
+							className='float-right text-blue-700'
+							size="lg"
+						></FontAwesomeIcon>
+					</span>
+					<div class='dropdown-content'>
+						<a
+							href='#'
+							onClick={() => userLogout().then(() => dispatch(logout()))}
+						>
+							Log out
+						</a>
+					</div>
+				</div>
 			</div>
 
 			<form
