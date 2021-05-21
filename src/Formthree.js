@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import React from "react";
 import { updatePatientData } from "./utils";
 import "./Styles/form.css";
+import "./Styles/index.css";
 
 const validate = (values) => {};
 

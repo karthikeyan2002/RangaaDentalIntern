@@ -2,6 +2,7 @@ import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFormik } from "formik";
 import "./Styles/form.css";
+import "./Styles/index.css";
 import React from "react";
 import { updatePatientData } from "./utils";
 import { useDispatch, useSelector } from "react-redux";

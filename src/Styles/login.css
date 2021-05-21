@@ -1,5 +1,4 @@
 /* Styles for login page */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
@@ -14,20 +13,17 @@
   justify-content: center;
   align-items: center;
 }
-
 .login-container {
-  /* color: #7579e7; */
   color: #000;
   background-color: white;
   padding: 3%;
   box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 40px;
 }
-
 .login p{
   margin: 0%;
+  color: #000;
 }
-
 hr{
   height: 1px;
   background:#7579e7;
@@ -35,21 +31,14 @@ hr{
   animation: hr;
   animation-duration: 2s;
 }
-
 @keyframes hr {
   0%{width: 2%;}
   100%{width: 45%;}
 }
-
 .input-container{
   margin-top: 40px;
   position: relative;
 }
-
-.login p{
-  color: #000;
-}
-
 .login input {
   margin: 10% 0%;
   border: none;
@@ -61,24 +50,20 @@ hr{
   letter-spacing: 1px;
   color: #7579e7;
 }
-
 .login ::placeholder {
  color: pink;
  font-family: 'Rubik', sans-serif;
  letter-spacing: 0.2px;
  font-weight:600;
 }
-
 .login input:focus {
   outline: none;
   color: #7579e7;
   font-size: 1;
 }
-
 .btn-container{
   text-align: center;
 }
-
 .login .btn {
   border-radius: 20px;
   color: #fff;
@@ -93,7 +78,6 @@ hr{
   text-align: center;
   width: 75%;
 }
-
 .login .btn:hover {
   background: #FC466B; 
   background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);
@@ -103,12 +87,12 @@ hr{
   border: none;
   outline: none;
 }
-
 .login .btn:focus {
   border: none;
   outline: none;
 }
 
+/* RESPONSIVENESS */
 @media only screen and (max-width : 725px) {
   .login-container{
     padding: 5%;
@@ -119,6 +103,7 @@ hr{
     padding: 7%;
   }
 }
+
 /* This will not automatically changes bg color when text is filled */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -128,19 +113,3 @@ input:-webkit-autofill:active {
   -webkit-transition-delay: 9999s;
   transition-delay: 9999s;
 }
-
-/* Typewritting Effect */
-/* .typing-demo {
-  width: 22ch;
-  animation: typing 1s steps(20);
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-} */
