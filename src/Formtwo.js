@@ -53,7 +53,6 @@ const Formtwo = ({ pid }) => {
 					</span>
 					<div class='dropdown-content'>
 						<span
-							href='#'
 							onClick={() => userLogout().then(() => dispatch(logout()))}
 						>
 							Log out
