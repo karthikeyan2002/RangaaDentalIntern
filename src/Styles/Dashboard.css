@@ -33,8 +33,17 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
 	background-color: white;
 }
+.download-btn{
+	text-decoration: none;
+	font-family: 'Rubik', sans-serif;
+}
 
 /* RESPONSIVENESS */
+@media only screen and (min-width:1300px) {
+	.Dashboard{
+		height: 100vh;
+	}
+}
 @media only screen and (max-width : 826px) {
 	.Phone{
 		display: none;

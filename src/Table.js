@@ -136,9 +136,7 @@ function Table() {
 														//data={formik.values}
 														// fileName={`${formik.values.firstName}_${formik.values.lastName}_${formik.values.age}`}
 														fileName="sample"
-														style={{
-															textDecoration: "none",
-														}}
+														className="downlad-btn"
 													>
 														{({ blob, url, loading, error }) =>
 															loading ? "Loading document..." : "Download"
