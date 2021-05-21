@@ -11,38 +11,10 @@
 	background-color: #7579e7;
 }
 .Dashboard {
-	/* background-color: #fcf5ee; */
 	background-color: #caf7e3;
 	font-family: "Rubik", sans-serif;
 	padding: 0% 4%;
 	height: 100% !important;
-}
-/* Dropdown Styles */
-.dropdown-content {
-	display: none;
-	position: absolute;
-	right: 1px;
-	background-color: #f9f9f9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-	font-family: "Roboto", sans-serif;
-	font-weight: bold;
-}
-.dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-.dropdown-content a:hover {
-	background-color: #f1f1f1;
-}
-.dropdown:hover .dropdown-content {
-	display: block;
-}
-.dropdown:hover .dropbtn {
-	background-color: #3e8e41;
 }
 .patienttabel thead {
 	background-color: #7579e7;
@@ -61,8 +33,16 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
 	background-color: white;
 }
-.Deatils-small {
-	display: none;
+.download-btn {
+	text-decoration: none;
+	font-family: "Rubik", sans-serif;
+}
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 2000px) {
+	.Dashboard {
+		height: 100% !important;
+	}
 }
 @media only screen and (max-width: 826px) {
 	.Phone {
@@ -82,9 +62,6 @@ tbody tr:nth-child(odd) {
 	.Deatils-small {
 		display: block;
 	}
-	.Deatils-big {
-		display: none;
-	}
 }
 @media only screen and (max-width: 607px) {
 	.Search {
@@ -94,14 +71,11 @@ tbody tr:nth-child(odd) {
 	}
 }
 @media only screen and (max-width: 562px) {
-	.Age {
-		display: none;
-	}
 	.Status {
 		display: none;
 	}
 	.patienttabel {
-		margin-left: 1em;
+		margin-left: 1.5em;
 	}
 	.Date {
 		text-align: center;
@@ -109,9 +83,9 @@ tbody tr:nth-child(odd) {
 }
 @media only screen and (max-width: 340px) {
 	.patienttabel {
-		margin-left: 0em;
+		margin-left: 1em;
 	}
 	.Search {
-		margin-right: 0px;
+		margin-right: 1px;
 	}
 }
