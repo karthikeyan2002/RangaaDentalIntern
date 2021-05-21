@@ -66,12 +66,12 @@ function Dashboard() {
 							placeholder='Search'
 						></input>
 						<div class='p-4'>
-							<a className='text-blue-900 hover:text-blue-600'>
+							<span className='text-blue-900 hover:text-blue-600'>
 							<FontAwesomeIcon
 								icon={faSearch}
 								className='float-right'
 							></FontAwesomeIcon>
-							</a>								
+							</span>								
 						</div>
 					</div>
 				</div>
