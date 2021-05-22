@@ -12,7 +12,10 @@ getPatients()
 	.then((res) => console.log(res))
 	.catch((err) => console.log(err));
 function App() {
-	const islogin = useSelector((state) => state.state.login);
+	const islogin = useSelector((state) => {
+		console.log(state);
+		return state.state.login;
+	});
 	console.log(islogin);
 	return (
 		<>
@@ -21,7 +24,7 @@ function App() {
 				{islogin ? ( // CHANGE true to islogin
 					<>
 						{/* <Dashboard />  */}
-						<Formone /> 
+						<Formone />
 						{/* <Formtwo /> */}
 						{/* <Formthree /> */}
 						{/* <Switch>

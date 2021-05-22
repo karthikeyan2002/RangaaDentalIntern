@@ -2,13 +2,16 @@ import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFormik } from "formik";
 import React from "react";
-import { updatePatientData } from "./utils";
+import { useDispatch } from "react-redux";
+import { updatePatientData, userLogout } from "./utils";
+import { logout } from "./redux/actions";
 import "./Styles/form.css";
 import "./Styles/index.css";
 
 const validate = (values) => {};
 
 const Formthree = ({ pid }) => {
+	const dispatch = useDispatch();
 	const formik = useFormik({
 		initialValues: {},
 		validate,
@@ -29,7 +32,7 @@ const Formthree = ({ pid }) => {
 						<FontAwesomeIcon
 							icon={faPowerOff}
 							className='float-right text-white'
-							size="lg"
+							size='lg'
 						></FontAwesomeIcon>
 					</span>
 					<div class='dropdown-content'>

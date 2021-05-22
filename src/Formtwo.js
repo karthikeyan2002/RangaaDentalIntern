@@ -5,14 +5,12 @@ import "./Styles/form.css";
 import "./Styles/index.css";
 import React from "react";
 import { updatePatientData } from "./utils";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { userLogout } from "./utils";
-import { logout } from "./redux/actions";
 
 const validate = (values) => {};
 
 const Formtwo = ({ pid }) => {
-	const dispatch = useDispatch();
 	const state = useSelector((state) => state.state);
 	console.log(state);
 	const formik = useFormik({
@@ -48,14 +46,11 @@ const Formtwo = ({ pid }) => {
 						<FontAwesomeIcon
 							icon={faPowerOff}
 							className='float-right text-gray-600'
-							size="lg"
+							size='lg'
 						></FontAwesomeIcon>
 					</span>
 					<div class='dropdown-content'>
-						<span
-							href='#'
-							onClick={() => userLogout().then(() => dispatch(logout()))}
-						>
+						<span href='#' onClick={() => userLogout()}>
 							Log out
 						</span>
 					</div>
@@ -69,21 +64,19 @@ const Formtwo = ({ pid }) => {
 				<div class='text-center text-xl'>
 					<p class='font-black'>NURSE DATA ENTRY</p>
 				</div>
-				
+
 				<div className='-mx-4 md:flex mb-4'>
 					<div className='md:w-1/4 px-3 mb-6 md:mb-0'>
-						<p class='font-black  text-center'>
-						HABITS
-						</p>
+						<p class='font-black  text-center'>HABITS</p>
 						<table class='border-collapse border border-green-800'>
-							<thead className="border border-green-600 ">
+							<thead className='border border-green-600 '>
 								<tr class='text-black text-center'>
 									<th class='w-1/2 px-2 py-2'>Habit</th>
 									<th class='w-1/4 px-2 py-2'>Yes</th>
 									<th class='w-1/4 px-2 py-2'>No</th>
 								</tr>
 							</thead>
-							<tbody className="text-center">
+							<tbody className='text-center'>
 								<tr>
 									<td class='w-1/2 px-2 py-2 text-left'>Nail biting</td>
 									<td class='w-1/4 px-2 py-2'>
@@ -202,15 +195,12 @@ const Formtwo = ({ pid }) => {
 							</tbody>
 						</table>
 					</div>
-				
-					<div className='md:w-3/4 px-3 mb-6 md:mb-0'>
 
-						<p class='font-black  text-center'>
-							MEDICAL HISTORY 
-						</p>
-						
+					<div className='md:w-3/4 px-3 mb-6 md:mb-0'>
+						<p class='font-black  text-center'>MEDICAL HISTORY</p>
+
 						<table>
-							<thead className= 'border border-green-600 text-center'>
+							<thead className='border border-green-600 text-center'>
 								<tr class='text-black'>
 									<th class='px-2 py-2'>Name of the Disease</th>
 									<th class='px-2 py-2'>Under Medication</th>
@@ -218,7 +208,7 @@ const Formtwo = ({ pid }) => {
 									<th class='px-2 py-2'>Unknown</th>
 								</tr>
 							</thead>
-							<tbody className="text-center border">
+							<tbody className='text-center border'>
 								<tr>
 									<td class='border px-2 py-2 text-left'>Allergy</td>
 									<td class='border px-2 py-2'>
@@ -385,7 +375,9 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='border px-2 py-2 text-left'>Anticoagulant therapy</td>
+									<td class='border px-2 py-2 text-left'>
+										Anticoagulant therapy
+									</td>
 									<td class='border px-2 py-2'>
 										<input
 											type='radio'
@@ -418,7 +410,9 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='border px-2 py-2 text-left'>Ischemic cardiac diseases</td>
+									<td class='border px-2 py-2 text-left'>
+										Ischemic cardiac diseases
+									</td>
 									<td class='border px-2 py-2'>
 										<input
 											type='radio'
@@ -453,8 +447,8 @@ const Formtwo = ({ pid }) => {
 							</tbody>
 						</table>
 					</div>
-					</div>
-				
+				</div>
+
 				<div className='text-center'>
 					<button
 						type='submit'

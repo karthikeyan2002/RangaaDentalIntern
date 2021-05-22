@@ -17,7 +17,6 @@ import Table from "./Table";
 import "./Styles/Dashboard.css";
 
 function Dashboard() {
-
 	const dispatch = useDispatch();
 	return (
 		<>
@@ -35,49 +34,49 @@ function Dashboard() {
 						></FontAwesomeIcon>
 					</a>
 					<div class='dropdown-content'>
-					<span
-						href='#'
-						onClick={() => userLogout().then(() => dispatch(logout()))}
-					>
-					Log out
-					</span>
+						<span
+							href='#'
+							onClick={() => userLogout().then(() => dispatch(logout()))}
+						>
+							Log out
+						</span>
 					</div>
 				</div>
 			</div>
 
-		<div className='Dashboard'>
-			<div className='p-4'>
-				<div className='float-left Date'>
-					<label>Date : </label>
-					<input
-						type='date'
-						name='date'
-						className='p-2 m-2 shadow-xl border-none'
-						defaultValue={moment().format("DD,MM,YYYY")}
-					></input>
-				</div>
-
-				<div class='float-right Search'>
-					<div class='bg-white flex items-center  border-12 shadow-xl w-full h-12'>
+			<div className='Dashboard'>
+				<div className='p-4'>
+					<div className='float-left Date'>
+						<label>Date : </label>
 						<input
-							class='rounded-l-full w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none border-none'
-							id='search'
-							type='text'
-							placeholder='Search'
+							type='date'
+							name='date'
+							className='p-2 m-2 shadow-xl border-none'
+							defaultValue={moment().format("DD,MM,YYYY")}
 						></input>
-						<div class='p-4'>
-							<span className='text-blue-900 hover:text-blue-600'>
-							<FontAwesomeIcon
-								icon={faSearch}
-								className='float-right'
-							></FontAwesomeIcon>
-							</span>								
+					</div>
+
+					<div class='float-right Search'>
+						<div class='bg-white flex items-center  border-12 shadow-xl w-full h-12'>
+							<input
+								class='rounded-l-full w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none border-none'
+								id='search'
+								type='text'
+								placeholder='Search'
+							></input>
+							<div class='p-4'>
+								<span className='text-blue-900 hover:text-blue-600'>
+									<FontAwesomeIcon
+										icon={faSearch}
+										className='float-right'
+									></FontAwesomeIcon>
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<Table />
+				<Table />
 
 				{/* Pagination starts here */}
 				<div className='p-3 pt-5 text-center'>
