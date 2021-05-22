@@ -84,7 +84,7 @@ const Formthree = ({ pid }) => {
 				</div>
 				<p class='font-black text-red-600 text-xl text-center'>DIAGNOSIS</p>
 				<div className='-mx-4 md:flex mb-4'>
-					<div className='md:w-1/2 px-3 mb-6 md:mb-0'>
+					<div className='overflow-auto md:overflow-scroll md:w-1/2 px-3 mb-6 md:mb-0'>
 						<table class='table-auto'>
 							<thead>
 								<tr class='text-black hover:text-blue-700'>
@@ -942,7 +942,7 @@ const Formthree = ({ pid }) => {
 				</div>
 				<p class='font-black text-red-600 text-xl text-center'>TREATMENT</p>
 				<div className='-mx-4 md:flex mb-4'>
-					<div className='md:w-1/2 px-3 mb-6 md:mb-0'>
+					<div className='overflow-auto md:overflow-scroll md:w-1/2 px-3 mb-6 md:mb-0'>
 						<table class='table-auto'>
 							<thead>
 								<tr class='text-black hover:text-blue-700'>
@@ -1160,12 +1160,12 @@ const Formthree = ({ pid }) => {
 						></textarea>
 					</div>
 				</div>
-				<button
+				<div className='text-center'><button
 					type='submit'
-					class='bg-gray-700 text-white font-bold py-2 px-4 hover:bg-gray-600 rounded uppercase'
+					class='bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase w-1/7 hover:bg-gray-600 border-none tracking-wider'
 				>
 					SUBMIT
-				</button>
+				</button></div>
 			</form>
 		</div>
 	);
