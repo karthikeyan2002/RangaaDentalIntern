@@ -7,6 +7,7 @@ import { updatePatientData, userLogout } from "./utils";
 import { logout } from "./redux/actions";
 import "./Styles/form.css";
 import "./Styles/index.css";
+import { Link } from "react-router-dom";
 
 const validate = (values) => {};
 
@@ -22,11 +23,13 @@ const Formthree = ({ pid }) => {
 	return (
 		<div className='form3'>
 			<div className='mb-5'>
-				<FontAwesomeIcon
-					icon={faArrowLeft}
-					className='text-white'
-					size='lg'
-				></FontAwesomeIcon>
+				<Link to='/'>
+					<FontAwesomeIcon
+						icon={faArrowLeft}
+						className='text-white'
+						size='lg'
+					></FontAwesomeIcon>
+				</Link>
 				<div class='dropdown'>
 					<span>
 						<FontAwesomeIcon

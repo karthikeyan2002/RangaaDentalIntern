@@ -15,6 +15,7 @@ import moment from "moment";
 import "./Styles/index.css";
 import Table from "./Table";
 import "./Styles/Dashboard.css";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
 	const dispatch = useDispatch();
@@ -146,13 +147,15 @@ function Dashboard() {
 					</div>
 				</div>
 
-				<a href='' className='text-pink-300  hover:text-cyan-900'>
-					<FontAwesomeIcon
-						icon={faUserPlus}
-						className='userplus'
-						size='lg'
-					></FontAwesomeIcon>
-				</a>
+				<Link to='/Receptionist'>
+					<a className='text-pink-300  hover:text-cyan-900'>
+						<FontAwesomeIcon
+							icon={faUserPlus}
+							className='userplus'
+							size='lg'
+						></FontAwesomeIcon>
+					</a>
+				</Link>
 			</div>
 		</>
 	);

@@ -5,12 +5,15 @@ import "./Styles/form.css";
 import "./Styles/index.css";
 import React from "react";
 import { updatePatientData } from "./utils";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { userLogout } from "./utils";
+import { logout } from "./redux/actions";
+import { Link } from "react-router-dom";
 
 const validate = (values) => {};
 
 const Formtwo = ({ pid }) => {
+	const dispatch = useDispatch();
 	const state = useSelector((state) => state.state);
 	console.log(state);
 	const formik = useFormik({
@@ -36,11 +39,13 @@ const Formtwo = ({ pid }) => {
 	return (
 		<div className='form2'>
 			<div className='mb-12 mt-2'>
-				<FontAwesomeIcon
-					icon={faArrowLeft}
-					className='text-blue-600 float-left'
-					size='lg'
-				></FontAwesomeIcon>
+				<Link to='/'>
+					<FontAwesomeIcon
+						icon={faArrowLeft}
+						className='text-blue-600 float-left'
+						size='lg'
+					></FontAwesomeIcon>
+				</Link>
 				<div class='dropdown'>
 					<span>
 						<FontAwesomeIcon
@@ -50,7 +55,10 @@ const Formtwo = ({ pid }) => {
 						></FontAwesomeIcon>
 					</span>
 					<div class='dropdown-content'>
-						<span href='#' onClick={() => userLogout()}>
+						<span
+							href='#'
+							onClick={() => userLogout().then(() => dispatch(logout()))}
+						>
 							Log out
 						</span>
 					</div>
