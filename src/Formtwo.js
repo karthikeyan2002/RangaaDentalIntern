@@ -40,14 +40,14 @@ const Formtwo = ({ pid }) => {
 			<div className='mb-10'>
 				<FontAwesomeIcon
 					icon={faArrowLeft}
-					className='text-blue-700 float-left'
+					className='text-white float-left'
 					size='lg'
 				></FontAwesomeIcon>
 				<div class='dropdown'>
 					<span>
 						<FontAwesomeIcon
 							icon={faPowerOff}
-							className='float-right text-blue-700'
+							className='float-right text-white'
 							size="lg"
 						></FontAwesomeIcon>
 					</span>
@@ -68,7 +68,7 @@ const Formtwo = ({ pid }) => {
 				<div class='text-center text-2xl'>
 					<p class='font-black'>NURSE DATA ENTRY</p>
 				</div>
-				<div className='md:w-full px-3 mb-6 md:mb-0'>
+				{/* <div className='md:w-full px-3 mb-6 md:mb-0'>
 					<label className='font-black text-blue-600'>PATIENT ID</label>
 					<input
 						id='pid'
@@ -76,28 +76,28 @@ const Formtwo = ({ pid }) => {
 						type='text'
 						onChange={formik.handleChange}
 						value={formik.values.pid}
-						className='appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-4 mb-3'
+						className='appearance-none block w-full bg-grey-lighter text-grey border border-red rounded py-3 px-2 mb-3'
 						placeholder='Patient ID'
 					/>
-				</div>
+				</div> */}
 				<br />
 				<div className='-mx-4 md:flex mb-4'>
 					<div className='md:w-1/4 px-3 mb-6 md:mb-0'>
-						<p class='font-black text-blue-600 text-center'>
-							HABITS OF THE PATIENT
+						<p class='font-black text-gray-700 text-center'>
+							PATIENT'S HABITS
 						</p>
-						<table class='table-fixed'>
-							<thead>
-								<tr class='text-black hover:text-blue-700 '>
-									<th class='w-1/2 px-4 py-2'>Habit</th>
-									<th class='w-1/4 px-4 py-2'>Yes</th>
-									<th class='w-1/4 px-4 py-2'>No</th>
+						<table class='"border-collapse border border-green-800 '>
+							<thead className="border border-green-600 ">
+								<tr class='text-black hover:text-blue-700'>
+									<th class='w-1/2 px-2 py-2'>Habit</th>
+									<th class='w-1/4 px-2 py-2'>Yes</th>
+									<th class='w-1/4 px-2 py-2'>No</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td class='w-1/2 px-4 py-2'>Nail biting</td>
-									<td class='w-1/4 px-4 py-2'>
+									<td class='w-1/2 px-2 py-2'>Nail biting</td>
+									<td class='w-1/4 px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -107,7 +107,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='w-1/4 px-4 py-2'>
+									<td class='w-1/4 px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -119,8 +119,8 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='w-1/2 px-4 py-2'>bottle feeding</td>
-									<td class='w-1/4 px-4 py-2'>
+									<td class='w-1/2 px-2 py-2'>bottle feeding</td>
+									<td class='w-1/4 px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -130,7 +130,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='w-1/4 px-4 py-2'>
+									<td class='w-1/4 px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -142,8 +142,8 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='w-1/2 px-4 py-2'>Thumb sucking</td>
-									<td class='w-1/4 px-4 py-2'>
+									<td class='w-1/2 px-2 py-2'>Thumb sucking</td>
+									<td class='w-1/4 px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -153,7 +153,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='w-1/4 px-4 py-2'>
+									<td class='w-1/4 px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -165,8 +165,8 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='w-1/2 px-4 py-2'>Tongue Thrusting</td>
-									<td class='w-1/4 px-4 py-2'>
+									<td class='w-1/2 px-2 py-2'>Tongue Thrusting</td>
+									<td class='w-1/4 px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -176,7 +176,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='w-1/4 px-4 py-2'>
+									<td class='w-1/4 px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -188,8 +188,8 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='w-1/2 px-4 py-2'>Mouth breathing</td>
-									<td class='w-1/4 px-4 py-2'>
+									<td class='w-1/2 px-2 py-2'>Mouth breathing</td>
+									<td class='w-1/4 px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -199,7 +199,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='w-1/4 px-4 py-2'>
+									<td class='w-1/4 px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -215,22 +215,22 @@ const Formtwo = ({ pid }) => {
 					</div>
 					<br />
 					<div className='md:w-3/4 px-3 mb-6 md:mb-0'>
-						<p class='font-black text-blue-600 text-center'>
+						<p class='font-black text-gray-700 text-center'>
 							MEDICAL HISTORY OF THE PATIENT
 						</p>
 						<table class='table-auto w-full'>
 							<thead>
 								<tr class='text-black hover:text-blue-700'>
-									<th class='px-4 py-2'>Name of the Disease</th>
-									<th class='px-4 py-2'>Under medication</th>
-									<th class='px-4 py-2'>Not under medication</th>
-									<th class='px-4 py-2'>Unknown</th>
+									<th class='px-2 py-2'>Name of the Disease</th>
+									<th class='px-2 py-2'>Under Medication</th>
+									<th class='px-2 py-2'>Not under Medication</th>
+									<th class='px-2 py-2'>Unknown</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody className="text-center border">
 								<tr>
-									<td class='border px-4 py-2'>Allergy</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>Allergy</td>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -240,7 +240,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -250,7 +250,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -262,8 +262,8 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='border px-4 py-2'>Diabetes</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>Diabetes</td>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -273,7 +273,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -283,7 +283,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -295,8 +295,8 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='border px-4 py-2'>Epilepsy</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>Epilepsy</td>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -306,7 +306,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -316,7 +316,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -328,8 +328,8 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='border px-4 py-2'>Hypertension</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>Hypertension</td>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -339,7 +339,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -349,7 +349,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -361,8 +361,8 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='border px-4 py-2'>Bleeding disorder</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>Bleeding disorder</td>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -372,7 +372,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -382,7 +382,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -394,8 +394,8 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='border px-4 py-2'>Anticoagulant therapy</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>Anticoagulant therapy</td>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -405,7 +405,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -415,7 +415,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -427,8 +427,8 @@ const Formtwo = ({ pid }) => {
 									</td>
 								</tr>
 								<tr>
-									<td class='border px-4 py-2'>Ischemic cardiac diseases</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>Ischemic cardiac diseases</td>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -438,7 +438,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -448,7 +448,7 @@ const Formtwo = ({ pid }) => {
 											onChange={formik.handleChange}
 										></input>
 									</td>
-									<td class='border px-4 py-2'>
+									<td class='border px-2 py-2'>
 										<input
 											type='radio'
 											class='form-radio'
@@ -463,24 +463,24 @@ const Formtwo = ({ pid }) => {
 						</table>
 					</div>
 				</div>
-				<div className='-mx-4 md:flex mb-4 text-center'>
+				{/* <div className='-mx-4 md:flex mb-4 text-center'>
 					<div className='md:w-full px-3 mb-6 md:mb-0'>
 						<label className='font-black text-blue-600' for='grid-city'>
 							COMMENTS IF ANY
 						</label>
 						<textarea
-							className='appearance-none block w-full bg-grey-lighter text-grey border border-grey-lighter rounded py-3 px-4 resize border rounded-md mb-2'
+							className='appearance-none block w-full bg-grey-lighter text-grey border border-grey-lighter rounded py-3 px-2 resize border rounded-md mb-2'
 							name='comments'
 							placeholder='Type your comments here ... '
 							value={formik.values.comments}
 							onChange={formik.handleChange}
 						></textarea>
 					</div>
-				</div>
+				</div> */}
 				<div className="text-center">
 					<button
 						type='submit'
-						className='bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase w-1/7 hover:bg-gray-600 border-none'
+						className='bg-blue-700 text-white font-bold py-2 px-2 rounded uppercase w-1/7 hover:bg-gray-600 border-none'
 					>
 						submit
 					</button>

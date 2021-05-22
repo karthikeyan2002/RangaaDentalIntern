@@ -71,17 +71,17 @@ const Formone = () => {
 	});
 	return (
 		<div className='form'>
-			<div className='mb-10'>
+			<div className='mb-12'>
 				<FontAwesomeIcon
 					icon={faArrowLeft}
-					className='text-blue-700 float-left'
+					className='text-white float-left'
 					size='lg'
 				></FontAwesomeIcon>
 				<div class='dropdown'>
 					<span>
 						<FontAwesomeIcon
 							icon={faPowerOff}
-							className='float-right text-blue-700'
+							className='float-right text-white'
 							size="lg"
 						></FontAwesomeIcon>
 					</span>

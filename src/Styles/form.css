@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 .form {
-	background-color: lightgray;
+	background-color: #A9C9FF;
+	background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
 	height: 100% !important;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding:  1% 2%;
+	font-family: 'Open Sans', sans-serif;
 }
 .form-container {
 	background-color: #fff;
