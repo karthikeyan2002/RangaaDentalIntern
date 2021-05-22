@@ -75,7 +75,7 @@ const Formtwo = ({ pid }) => {
         </div>
 
         <div className="-mx-4 md:flex mb-4">
-          <div className="md:w-1/4 px-3 mb-6 md:mb-0">
+          <div className="sm:w-16 md:w-1/4 px-3 mb-6 md:mb-0">
             <p class="font-black  text-center">HABITS</p>
             <table class="border-collapse border border-green-800">
               <thead className="border border-green-600 ">
@@ -204,11 +204,9 @@ const Formtwo = ({ pid }) => {
               </tbody>
             </table>
           </div>
-
-          <div className="md:w-3/4 px-3 mb-6 md:mb-0">
-            <p class="font-black  text-center">MEDICAL HISTORY</p>
-
-            <table>
+		  <p class="font-black  text-center">MEDICAL HISTORY</p>
+          <div className="sm:w-16 md:w-3/4 px-3 mb-6 md:mb-0 overflow-auto sm:overflow-scroll ">
+            <table> 
               <thead className="border border-green-600 text-center">
                 <tr class="text-black">
                   <th class="px-2 py-2">Name of the Disease</th>
