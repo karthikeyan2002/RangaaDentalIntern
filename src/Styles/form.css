@@ -22,6 +22,10 @@
 	padding: 1% 3%;
 	font-family: 'Noto Sans', sans-serif;
 }
+.tablecenter {
+	margin-left: auto;
+	margin-right: auto;
+  }
 tbody tr:nth-child(even) {
 	background-color: #edffec;
 }

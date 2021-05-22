@@ -155,7 +155,7 @@ function Table() {
 										</tr>
 									))
 								) : (
-									<h2 style={{ fontFamily: "monospace" }}>Loading ....</h2>
+									<h6 style={{ fontFamily: "monospace" }}>Loading ....</h6>
 								)}
 							</tbody>
 						</table>

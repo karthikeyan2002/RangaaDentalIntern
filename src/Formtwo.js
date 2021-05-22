@@ -72,142 +72,11 @@ const Formtwo = ({ pid }) => {
 				<div class='text-center text-xl'>
 					<p class='font-black'>NURSE DATA ENTRY</p>
 				</div>
-
 				<div className='-mx-4 md:flex mb-4'>
-					<div className='md:w-1/4 px-3 mb-6 md:mb-0'>
-						<p class='font-black  text-center'>HABITS</p>
-						<table class='border-collapse border border-green-800'>
-							<thead className='border border-green-600 '>
-								<tr class='text-black text-center'>
-									<th class='w-1/2 px-2 py-2'>Habit</th>
-									<th class='w-1/4 px-2 py-2'>Yes</th>
-									<th class='w-1/4 px-2 py-2'>No</th>
-								</tr>
-							</thead>
-							<tbody className='text-center'>
-								<tr>
-									<td class='w-1/2 px-2 py-2 text-left'>Nail biting</td>
-									<td class='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											class='form-radio'
-											name='biting'
-											value='yes'
-											checked={formik.values.biting === "yes"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-									<td class='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											class='form-radio'
-											name='biting'
-											value='no'
-											checked={formik.values.biting === "no"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-								</tr>
-								<tr>
-									<td class='w-1/2 px-2 py-2 text-left'>bottle feeding</td>
-									<td class='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											class='form-radio'
-											name='bottle'
-											value='yes'
-											checked={formik.values.bottle === "yes"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-									<td class='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											class='form-radio'
-											name='bottle'
-											value='no'
-											checked={formik.values.bottle === "no"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-								</tr>
-								<tr>
-									<td class='w-1/2 px-2 py-2 text-left'>Thumb sucking</td>
-									<td class='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											class='form-radio'
-											name='thumb'
-											value='yes'
-											checked={formik.values.thumb === "yes"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-									<td class='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											class='form-radio'
-											name='thumb'
-											value='no'
-											checked={formik.values.thumb === "no"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-								</tr>
-								<tr>
-									<td class='w-1/2 px-2 py-2 text-left'>Tongue Thrusting</td>
-									<td class='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											class='form-radio'
-											name='tongue'
-											value='yes'
-											checked={formik.values.tongue === "yes"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-									<td class='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											class='form-radio'
-											name='tongue'
-											value='no'
-											checked={formik.values.tongue === "no"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-								</tr>
-								<tr>
-									<td class='w-1/2 px-2 py-2 text-left'>Mouth breathing</td>
-									<td class='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											class='form-radio'
-											name='mouth'
-											value='yes'
-											checked={formik.values.mouth === "yes"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-									<td class='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											class='form-radio'
-											name='mouth'
-											value='no'
-											checked={formik.values.mouth === "no"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
 
-					<div className='md:w-3/4 px-3 mb-6 md:mb-0'>
-						<p class='font-black  text-center'>MEDICAL HISTORY</p>
-
-						<table>
+				<div className='overflow-auto md:overflow-scroll md:w-1/2 px-3 mb-6 md:mb-0'>
+					<p class='font-black  text-center'>MEDICAL HISTORY</p>
+						<table className="tablecenter sm:w-16">
 							<thead className='border border-green-600 text-center'>
 								<tr class='text-black'>
 									<th class='px-2 py-2'>Name of the Disease</th>
@@ -455,6 +324,137 @@ const Formtwo = ({ pid }) => {
 							</tbody>
 						</table>
 					</div>
+
+					<div className='md:w-1/2 px-3 mb-6 md:mb-0'>
+						<p class='font-black text-center'>HABITS</p>
+						<table class='tablecenter border-collapse border border-green-800'>
+							<thead className=' border border-green-600 '>
+								<tr class='text-black text-center'>
+									<th class='w-1/2 px-2 py-2'>Habit</th>
+									<th class='w-1/4 px-2 py-2'>Yes</th>
+									<th class='w-1/4 px-2 py-2'>No</th>
+								</tr>
+							</thead>
+							<tbody className='text-center'>
+								<tr>
+									<td class='w-1/2 px-2 py-2 text-left'>Nail biting</td>
+									<td class='w-1/4 px-2 py-2'>
+										<input
+											type='radio'
+											class='form-radio'
+											name='biting'
+											value='yes'
+											checked={formik.values.biting === "yes"}
+											onChange={formik.handleChange}
+										></input>
+									</td>
+									<td class='w-1/4 px-2 py-2'>
+										<input
+											type='radio'
+											class='form-radio'
+											name='biting'
+											value='no'
+											checked={formik.values.biting === "no"}
+											onChange={formik.handleChange}
+										></input>
+									</td>
+								</tr>
+								<tr>
+									<td class='w-1/2 px-2 py-2 text-left'>bottle feeding</td>
+									<td class='w-1/4 px-2 py-2'>
+										<input
+											type='radio'
+											class='form-radio'
+											name='bottle'
+											value='yes'
+											checked={formik.values.bottle === "yes"}
+											onChange={formik.handleChange}
+										></input>
+									</td>
+									<td class='w-1/4 px-2 py-2'>
+										<input
+											type='radio'
+											class='form-radio'
+											name='bottle'
+											value='no'
+											checked={formik.values.bottle === "no"}
+											onChange={formik.handleChange}
+										></input>
+									</td>
+								</tr>
+								<tr>
+									<td class='w-1/2 px-2 py-2 text-left'>Thumb sucking</td>
+									<td class='w-1/4 px-2 py-2'>
+										<input
+											type='radio'
+											class='form-radio'
+											name='thumb'
+											value='yes'
+											checked={formik.values.thumb === "yes"}
+											onChange={formik.handleChange}
+										></input>
+									</td>
+									<td class='w-1/4 px-2 py-2'>
+										<input
+											type='radio'
+											class='form-radio'
+											name='thumb'
+											value='no'
+											checked={formik.values.thumb === "no"}
+											onChange={formik.handleChange}
+										></input>
+									</td>
+								</tr>
+								<tr>
+									<td class='w-1/2 px-2 py-2 text-left'>Tongue Thrusting</td>
+									<td class='w-1/4 px-2 py-2'>
+										<input
+											type='radio'
+											class='form-radio'
+											name='tongue'
+											value='yes'
+											checked={formik.values.tongue === "yes"}
+											onChange={formik.handleChange}
+										></input>
+									</td>
+									<td class='w-1/4 px-2 py-2'>
+										<input
+											type='radio'
+											class='form-radio'
+											name='tongue'
+											value='no'
+											checked={formik.values.tongue === "no"}
+											onChange={formik.handleChange}
+										></input>
+									</td>
+								</tr>
+								<tr>
+									<td class='w-1/2 px-2 py-2 text-left'>Mouth breathing</td>
+									<td class='w-1/4 px-2 py-2'>
+										<input
+											type='radio'
+											class='form-radio'
+											name='mouth'
+											value='yes'
+											checked={formik.values.mouth === "yes"}
+											onChange={formik.handleChange}
+										></input>
+									</td>
+									<td class='w-1/4 px-2 py-2'>
+										<input
+											type='radio'
+											class='form-radio'
+											name='mouth'
+											value='no'
+											checked={formik.values.mouth === "no"}
+											onChange={formik.handleChange}
+										></input>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
 				</div>
 
 				<div className='text-center'>
