@@ -71,17 +71,17 @@ const Formone = () => {
 	});
 	return (
 		<div className='form'>
-			<div className='mb-12'>
+			<div className='mb-12 mt-2'>
 				<FontAwesomeIcon
 					icon={faArrowLeft}
-					className='text-white float-left'
+					className='text-blue-600 float-left'
 					size='lg'
 				></FontAwesomeIcon>
 				<div class='dropdown'>
 					<span>
 						<FontAwesomeIcon
 							icon={faPowerOff}
-							className='float-right text-white'
+							className='float-right text-gray-600'
 							size="lg"
 						></FontAwesomeIcon>
 					</span>
@@ -100,7 +100,7 @@ const Formone = () => {
 				onSubmit={formik.handleSubmit}
 				className='form-container shadow-md rounded px-10 py-3 mb-2 flex flex-col my-2'
 			>
-				<h1 className='block uppercase tracking-wide text-gray-700 font-bold mb-10 text-center text-xl'>
+				<h1 className='block uppercase tracking-wider text-gray-700 font-bold mb-10 text-center text-xl'>
 					patient registration
 				</h1>
 
@@ -108,7 +108,7 @@ const Formone = () => {
 					<div className='md:w-1/2 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='firstName'
-							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+							className='block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2'
 							for='grid-first-name'
 						>
 							First Name
@@ -132,7 +132,7 @@ const Formone = () => {
 					<div className='md:w-1/2 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='lastName'
-							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+							className='block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2'
 							for='grid-last-name'
 						>
 							Last Name
@@ -158,7 +158,7 @@ const Formone = () => {
 					<div className='md:w-1/3 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='age'
-							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+							className='block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2'
 						>
 							Age
 						</label>
@@ -178,7 +178,7 @@ const Formone = () => {
 					<div className='md:w-1/3 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='phno'
-							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+							className='block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2'
 						>
 							Phone Number
 						</label>
@@ -199,7 +199,7 @@ const Formone = () => {
 					<div className='md:w-1/3 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='email'
-							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+							className='block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2'
 						>
 							Email Address
 						</label>
@@ -220,7 +220,7 @@ const Formone = () => {
 
 				<div className='-mx-4 md:flex mb-2'>
 					<div className='md:w-1/3 px-3 mb-2 md:mb-0'>
-						<p class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
+						<p class='block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2'>
 							Gender
 						</p>
 						<label class='inline-flex items-center'>
@@ -261,7 +261,7 @@ const Formone = () => {
 					<div className='md:w-1/3 px-3 mb-2 md:mb-0'>
 						<label
 							htmlFor='city'
-							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+							className='block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2'
 						>
 							city
 						</label>
@@ -281,7 +281,7 @@ const Formone = () => {
 
 					<div class='w-full md:w-1/3 px-3 mb-2 md:mb-0'>
 						<label
-							class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+							class='block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2'
 							for='state'
 						>
 							State
@@ -312,7 +312,7 @@ const Formone = () => {
 				<div className='-mx-4 md:flex mb-2'>
 					<div className='md:w-full px-3 mb-2 md:mb-0'>
 						<label
-							className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+							className='block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2'
 							for='grid-city'
 						>
 							Complaints
