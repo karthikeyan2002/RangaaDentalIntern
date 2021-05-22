@@ -4,7 +4,7 @@ import { userLogout } from "./utils/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faPowerOff,
-	faBars,
+	// faBars,
 	faSearch,
 	faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
@@ -22,16 +22,16 @@ function Dashboard() {
 	return (
 		<>
 			<div className='navbar text-white'>
-				<FontAwesomeIcon
+				{/* <FontAwesomeIcon
 					icon={faBars}
 					className='float-left mb-2'
-				></FontAwesomeIcon>
-				<h3 className='text-center'>PATIENT DETAILS</h3>
+				></FontAwesomeIcon> */}
+				<h3 className='text-center m-auto'>PATIENT DETAILS</h3>
 				<div class='dropdown'>
 					<a>
 						<FontAwesomeIcon
 							icon={faPowerOff}
-							className='float-right mb-2'
+							className='float-right'
 						></FontAwesomeIcon>
 					</a>
 					<div class='dropdown-content'>
@@ -147,7 +147,7 @@ function Dashboard() {
 					</div>
 				</div>
 
-				<a href='' className='text-blue-700  hover:text-cyan-900'>
+				<a href='' className='text-pink-300  hover:text-cyan-900'>
 					<FontAwesomeIcon
 						icon={faUserPlus}
 						className='userplus'

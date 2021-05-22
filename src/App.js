@@ -4,9 +4,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { getPatients } from "./utils/index.ts";
 import { BrowserRouter } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Dashboard from "./Dashboard";
+//import Dashboard from "./Dashboard";
 //import Formtwo from "./Formtwo.js";
-//import Formone from "./Formone";
+import Formone from "./Formone";
 
 getPatients()
 	.then((res) => console.log(res))
@@ -20,8 +20,8 @@ function App() {
 			<BrowserRouter>
 				{islogin ? ( // CHANGE true to islogin
 					<>
-						<Dashboard /> 
-						{/* <Formone />  */}
+						{/* <Dashboard />  */}
+						<Formone /> 
 						{/* <Formtwo /> */}
 						{/* <Formthree /> */}
 						{/* <Switch>

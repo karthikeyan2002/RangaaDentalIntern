@@ -21,14 +21,14 @@ const Formthree = ({ pid }) => {
 			<div className='mb-5'>
 				<FontAwesomeIcon
 					icon={faArrowLeft}
-					className='text-blue-200'
+					className='text-white'
 					size='lg'
 				></FontAwesomeIcon>
 				<div class='dropdown'>
 					<span>
 						<FontAwesomeIcon
 							icon={faPowerOff}
-							className='float-right text-blue-700'
+							className='float-right text-white'
 							size="lg"
 						></FontAwesomeIcon>
 					</span>
