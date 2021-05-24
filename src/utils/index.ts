@@ -3,8 +3,6 @@ import { MailDataRequired } from "@sendgrid/mail";
 import * as firebase from "firebase";
 import fs from "fs";
 import { firestore } from "../firebase";
-import { login } from "../redux/actions";
-import { store } from "../redux/store";
 /**
  * Create new paient with unique ID and store it in DB
  * @param data
