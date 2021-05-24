@@ -156,17 +156,6 @@ function Table() {
 							)}
 						</tbody>
 					</table>
-													<FontAwesomeIcon icon={faPencilAlt}></FontAwesomeIcon>
-												</span>
-											</td>
-										</tr>
-									))
-								) : (
-									<h4 style={{ fontFamily: "monospace" , marginLeft: '2px'}}>Loading ....</h4>
-								)}
-							</tbody>
-						</table>
-					</div>
 				</div>
 			</div>
 		</div>
