@@ -131,8 +131,7 @@ function Table() {
 												<PDFDownloadLink
 													document={<GetPDF styles={styles} data={patient} />}
 													//data={formik.values}
-													// fileName={`${formik.values.firstName}_${formik.values.lastName}_${formik.values.age}`}
-													fileName='sample'
+													fileName={`${patient.Name}_${patient.Age}`}
 													className='downlad-btn'
 												>
 													{({ blob, url, loading, error }) =>
