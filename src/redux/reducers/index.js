@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import * as types from "../types";
 
 const intialState = {
-	login: localStorage.getItem("user"),
+	login: sessionStorage.getItem("user"),
 };
 
 const state = (state = intialState, action) => {
@@ -16,13 +16,13 @@ const state = (state = intialState, action) => {
 				details: action.payload,
 			};
 		case types.LOGIN:
-			localStorage.setItem("user", true);
+			sessionStorage.setItem("user", true);
 			return {
 				...state,
 				login: true,
 			};
 		case types.LOGOUT:
-			localStorage.setItem("user", false);
+			sessionStorage.setItem("user", false);
 			return {
 				...state,
 				login: false,

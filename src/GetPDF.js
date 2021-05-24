@@ -15,14 +15,14 @@ const GetPDF = ({ data, styles }) => (
 
 				<view style={styles.BasicDetails}>
 					<view style={styles.box1}>
-						<Text> Name :  Karthikeyan</Text>
-						<Text> Email : bkarthi1000@gmail.com </Text> 
+						<Text> Name : {data["Name"]}</Text>
+						<Text> Email : {data["email"]} </Text>
 						<Text> State : TN</Text>
 					</view>
 
 					<view style={styles.box2}>
-						<Text> Age :  18 </Text>
-						<Text> Phone Number : 9080585673</Text>
+						<Text> Age : {data["Age"]} </Text>
+						<Text> Phone Number : {data["Phone Number"]}</Text>
 						<Text> Visited due to : Fever</Text>
 					</view>
 

@@ -73,7 +73,7 @@ const Formtwo = ({ pid }) => {
 					<p class='font-black'>NURSE DATA ENTRY</p>
 				</div>
 
-				<div className='-mx-4 md:flex mb-4'>
+				<div className='-mx-4 md:flex mb-4 justify-center justify-items-center'>
 					<div className='md:w-1/4 px-3 mb-6 md:mb-0'>
 						<p class='font-black  text-center'>HABITS</p>
 						<table class='border-collapse border border-green-800'>
@@ -204,11 +204,10 @@ const Formtwo = ({ pid }) => {
 						</table>
 					</div>
 
-					<div className='md:w-3/4 px-3 mb-6 md:mb-0'>
+					<div className='md:w-2/4 px-3 mb-6 md:mb-0'>
 						<p class='font-black  text-center'>MEDICAL HISTORY</p>
-
 						<table>
-							<thead className='border border-green-600 text-center'>
+							<thead className='border border-green-600 text-center px-3'>
 								<tr class='text-black'>
 									<th class='px-2 py-2'>Name of the Disease</th>
 									<th class='px-2 py-2'>Under Medication</th>

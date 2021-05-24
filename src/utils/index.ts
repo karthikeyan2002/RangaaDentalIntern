@@ -137,8 +137,6 @@ const userSignedIn = (): boolean => {
 
 console.log(userSignedIn());
 
-monitorUser();
-
 // 1//0g1slxpjR79hVCgYIARAAGBASNgF-L9Ir8ERV5PSHYf1JMLgaMpwv08eHYXU393LjK6P_xFqUp0QNBUzempnbz2zfnEHCoWuoEA
 export {
 	createNewPost,
