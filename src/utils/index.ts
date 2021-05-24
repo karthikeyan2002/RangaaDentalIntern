@@ -115,13 +115,13 @@ const userLogout = async (): Promise<void> => {
 /**
  * Keeps track of user's auth state
  */
-const monitorUser = (): void => {
-	firebase.default.auth().onAuthStateChanged((user) => {
-		if (user?.email) {
-			store.dispatch(login());
-		}
-	});
-};
+// const monitorUser = (): void => {
+// 	firebase.default.auth().onAuthStateChanged((user) => {
+// 		if (user?.email) {
+// 			store.dispatch(login());
+// 		}
+// 	});
+// };
 
 /**
  * Returns a boolean based on user's auth state
