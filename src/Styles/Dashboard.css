@@ -28,14 +28,13 @@ body {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	animation: usericon;
-	animation-duration: 5s;
+	color: #9ab3f5;
 }
 tbody tr:nth-child(even) {
-	background-color: #edffec;
+	background-color: #b9fffc;
 }
 tbody tr:nth-child(odd) {
-	background-color: white;
+	background-color: #fff;
 }
 .download-btn {
 	text-decoration: none;

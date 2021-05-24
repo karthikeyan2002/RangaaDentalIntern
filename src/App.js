@@ -20,11 +20,11 @@ function App() {
 		<>
 			{" "}
 			<BrowserRouter>
-				{islogin ? ( // CHANGE true to islogin
+				{islogin ? ( 
 					<>
 						{/* <Dashboard />  */}
 						{/* <Formone /> */}
-						{/* <Formtwo /> */}
+						{/* <Formtwo />  */}
 						{/* <Formthree /> */}
 						<Switch>
 							<Route exact path='/' component={Dashboard} />

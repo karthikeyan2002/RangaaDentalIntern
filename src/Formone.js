@@ -80,7 +80,7 @@ const Formone = () => {
             size="lg"
           ></FontAwesomeIcon>
         </Link>
-        <div class="dropdown">
+        <div className="dropdown">
           <span>
             <FontAwesomeIcon
               icon={faPowerOff}
@@ -88,7 +88,7 @@ const Formone = () => {
               size="lg"
             ></FontAwesomeIcon>
           </span>
-          <div class="dropdown-content">
+          <div className="dropdown-content">
             <span
               href="#"
               onClick={() => userLogout().then(() => dispatch(logout()))}
@@ -223,41 +223,41 @@ const Formone = () => {
 
         <div className="-mx-4 md:flex mb-2">
           <div className="md:w-1/3 px-3 mb-2 md:mb-0">
-            <p class="block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2">
+            <p className="block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2">
               Gender
             </p>
-            <label class="inline-flex items-center">
+            <label className="inline-flex items-center">
               <input
                 type="radio"
-                class="form-radio"
+                className="form-radio"
                 name="gender"
                 value="male"
                 checked={formik.values.gender === "male"}
                 onChange={formik.handleChange}
               ></input>
-              <span class="ml-2 text-gray-700 font-bold">Male</span>
+              <span className="ml-2 text-gray-700 font-bold">Male</span>
             </label>
-            <label class="inline-flex items-center ml-6">
+            <label className="inline-flex items-center ml-6">
               <input
                 type="radio"
-                class="form-radio"
+                className="form-radio"
                 name="gender"
                 value="female"
                 checked={formik.values.gender === "female"}
                 onChange={formik.handleChange}
               ></input>
-              <span class="ml-2 text-gray-700 font-bold">Female</span>
+              <span className="ml-2 text-gray-700 font-bold">Female</span>
             </label>
-            <label class="inline-flex items-center ml-6">
+            <label className="inline-flex items-center ml-6">
               <input
                 type="radio"
-                class="form-radio"
+                className="form-radio"
                 name="gender"
                 value="others"
                 checked={formik.values.gender === "others"}
                 onChange={formik.handleChange}
               ></input>
-              <span class="ml-2 text-gray-700 font-bold">Others</span>
+              <span className="ml-2 text-gray-700 font-bold">Others</span>
             </label>
           </div>
 
@@ -282,26 +282,26 @@ const Formone = () => {
             ) : null}
           </div>
 
-          <div class="w-full md:w-1/3 px-3 mb-2 md:mb-0">
+          <div className="w-full md:w-1/3 px-3 mb-2 md:mb-0">
             <label
-              class="block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wider text-gray-700 text-xs font-bold mb-2"
               for="state"
             >
               State
             </label>
-            <div class="relative">
+            <div className="relative">
               <select
                 value={formik.values.state}
                 onChange={formik.handleChange}
-                class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="state"
               >
                 <option value="Tamil Nadu">Tamil Nadu</option>
                 <option value="others">Others</option>
               </select>
-              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                 <svg
-                  class="fill-current h-4 w-4"
+                  className="fill-current h-4 w-4"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                 >

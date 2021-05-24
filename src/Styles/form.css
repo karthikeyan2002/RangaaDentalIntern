@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .form {
 	background: url('../img/Waimakariri.png');
 	height: 100% !important;
@@ -6,7 +6,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 1% 3%;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .form-container {
 	background-color: whitesmoke;
@@ -14,20 +14,31 @@
 }
 .form2,
 .form3 {
-	background: url('../img/Mataura.png');
+	background: url('../img/Waihou.png');
 	height: 100% !important;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 1% 3%;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
-tbody tr:nth-child(even) {
-	background-color: #edffec;
+.tablecenter {
+	margin-left: auto;
+	margin-right: auto;
+  }
+  .form-container thead tr{
+	background-color: #F8AFA6;
 }
-tbody tr:nth-child(odd) {
-	background-color: white;
+.form-container tbody tr:nth-child(even) {
+	background-color: #FADCD9;
 }
+.form-container tbody tr:nth-child(odd) {
+	background-color: #F9F1F0;
+}
+.form-container input:checked ~ .dot {
+	transform: translateX(100%);
+	background-color: #48bb78;
+  }
 @media only screen and (min-width:2000px) {
 	.form{
 		height: 100% !important;

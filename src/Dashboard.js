@@ -27,14 +27,14 @@ function Dashboard() {
 					className='float-left mb-2'
 				></FontAwesomeIcon> */}
 				<h3 className='text-center m-auto'>PATIENT DETAILS</h3>
-				<div class='dropdown'>
+				<div className='dropdown'>
 					<a>
 						<FontAwesomeIcon
 							icon={faPowerOff}
 							className='float-right'
 						></FontAwesomeIcon>
 					</a>
-					<div class='dropdown-content'>
+					<div className='dropdown-content'>
 						<span
 							href='#'
 							onClick={() => userLogout().then(() => dispatch(logout()))}
@@ -57,15 +57,15 @@ function Dashboard() {
 						></input>
 					</div>
 
-					<div class='float-right Search'>
-						<div class='bg-white flex items-center  border-12 shadow-xl w-full h-12'>
+					<div className='float-right Search'>
+						<div className='bg-white flex items-center  border-12 shadow-xl w-full h-12'>
 							<input
-								class='rounded-l-full w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none border-none'
+								className='rounded-l-full w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none border-none'
 								id='search'
 								type='text'
 								placeholder='Search'
 							></input>
-							<div class='p-4'>
+							<div className='p-4'>
 								<span className='text-blue-900 hover:text-blue-600'>
 									<FontAwesomeIcon
 										icon={faSearch}
@@ -148,7 +148,7 @@ function Dashboard() {
 				</div>
 
 				<Link to='/Receptionist'>
-					<a className='text-pink-300  hover:text-cyan-900'>
+					<a className='hover:text-cyan-900'>
 						<FontAwesomeIcon
 							icon={faUserPlus}
 							className='userplus'
