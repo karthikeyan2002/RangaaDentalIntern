@@ -8,3 +8,4 @@ export const EPILSEPSY = "EPILEPSY";
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 export const PATIENT_DETAILS = "PATIENT_DETAILS";
+export const LATEST_DOC = "LATEST_DOC";

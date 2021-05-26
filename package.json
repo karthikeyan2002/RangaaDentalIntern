@@ -42,6 +42,7 @@
 		"react-scripts": "^4.0.3",
 		"redux": "^4.0.5",
 		"redux-firestore": "^0.15.0",
+		"redux-thunk": "^2.3.0",
 		"start": "^5.1.0",
 		"styled-components": "^5.2.1",
 		"survey-pdf": "^1.8.39",

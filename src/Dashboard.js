@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-import { userLogout } from "./utils/index";
+import React, { useEffect, useState } from "react";
+import { userLogout, getMorePatients, getPatients } from "./utils/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faPowerOff,
@@ -19,6 +19,14 @@ import { Link } from "react-router-dom";
 
 function Dashboard() {
 	const dispatch = useDispatch();
+	const [patients, setPatients] = useState([]);
+	const [pageNumber, setPageNumber] = useState(1);
+	useEffect(() => {
+		getPatients()
+			.then((res) => setPatients(res))
+			.catch((err) => console.log(err));
+	});
+	const paginate = (number) => setPageNumber(number);
 	return (
 		<>
 			<div className='navbar text-white'>
@@ -77,7 +85,7 @@ function Dashboard() {
 					</div>
 				</div>
 
-				<Table />
+				<Table patients={patients} />
 
 				{/* Pagination starts here */}
 				<div className='p-3 pt-5 text-center'>
@@ -125,6 +133,11 @@ function Dashboard() {
 									<a
 										href='#'
 										className='relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50'
+										onClick={() => {
+											getMorePatients()
+												.then((res) => console.log(res))
+												.catch((err) => console.log(err));
+										}}
 									>
 										2
 									</a>

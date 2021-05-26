@@ -54,13 +54,7 @@ const styles = StyleSheet.create({
 	},
 });
 
-function Table() {
-	const [patients, setPatients] = useState([]);
-	useEffect(() => {
-		getPatients()
-			.then((response) => setPatients(response))
-			.catch((err) => console.error(err));
-	}, []);
+function Table({ patients }) {
 	return (
 		<div>
 			<div className='-my-6 py-4 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both mt-12'>
