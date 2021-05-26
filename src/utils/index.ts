@@ -1,4 +1,3 @@
-import { DocumentData, QueryDocumentSnapshot } from "@firebase/firestore-types";
 import * as sgMail from "@sendgrid/mail";
 import { MailDataRequired } from "@sendgrid/mail";
 import * as firebase from "firebase";
