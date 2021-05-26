@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import { getPatients } from "./utils/index";
 import "./Styles/Dashboard.css";
-import { PDFDownloadLink, StyleSheet } from "@react-pdf/renderer";
+import { PDFDownloadLink, StyleSheet,Font } from "@react-pdf/renderer";
 import GetPDF from "./GetPDF";
+
+Font.register({ family: 'Roboto', src: '../fonts/Roboto/Roboto-Bold.ttf'});
 
 const styles = StyleSheet.create({
 	page: {
@@ -16,6 +18,8 @@ const styles = StyleSheet.create({
 		width: "100%",
 		padding: 5,
 		fontSize: "11px",
+		fontFamily:'Roboto',
+		fontWeight:'bold',
 	},
 	header: {
 		color: "red",
