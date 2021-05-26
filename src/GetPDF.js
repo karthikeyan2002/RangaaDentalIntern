@@ -1,34 +1,45 @@
 import { Document, Page, Text, View } from "@react-pdf/renderer";
 import React from "react";
 
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = dd + '/' + mm + '/' + yyyy;
+
 const GetPDF = ({ data, styles }) => (
 	<Document>
 		<Page size='A4' style={styles.page}>
 			<View style={styles.pagecontainer}>
 				<view style={styles.header}>
-					<Text>Rangaa Dental</Text>
+					<Text>Rangaa Dental Care</Text>
+						<view style={styles.address}>
+						<Text>No 36, Gandhi Road, Thiruvanaikoil, Trichy - 620005, Near Thiruvanaikovil Theppa Kulam</Text>
+						</view>
+						<view style={styles.date}>
+						<Text>Reported : {today}</Text>
+						</view>
 				</view>
 				{/* Basic Details */}
-				<view style={styles.subheading}>
-					<Text>Patient Details</Text>
-				</view>
+				<view style={styles.margintop}>
+					<view style={styles.BasicDetails}>
+						<view style={styles.box1}>
+							<Text> Name : {data["Name"]}</Text>
+							<Text> Email : {data["email"]} </Text>
+							<Text> State : TN</Text>
+						</view>
 
-				<view style={styles.BasicDetails}>
-					<view style={styles.box1}>
-						<Text> Name : {data["Name"]}</Text>
-						<Text> Email : {data["email"]} </Text>
-						<Text> State : TN</Text>
-					</view>
+						<view style={styles.box2}>
+							<Text> Age : {data["Age"]} </Text>
+							<Text> Phone Number : {data["Phone Number"]}</Text>
+							<Text> Visited due to : Fever</Text>
+						</view>
 
-					<view style={styles.box2}>
-						<Text> Age : {data["Age"]} </Text>
-						<Text> Phone Number : {data["Phone Number"]}</Text>
-						<Text> Visited due to : Fever</Text>
-					</view>
-
-					<view style={styles.box3}>
-						<Text> Gender : Male </Text>
-						<Text> City : Madurai </Text>
+						<view style={styles.box3}>
+							<Text> Gender : Male </Text>
+							<Text> City : Madurai </Text>
+						</view>
 					</view>
 				</view>
 				{/* Habits */}
@@ -53,14 +64,14 @@ const GetPDF = ({ data, styles }) => (
 				</view>
 				{/* Medical History */}
 				<view style={styles.subheading}>
-					<Text>Medical History</Text>
+					<Text>History</Text>
 				</view>
 
 				<view style={styles.BasicDetails}>
 					<view style={styles.box1}>
-						<Text> Allergy : </Text>
-						<Text> Diabetes : </Text>
-						<Text> Epilepsy : </Text>
+						<Text> Allergy : UM</Text>
+						<Text> Diabetes : UM  </Text>
+						<Text> Epilepsy : UM </Text>
 					</view>
 
 					<view style={styles.box2}>
@@ -136,7 +147,7 @@ const GetPDF = ({ data, styles }) => (
 				</view>
 
 				<view style={styles.subheading}>
-					<Text>MUCOSAL LESIONS</Text>
+					<Text>Mucosal Lesions</Text>
 				</view>
 
 				<view style={styles.BasicDetails}>
@@ -165,6 +176,16 @@ const GetPDF = ({ data, styles }) => (
 						<Text> Bleaching :</Text>
 					</view>
 				</view>
+
+				<view style={styles.Thankyou}>
+					<Text>Thank You</Text>
+					<Text>Get Well Soon !</Text>
+				</view>
+
+				<view style={styles.footer}>
+					<Text>Contact : 7947264733</Text>
+				</view>
+
 			</View>
 		</Page>
 	</Document>
