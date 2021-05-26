@@ -1,7 +1,6 @@
 import React from "react";
 import Login from "./login.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { getPatients } from "./utils/index.ts";
 import { BrowserRouter } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -10,9 +9,6 @@ import Formtwo from "./Formtwo";
 import Formone from "./Formone";
 import Formthree from "./Formthree";
 
-getPatients()
-	.then((res) => console.log(res))
-	.catch((err) => console.log(err));
 function App() {
 	const islogin = useSelector((state) => state.state.login);
 	console.log(islogin);
@@ -20,7 +16,7 @@ function App() {
 		<>
 			{" "}
 			<BrowserRouter>
-				{islogin ? ( 
+				{islogin ? (
 					<>
 						{/* <Dashboard />  */}
 						{/* <Formone /> */}

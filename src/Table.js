@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
-import { getPatients } from "./utils/index";
 import "./Styles/Dashboard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PDFDownloadLink, StyleSheet } from "@react-pdf/renderer";
 import GetPDF from "./GetPDF";
 
@@ -18,7 +16,7 @@ const styles = StyleSheet.create({
 		width: "100%",
 		padding: 10,
 		fontSize: "11px",
-		border: '1px solid black'
+		border: "1px solid black",
 		// fontFamily:'Roboto',
 		// fontWeight:'bold',
 	},
@@ -29,22 +27,22 @@ const styles = StyleSheet.create({
 		fontWeight: "bold",
 		paddingTop: "9px",
 		paddingBottom: "3px",
-		borderBottom: '1px solid black'
+		borderBottom: "1px solid black",
 	},
-	address:{
-		fontSize:'10px',
-		marginTop:'5px',
-		width:'70%',
-		marginLeft: 'auto',
-		marginRight:'auto',
+	address: {
+		fontSize: "10px",
+		marginTop: "5px",
+		width: "70%",
+		marginLeft: "auto",
+		marginRight: "auto",
 	},
 	date: {
-		textAlign: 'right',
-		fontSize:'8px',
-		marginTop: '5px',
+		textAlign: "right",
+		fontSize: "8px",
+		marginTop: "5px",
 	},
 	margintop: {
-		marginTop:'30px',
+		marginTop: "30px",
 	},
 	subheading: {
 		fontSize: "14px",
@@ -57,7 +55,7 @@ const styles = StyleSheet.create({
 		lineHeight: "2px",
 		display: "flex",
 		flexDirection: "row",
-		padding: '5px',
+		padding: "5px",
 	},
 	box1: {
 		flex: "2",
@@ -68,23 +66,17 @@ const styles = StyleSheet.create({
 	box3: {
 		flex: "1",
 	},
-	Thankyou:{
-		textAlign:'center',
-		marginTop:'4px'
+	Thankyou: {
+		textAlign: "center",
+		marginTop: "4px",
 	},
-	footer:{
-		textAlign: 'right',
-		fontSize:'8px',
+	footer: {
+		textAlign: "right",
+		fontSize: "8px",
 	},
 });
 
-function Table() {
-	const [patients, setPatients] = useState([]);
-	useEffect(() => {
-		getPatients()
-			.then((response) => setPatients(response))
-			.catch((err) => console.error(err));
-	}, []);
+function Table({ patients }) {
 	return (
 		<div>
 			<div className='-my-6 py-4 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 patienttabel clear-both mt-12'>
@@ -153,7 +145,7 @@ function Table() {
 										<td className='py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center'>
 											<button className='px-2 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-200 hover:text-white focus:outline-none'>
 												<PDFDownloadLink
-													document={<GetPDF styles={styles} data={patient} />}
+													document={<GetPDF data={patient} styles={styles} />}
 													//data={formik.values}
 													fileName={`${patient.Name}_${patient.Age}`}
 													className='downlad-btn'

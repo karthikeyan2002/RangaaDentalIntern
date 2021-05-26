@@ -1,3 +1,4 @@
+import { DocumentData, QueryDocumentSnapshot } from "@firebase/firestore-types";
 import * as sgMail from "@sendgrid/mail";
 import { MailDataRequired } from "@sendgrid/mail";
 import * as firebase from "firebase";
@@ -35,6 +36,7 @@ const getPatients = async (): Promise<Array<Object>> => {
 	const result: Array<Object> = [];
 	await firestore
 		.collection("PatientDetails")
+		.orderBy("Name")
 		.get()
 		.then((res) => {
 			res.docs.forEach((doc) => {
@@ -44,6 +46,24 @@ const getPatients = async (): Promise<Array<Object>> => {
 		.catch((err) => console.log(err));
 	return result;
 };
+
+// const getMorePatients = async (): Promise<Array<Object>> => {
+// 	const result: Array<Object> = [];
+// 	await firestore
+// 		.collection("PatientDetails")
+// 		.orderBy("Name")
+// 		.limit(2)
+// 		.startAfter(tempDoc || 0)
+// 		.get()
+// 		.then((res) => {
+// 			tempDoc = res.docs[res.docs.length - 1];
+// 			res.docs.forEach((doc) => {
+// 				result.push(doc.data());
+// 			});
+// 		})
+// 		.catch((err) => console.log(err));
+// 	return result;
+// };
 
 const sendMail = (fileName?: string, filePath?: string): void => {
 	sgMail.setApiKey("APIKEY");
@@ -111,17 +131,6 @@ const userLogout = async (): Promise<void> => {
 };
 
 /**
- * Keeps track of user's auth state
- */
-// const monitorUser = (): void => {
-// 	firebase.default.auth().onAuthStateChanged((user) => {
-// 		if (user?.email) {
-// 			store.dispatch(login());
-// 		}
-// 	});
-// };
-
-/**
  * Returns a boolean based on user's auth state
  * @returns boolean
  */
@@ -132,8 +141,6 @@ const userSignedIn = (): boolean => {
 	}
 	return false;
 };
-
-console.log(userSignedIn());
 
 // 1//0g1slxpjR79hVCgYIARAAGBASNgF-L9Ir8ERV5PSHYf1JMLgaMpwv08eHYXU393LjK6P_xFqUp0QNBUzempnbz2zfnEHCoWuoEA
 export {

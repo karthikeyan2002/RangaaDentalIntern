@@ -3,6 +3,7 @@ import * as types from "../types";
 
 const intialState = {
 	login: sessionStorage.getItem("user"),
+	latestDoc: null,
 };
 
 const state = (state = intialState, action) => {

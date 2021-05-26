@@ -1,24 +1,36 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-import { userLogout } from "./utils/index";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faPowerOff,
 	// faBars,
 	faSearch,
 	faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
-import { logout } from "./redux/actions";
-import { useDispatch } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import Pagination from "./Pagination";
+import { logout } from "./redux/actions";
+import "./Styles/Dashboard.css";
 import "./Styles/index.css";
 import Table from "./Table";
-import "./Styles/Dashboard.css";
-import { Link } from "react-router-dom";
+import { getPatients, userLogout } from "./utils/index";
 
 function Dashboard() {
 	const dispatch = useDispatch();
+	const [patients, setPatients] = useState([]);
+	const [currentPage, setCurrentPage] = useState(1);
+	const [postsPerPage] = useState(5);
+	const paginate = (pageNumber) => setCurrentPage(pageNumber);
+	useEffect(() => {
+		getPatients()
+			.then((res) => setPatients(res))
+			.catch((err) => console.log(err));
+	}, []);
+	const indexOfLastPost = currentPage * postsPerPage;
+	const indexOfFirstPost = indexOfLastPost - postsPerPage;
+	const currentPosts = patients.slice(indexOfFirstPost, indexOfLastPost);
 	return (
 		<>
 			<div className='navbar text-white'>
@@ -77,71 +89,18 @@ function Dashboard() {
 					</div>
 				</div>
 
-				<Table />
+				<Table patients={currentPosts} />
 
 				{/* Pagination starts here */}
 				<div className='p-3 pt-5 text-center'>
 					<div className=' patienttabel mt-3 flex items-center justify-between border-t border-gray-200 sm:px-6'>
-						<div className='flex-1 flex justify-between sm:hidden'>
-							<a
-								href='#'
-								className='inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-500'
-							>
-								Previous
-							</a>
-							<a
-								href='#'
-								className='ml-3 inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-500'
-							>
-								Next
-							</a>
-						</div>
-						<div className='hidden sm:flex-1 sm:flex sm:items-center sm:justify-between'>
+						<div className='sm:flex-1 sm:flex sm:items-center content-center justify-center sm:justify-center'>
 							<div>
-								<p className='text-sm text-gray-700'>
-									Showing <span className='font-medium'>1</span> to{" "}
-									<span className='font-medium'>3</span> of{" "}
-									<span className='font-medium'>3</span> results
-								</p>
-							</div>
-							<div>
-								<nav
-									className='relative z-0 inline-flex rounded-md shadow-xl -space-x-px'
-									aria-label='Pagination'
-								>
-									<a
-										href='#'
-										className='relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50'
-									>
-										<span className='sr-only'>Previous</span>
-										<ChevronLeftIcon className='h-5 w-5' aria-hidden='true' />
-									</a>
-									<a
-										href='#'
-										className='relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50'
-									>
-										1
-									</a>
-									<a
-										href='#'
-										className='relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50'
-									>
-										2
-									</a>
-									<a
-										href='#'
-										className='hidden md:inline-flex relative items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50'
-									>
-										3
-									</a>
-									<a
-										href='#'
-										className='relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50'
-									>
-										<span className='sr-only'>Next</span>
-										<ChevronRightIcon className='h-5 w-5' aria-hidden='true' />
-									</a>
-								</nav>
+								<Pagination
+									postsPerPage={postsPerPage}
+									totalPosts={patients.length}
+									paginate={paginate}
+								/>
 							</div>
 						</div>
 					</div>

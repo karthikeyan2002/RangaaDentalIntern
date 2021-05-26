@@ -2,11 +2,11 @@ import { Document, Page, Text, View } from "@react-pdf/renderer";
 import React from "react";
 
 var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var dd = String(today.getDate()).padStart(2, "0");
+var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
 var yyyy = today.getFullYear();
 
-today = dd + '/' + mm + '/' + yyyy;
+today = dd + "/" + mm + "/" + yyyy;
 
 const GetPDF = ({ data, styles }) => (
 	<Document>
@@ -14,12 +14,15 @@ const GetPDF = ({ data, styles }) => (
 			<View style={styles.pagecontainer}>
 				<view style={styles.header}>
 					<Text>Rangaa Dental Care</Text>
-						<view style={styles.address}>
-						<Text>No 36, Gandhi Road, Thiruvanaikoil, Trichy - 620005, Near Thiruvanaikovil Theppa Kulam</Text>
-						</view>
-						<view style={styles.date}>
+					<view style={styles.address}>
+						<Text>
+							No 36, Gandhi Road, Thiruvanaikoil, Trichy - 620005, Near
+							Thiruvanaikovil Theppa Kulam
+						</Text>
+					</view>
+					<view style={styles.date}>
 						<Text>Reported : {today}</Text>
-						</view>
+					</view>
 				</view>
 				{/* Basic Details */}
 				<view style={styles.margintop}>
@@ -70,7 +73,7 @@ const GetPDF = ({ data, styles }) => (
 				<view style={styles.BasicDetails}>
 					<view style={styles.box1}>
 						<Text> Allergy : UM</Text>
-						<Text> Diabetes : UM  </Text>
+						<Text> Diabetes : UM </Text>
 						<Text> Epilepsy : UM </Text>
 					</view>
 
@@ -185,7 +188,6 @@ const GetPDF = ({ data, styles }) => (
 				<view style={styles.footer}>
 					<Text>Contact : 7947264733</Text>
 				</view>
-
 			</View>
 		</Page>
 	</Document>
