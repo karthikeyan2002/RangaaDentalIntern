@@ -10,11 +10,11 @@
 	letter-spacing: 1px;
 	background-color: #7579e7;
 }
-
 .Dashboard {
 	font-family: "Rubik", sans-serif;
 	padding: 0% 4%;
 	height: 100% !important;
+	background-color:  #caf7e3;;
 }
 .patienttabel thead {
 	background-color: #7579e7;
