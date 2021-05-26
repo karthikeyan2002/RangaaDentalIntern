@@ -3,49 +3,61 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import { getPatients } from "./utils/index";
 import "./Styles/Dashboard.css";
-import { PDFDownloadLink, StyleSheet,Font } from "@react-pdf/renderer";
+import { PDFDownloadLink, StyleSheet } from "@react-pdf/renderer";
 import GetPDF from "./GetPDF";
 
-Font.register({ family: 'Roboto', src: '../fonts/Roboto/Roboto-Bold.ttf'});
+// Font.register({ family: 'Roboto', src: '../fonts/Roboto/Roboto-Bold.ttf'});
 
 const styles = StyleSheet.create({
 	page: {
-		padding: 20,
+		padding: 10,
 	},
 	pagecontainer: {
 		backgroundColor: "#f9f6f7",
 		height: "100%",
 		width: "100%",
-		padding: 5,
+		padding: 10,
 		fontSize: "11px",
-		fontFamily:'Roboto',
-		fontWeight:'bold',
+		border: '1px solid black'
+		// fontFamily:'Roboto',
+		// fontWeight:'bold',
 	},
 	header: {
-		color: "red",
-		height: "8%",
-		fontSize: "16px",
 		width: "100%",
+		fontSize: "16px",
 		textAlign: "center",
 		fontWeight: "bold",
 		paddingTop: "9px",
-		letterSpacing: "1px",
+		paddingBottom: "3px",
+		borderBottom: '1px solid black'
 	},
-	BasicDetails: {
-		borderBottom: "1px solid gray",
-		letterSpacing: "1px",
-		lineHeight: "2px",
-		display: "flex",
-		flexDirection: "row",
+	address:{
+		fontSize:'10px',
+		marginTop:'5px',
+		width:'70%',
+		marginLeft: 'auto',
+		marginRight:'auto',
+	},
+	date: {
+		textAlign: 'right',
+		fontSize:'8px',
+		marginTop: '5px',
+	},
+	margintop: {
+		marginTop:'30px',
 	},
 	subheading: {
-		display: "block",
-		color: "red",
 		fontSize: "14px",
 		fontWeight: "bold",
 		marginBottom: "10px",
-		marginTop: "4px",
-		letterSpacing: "1px",
+		marginTop: "8px",
+	},
+	BasicDetails: {
+		borderBottom: "1px solid gray",
+		lineHeight: "2px",
+		display: "flex",
+		flexDirection: "row",
+		padding: '5px',
 	},
 	box1: {
 		flex: "2",
@@ -55,6 +67,14 @@ const styles = StyleSheet.create({
 	},
 	box3: {
 		flex: "1",
+	},
+	Thankyou:{
+		textAlign:'center',
+		marginTop:'4px'
+	},
+	footer:{
+		textAlign: 'right',
+		fontSize:'8px',
 	},
 });
 
