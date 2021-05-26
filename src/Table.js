@@ -1,62 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
-import { getPatients } from "./utils/index";
 import "./Styles/Dashboard.css";
-import { PDFDownloadLink, StyleSheet,Font } from "@react-pdf/renderer";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 import GetPDF from "./GetPDF";
-
-Font.register({ family: 'Roboto', src: '../fonts/Roboto/Roboto-Bold.ttf'});
-
-const styles = StyleSheet.create({
-	page: {
-		padding: 20,
-	},
-	pagecontainer: {
-		backgroundColor: "#f9f6f7",
-		height: "100%",
-		width: "100%",
-		padding: 5,
-		fontSize: "11px",
-		fontFamily:'Roboto',
-		fontWeight:'bold',
-	},
-	header: {
-		color: "red",
-		height: "8%",
-		fontSize: "16px",
-		width: "100%",
-		textAlign: "center",
-		fontWeight: "bold",
-		paddingTop: "9px",
-		letterSpacing: "1px",
-	},
-	BasicDetails: {
-		borderBottom: "1px solid gray",
-		letterSpacing: "1px",
-		lineHeight: "2px",
-		display: "flex",
-		flexDirection: "row",
-	},
-	subheading: {
-		display: "block",
-		color: "red",
-		fontSize: "14px",
-		fontWeight: "bold",
-		marginBottom: "10px",
-		marginTop: "4px",
-		letterSpacing: "1px",
-	},
-	box1: {
-		flex: "2",
-	},
-	box2: {
-		flex: "1",
-	},
-	box3: {
-		flex: "1",
-	},
-});
 
 function Table({ patients }) {
 	return (
@@ -127,7 +74,7 @@ function Table({ patients }) {
 										<td className='py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center'>
 											<button className='px-2 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-200 hover:text-white focus:outline-none'>
 												<PDFDownloadLink
-													document={<GetPDF styles={styles} data={patient} />}
+													document={<GetPDF data={patient} />}
 													//data={formik.values}
 													fileName={`${patient.Name}_${patient.Age}`}
 													className='downlad-btn'
