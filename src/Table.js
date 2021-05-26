@@ -1,9 +1,80 @@
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { PDFDownloadLink } from "@react-pdf/renderer";
-import React from "react";
-import GetPDF from "./GetPDF";
 import "./Styles/Dashboard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { PDFDownloadLink, StyleSheet } from "@react-pdf/renderer";
+import GetPDF from "./GetPDF";
+
+// Font.register({ family: 'Roboto', src: '../fonts/Roboto/Roboto-Bold.ttf'});
+
+const styles = StyleSheet.create({
+	page: {
+		padding: 10,
+	},
+	pagecontainer: {
+		backgroundColor: "#f9f6f7",
+		height: "100%",
+		width: "100%",
+		padding: 10,
+		fontSize: "11px",
+		border: "1px solid black",
+		// fontFamily:'Roboto',
+		// fontWeight:'bold',
+	},
+	header: {
+		width: "100%",
+		fontSize: "16px",
+		textAlign: "center",
+		fontWeight: "bold",
+		paddingTop: "9px",
+		paddingBottom: "3px",
+		borderBottom: "1px solid black",
+	},
+	address: {
+		fontSize: "10px",
+		marginTop: "5px",
+		width: "70%",
+		marginLeft: "auto",
+		marginRight: "auto",
+	},
+	date: {
+		textAlign: "right",
+		fontSize: "8px",
+		marginTop: "5px",
+	},
+	margintop: {
+		marginTop: "30px",
+	},
+	subheading: {
+		fontSize: "14px",
+		fontWeight: "bold",
+		marginBottom: "10px",
+		marginTop: "8px",
+	},
+	BasicDetails: {
+		borderBottom: "1px solid gray",
+		lineHeight: "2px",
+		display: "flex",
+		flexDirection: "row",
+		padding: "5px",
+	},
+	box1: {
+		flex: "2",
+	},
+	box2: {
+		flex: "1",
+	},
+	box3: {
+		flex: "1",
+	},
+	Thankyou: {
+		textAlign: "center",
+		marginTop: "4px",
+	},
+	footer: {
+		textAlign: "right",
+		fontSize: "8px",
+	},
+});
 
 function Table({ patients }) {
 	return (
@@ -74,7 +145,7 @@ function Table({ patients }) {
 										<td className='py-3 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center'>
 											<button className='px-2 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-200 hover:text-white focus:outline-none'>
 												<PDFDownloadLink
-													document={<GetPDF data={patient} />}
+													document={<GetPDF data={patient} styles={styles} />}
 													//data={formik.values}
 													fileName={`${patient.Name}_${patient.Age}`}
 													className='downlad-btn'

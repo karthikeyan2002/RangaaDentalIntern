@@ -21,6 +21,7 @@ function App() {
 						{/* <Dashboard />  */}
 						{/* <Formone /> */}
 						{/* <Formtwo />  */}
+						{/* <Form2 /> */}
 						{/* <Formthree /> */}
 						<Switch>
 							<Route exact path='/' component={Dashboard} />
