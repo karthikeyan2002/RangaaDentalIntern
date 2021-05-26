@@ -1,9 +1,9 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
-import "./Styles/Dashboard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PDFDownloadLink } from "@react-pdf/renderer";
+import React from "react";
 import GetPDF from "./GetPDF";
+import "./Styles/Dashboard.css";
 
 function Table({ patients }) {
 	return (

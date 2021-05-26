@@ -15,8 +15,6 @@ const createNewPost = async (data: any) => {
 	});
 };
 
-var tempDoc: QueryDocumentSnapshot<DocumentData> | null = null;
-
 /**
  * Function that updates patients data. Use this to update not create
  * @param data
@@ -39,10 +37,8 @@ const getPatients = async (): Promise<Array<Object>> => {
 	await firestore
 		.collection("PatientDetails")
 		.orderBy("Name")
-		.limit(2)
 		.get()
 		.then((res) => {
-			tempDoc = res.docs[res.docs.length - 1];
 			res.docs.forEach((doc) => {
 				result.push(doc.data());
 			});
@@ -51,23 +47,23 @@ const getPatients = async (): Promise<Array<Object>> => {
 	return result;
 };
 
-const getMorePatients = async (): Promise<Array<Object>> => {
-	const result: Array<Object> = [];
-	await firestore
-		.collection("PatientDetails")
-		.orderBy("Name")
-		.limit(2)
-		.startAfter(tempDoc || 0)
-		.get()
-		.then((res) => {
-			tempDoc = res.docs[res.docs.length - 1];
-			res.docs.forEach((doc) => {
-				result.push(doc.data());
-			});
-		})
-		.catch((err) => console.log(err));
-	return result;
-};
+// const getMorePatients = async (): Promise<Array<Object>> => {
+// 	const result: Array<Object> = [];
+// 	await firestore
+// 		.collection("PatientDetails")
+// 		.orderBy("Name")
+// 		.limit(2)
+// 		.startAfter(tempDoc || 0)
+// 		.get()
+// 		.then((res) => {
+// 			tempDoc = res.docs[res.docs.length - 1];
+// 			res.docs.forEach((doc) => {
+// 				result.push(doc.data());
+// 			});
+// 		})
+// 		.catch((err) => console.log(err));
+// 	return result;
+// };
 
 const sendMail = (fileName?: string, filePath?: string): void => {
 	sgMail.setApiKey("APIKEY");
@@ -154,6 +150,5 @@ export {
 	sendMail,
 	userLogin,
 	userLogout,
-	getMorePatients,
 	userSignedIn,
 };

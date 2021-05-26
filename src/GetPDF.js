@@ -1,10 +1,10 @@
 import {
 	Document,
+	Font,
 	Page,
+	StyleSheet,
 	Text,
 	View,
-	StyleSheet,
-	Font,
 } from "@react-pdf/renderer";
 import React, { useEffect } from "react";
 
