@@ -2,6 +2,7 @@
 .form {
 	background: url('../img/form-1.jpg');
 	height: 100% !important;
+  height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -15,6 +16,7 @@
 .form2{
 		background: url('../img/form-2.jpg');
 		height: 100% !important;
+    height: 100vh;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
