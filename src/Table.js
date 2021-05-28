@@ -3,6 +3,7 @@ import "./Styles/Dashboard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PDFDownloadLink, StyleSheet } from "@react-pdf/renderer";
 import GetPDF from "./GetPDF";
+import { Link } from "react-router-dom";
 
 // Font.register({ family: 'Roboto', src: '../fonts/Roboto/Roboto-Bold.ttf'});
 
@@ -157,12 +158,14 @@ function Table({ patients }) {
 											</button>
 										</td>
 										<td className='whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 text-center'>
+										<Link to='/Nurse'>
 											<span
 												href=''
 												className='text-green-900  hover:text-cyan-600 cursor-pointer'
 											>
 												<FontAwesomeIcon icon={faPencilAlt}></FontAwesomeIcon>
 											</span>
+										</Link>
 										</td>
 									</tr>
 								))

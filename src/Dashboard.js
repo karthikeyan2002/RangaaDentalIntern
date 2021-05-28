@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {
-	faPowerOff,
+	faSignOutAlt,
 	// faBars,
 	faSearch,
 	faUserPlus,
@@ -33,28 +33,15 @@ function Dashboard() {
 	const currentPosts = patients.slice(indexOfFirstPost, indexOfLastPost);
 	return (
 		<>
-			<div className='navbar text-white'>
-				{/* <FontAwesomeIcon
-					icon={faBars}
-					className='float-left mb-2'
-				></FontAwesomeIcon> */}
-				<h3 className='text-center m-auto'>PATIENT DETAILS</h3>
-				<div className='dropdown'>
-					<a>
-						<FontAwesomeIcon
-							icon={faPowerOff}
-							className='float-right'
-						></FontAwesomeIcon>
-					</a>
-					<div className='dropdown-content'>
-						<span
-							href='#'
-							onClick={() => userLogout().then(() => dispatch(logout()))}
-						>
-							Log out
-						</span>
-					</div>
-				</div>
+			<div className='navbar'>
+				<h3 className='text-center m-auto text-white'>PATIENT DETAILS</h3>
+			<span className="float-right">
+				<FontAwesomeIcon
+				icon={faSignOutAlt}
+				size="lg"
+				onClick={() => userLogout().then(() => dispatch(logout()))}
+				></FontAwesomeIcon>
+         	 </span>
 			</div>
 
 			<div className='Dashboard'>
@@ -107,13 +94,13 @@ function Dashboard() {
 				</div>
 
 				<Link to='/Receptionist'>
-					<a className='hover:text-cyan-900'>
+					<span>
 						<FontAwesomeIcon
 							icon={faUserPlus}
 							className='userplus'
 							size='lg'
 						></FontAwesomeIcon>
-					</a>
+					</span>
 				</Link>
 			</div>
 		</>

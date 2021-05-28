@@ -26,6 +26,9 @@
 	right: 20px;
 	color: #9ab3f5;
 }
+.userplus :hover{
+	color:blue;
+}
 tbody tr:nth-child(even) {
 	background-color: #b9fffc;
 }
@@ -35,6 +38,14 @@ tbody tr:nth-child(odd) {
 .download-btn {
 	text-decoration: none;
 	font-family: "Rubik", sans-serif;
+}
+.navbar span{
+	color: white;
+	cursor: pointer;
+}
+.navbar span :hover{
+	color: cyan;
+	cursor: pointer;
 }
 
 /* RESPONSIVENESS */

@@ -1,5 +1,5 @@
 import React from "react";
-import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFormik } from "formik";
 import "./Styles/form.css";
@@ -57,27 +57,18 @@ const Formtwo = ({ pid }) => {
 				<Link to='/'>
 					<FontAwesomeIcon
 						icon={faArrowLeft}
-						className='text-blue-600 float-left'
+						className='text-blue-600 float-left hover:text-blue-400'
 						size='lg'
 					></FontAwesomeIcon>
 				</Link>
-				<div className='dropdown'>
-					<span>
-						<FontAwesomeIcon
-							icon={faPowerOff}
-							className='float-right text-gray-600'
-							size='lg'
-						></FontAwesomeIcon>
-					</span>
-					<div className='dropdown-content'>
-						<span
-							href='#'
-							onClick={() => userLogout().then(() => dispatch(logout()))}
-						>
-							Log out
-						</span>
-					</div>
-				</div>
+				<span>
+					<FontAwesomeIcon
+					icon={faSignOutAlt}
+					className="float-right text-blue-600 hover:text-blue-400"
+					size="lg"
+					onClick={() => userLogout().then(() => dispatch(logout()))}
+					></FontAwesomeIcon>
+          		</span>
 			</div>
 
 			<form
