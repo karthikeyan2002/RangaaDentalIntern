@@ -79,7 +79,7 @@ function Dashboard() {
 				<Table patients={currentPosts} />
 
 				{/* Pagination starts here */}
-				<div className='p-3 pt-5 text-center'>
+				<div className='pt-5 text-center'>
 					<div className=' patienttabel mt-3 flex items-center justify-between border-t border-gray-200 sm:px-6'>
 						<div className='sm:flex-1 sm:flex sm:items-center content-center justify-center sm:justify-center'>
 							<div>
