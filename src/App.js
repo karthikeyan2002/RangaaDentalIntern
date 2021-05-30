@@ -22,6 +22,7 @@ function App() {
 						{/* <Formone /> */}
 						{/* <Formtwo />  */}
 						{/* <Formthree /> */}
+						{/* <Modal /> */}
 						<Switch>
 							<Route exact path='/' component={Dashboard} />
 							<Route path='/Receptionist' component={Formone} />

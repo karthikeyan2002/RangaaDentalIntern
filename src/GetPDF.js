@@ -179,6 +179,9 @@ const GetPDF = ({ data, styles }) => (
 						<Text> Bleaching :</Text>
 					</view>
 				</view>
+				<view style={styles.BasicDetails}>
+				<Text> Advice :</Text>
+				</view>
 
 				<view style={styles.Thankyou}>
 					<Text>Thank You</Text>

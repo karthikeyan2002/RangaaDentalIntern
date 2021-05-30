@@ -47,6 +47,9 @@ tbody tr:nth-child(odd) {
 	color: cyan;
 	cursor: pointer;
 }
+.Details-small{
+	display: none;
+}
 
 /* RESPONSIVENESS */
 @media only screen and (min-width: 2000px) {
@@ -69,8 +72,11 @@ tbody tr:nth-child(odd) {
 	.Dashboard {
 		overflow-x: scroll;
 	}
-	.Deatils-small {
+	.Details-small {
 		display: block;
+	}
+	.Details-big{
+		display: none;
 	}
 }
 @media only screen and (max-width: 607px) {
@@ -85,7 +91,7 @@ tbody tr:nth-child(odd) {
 		display: none;
 	}
 	.patienttabel {
-		margin-left: 1.5em;
+		margin-left: 0.5em;
 	}
 	.Date {
 		text-align: center;
@@ -93,7 +99,7 @@ tbody tr:nth-child(odd) {
 }
 @media only screen and (max-width: 340px) {
 	.patienttabel {
-		margin-left: 1em;
+		margin-left: 0em;
 	}
 	.Search {
 		margin-right: 1px;
