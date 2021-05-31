@@ -19,6 +19,8 @@
 		"@types/react": "^17.0.8",
 		"@types/react-dom": "^17.0.5",
 		"bootstrap": "^4.6.0",
+		"classnames": "^2.3.1",
+		"date-fns": "^2.21.3",
 		"firebase": "^8.6.2",
 		"firebase-tools": "^9.11.0",
 		"formik": "^2.2.8",
@@ -53,7 +55,7 @@
 		"yup": "^0.32.9"
 	},
 	"scripts": {
-		"start": "craco start",
+		"start": "set PORT=3006 && craco start",
 		"build": "craco build",
 		"test": "craco test",
 		"eject": "react-scripts eject"

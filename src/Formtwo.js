@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFormik } from "formik";
@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { userLogout } from "./utils";
 import { logout } from "./redux/actions";
 import { Link } from "react-router-dom";
-
+import classnames from "classnames";
 // let myRadios = document.getElementsByName('tabs2');
 // let setCheck;
 // let x = 0;
@@ -24,10 +24,37 @@ import { Link } from "react-router-dom";
 //     };
 // }
 
-
 const validate = (values) => {};
 
 const Formtwo = ({ pid }) => {
+	const [open, setOpen] = useState(false);
+	const [openTwo, setOpenTwo] = useState(false);
+	console.log(open, openTwo);
+	const accordion = classnames(
+		"border-l-2",
+		"bg-gray-100",
+		"border-indigo-500",
+		"leading-normal",
+		"transition",
+		"duration-300",
+		"ease-in-out",
+		"justify-center",
+		"p-0",
+		"h-0",
+		{ "opacity-0": !open, "opacity-1 h-auto p-10": open }
+	);
+	const accordionTwo = classnames(
+		"border-l-2",
+		"bg-gray-100",
+		"border-indigo-500",
+		"leading-normal",
+		"transition",
+		"duration-300",
+		"ease-in-out",
+		"p-0",
+		"h-0",
+		{ "opacity-0": !openTwo, "opacity-1 h-auto p-10": openTwo }
+	);
 	const dispatch = useDispatch();
 	const state = useSelector((state) => state.state);
 	console.log(state);
@@ -52,7 +79,7 @@ const Formtwo = ({ pid }) => {
 		},
 	});
 	return (
-		<div className='form2'>
+		<div className='form2 h-screen'>
 			<div className='mb-12 mt-2'>
 				<Link to='/'>
 					<FontAwesomeIcon
@@ -84,11 +111,16 @@ const Formtwo = ({ pid }) => {
 				onSubmit={formik.handleSubmit}
 				className='form-container shadow-md rounded p-10 mb-4 flex flex-col my-2'
 			>
-		<div className="tab w-full overflow-hidden border-t">
-               <input className="absolute opacity-0" id="tab-single-three" type="radio" name="tabs2"></input>
-               <label className="block p-5 leading-normal cursor-pointer" for="tab-single-three">HABITS</label>
-               <div className="tab-content overflow-hidden border-l-2 bg-gray-100 border-indigo-500 leading-normal">
-			   <table>
+				<div className='tab w-full overflow-hidden border-t transition-all duration-300 ease-in-out justify-center'>
+					<span
+						className='block p-5 leading-normal cursor-pointer'
+						for='tab-single-three'
+						onClick={() => setOpen((open) => !open)}
+					>
+						HABITS
+					</span>
+					<div className={accordion}>
+						<table>
 							<thead className='border border-green-600 text-center px-3'>
 								<tr class='text-black'>
 									<th class='px-2 py-2'>Name of the Disease</th>
@@ -337,14 +369,19 @@ const Formtwo = ({ pid }) => {
 								</tr>
 							</tbody>
 						</table>
-               </div>
-            </div>
-   
- 			<div className="tab w-full overflow-hidden border-t">
-               <input className="absolute opacity-0" id="tab-single-two" type="radio" name="tabs2"></input>
-               <label className="block p-5 leading-normal cursor-pointer" for="tab-single-two">MEDICAL HISTORY</label>
-               <div className="tab-content overflow-hidden border-l-2 bg-gray-100 border-indigo-500 leading-normal">
-			   <table className='tablecenter border-collapse border border-green-800'>
+					</div>
+				</div>
+
+				<div className='tab w-full overflow-hidden border-t'>
+					<span
+						className='block p-5 leading-normal cursor-pointer'
+						for='tab-single-two'
+						onClick={() => setOpenTwo((openTwo) => !openTwo)}
+					>
+						MEDICAL HISTORY
+					</span>
+					<div className={accordionTwo}>
+						<table className='tablecenter border-collapse border border-green-800'>
 							<thead className=' border border-green-600 '>
 								<tr className='text-black text-center'>
 									<th className='w-1/2 px-2 py-2'>Habit</th>
@@ -472,9 +509,8 @@ const Formtwo = ({ pid }) => {
 								</tr>
 							</tbody>
 						</table>
-               </div>
-            </div>
-				
+					</div>
+				</div>
 
 				<div className='text-center'>
 					<button
@@ -484,11 +520,8 @@ const Formtwo = ({ pid }) => {
 						submit
 					</button>
 				</div>
-			
-			
 			</form>
-			</div>
-		
+		</div>
 	);
 };
 

@@ -34,10 +34,6 @@ function Dashboard() {
 	return (
 		<>
 			<div className='navbar text-white'>
-				{/* <FontAwesomeIcon
-					icon={faBars}
-					className='float-left mb-2'
-				></FontAwesomeIcon> */}
 				<h3 className='text-center m-auto'>PATIENT DETAILS</h3>
 				<div className='dropdown'>
 					<a>
@@ -56,7 +52,6 @@ function Dashboard() {
 					</div>
 				</div>
 			</div>
-
 			<div className='Dashboard'>
 				<div className='p-4'>
 					<div className='float-left Date'>

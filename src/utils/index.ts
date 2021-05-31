@@ -1,4 +1,3 @@
-import { DocumentData, QueryDocumentSnapshot } from "@firebase/firestore-types";
 import * as sgMail from "@sendgrid/mail";
 import { MailDataRequired } from "@sendgrid/mail";
 import * as firebase from "firebase";
@@ -11,7 +10,7 @@ import { firestore } from "../firebase";
 const createNewPost = async (data: any) => {
 	await firestore.collection("patients").add({
 		...data,
-		created: firebase.default.firestore.FieldValue.serverTimestamp(),
+		created: firebase.default.firestore.Timestamp.fromDate(new Date()),
 	});
 };
 
@@ -46,24 +45,6 @@ const getPatients = async (): Promise<Array<Object>> => {
 		.catch((err) => console.log(err));
 	return result;
 };
-
-// const getMorePatients = async (): Promise<Array<Object>> => {
-// 	const result: Array<Object> = [];
-// 	await firestore
-// 		.collection("PatientDetails")
-// 		.orderBy("Name")
-// 		.limit(2)
-// 		.startAfter(tempDoc || 0)
-// 		.get()
-// 		.then((res) => {
-// 			tempDoc = res.docs[res.docs.length - 1];
-// 			res.docs.forEach((doc) => {
-// 				result.push(doc.data());
-// 			});
-// 		})
-// 		.catch((err) => console.log(err));
-// 	return result;
-// };
 
 const sendMail = (fileName?: string, filePath?: string): void => {
 	sgMail.setApiKey("APIKEY");
