@@ -1,34 +1,15 @@
 import { faArrowLeft, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classnames from "classnames";
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Habits from "./Table/Habits";
-import MedicalHistory from "./Table/MedicalHistory";
-import ToothProblem from "./Table/Mucosalesions";
 import { logout } from "./redux/actions";
 import "./Styles/form.css";
 import "./Styles/index.css";
-import { updatePatientData } from "./utils";
-import { useSelector, useDispatch } from "react-redux";
-import { userLogout } from "./utils";
-import { logout } from "./redux/actions";
-import { Link } from "react-router-dom";
-import classnames from "classnames";
-// let myRadios = document.getElementsByName('tabs2');
-// let setCheck;
-// let x = 0;
-// for(x = 0; x < myRadios.length; x++){
-//     myRadios[x].onclick = function(){
-//         if(setCheck !== this){
-//              setCheck = this;
-//         }else{
-//             this.checked = false;
-//             setCheck = null;
-//     }
-//     };
-// }
+import { updatePatientData, userLogout } from "./utils";
+
 const validate = (values) => {};
 const Formtwo = ({ pid }) => {
 	const [open, setOpen] = useState(false);
