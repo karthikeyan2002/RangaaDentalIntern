@@ -10,11 +10,11 @@
 	letter-spacing: 1px;
 	background-color: #7579e7;
 }
-
 .Dashboard {
 	font-family: "Rubik", sans-serif;
 	padding: 0% 4%;
 	height: 100% !important;
+	background-color:  #caf7e3;
 }
 .patienttabel thead {
 	background-color: #7579e7;
@@ -26,6 +26,9 @@
 	right: 20px;
 	color: #9ab3f5;
 }
+.userplus :hover{
+	color:blue;
+}
 tbody tr:nth-child(even) {
 	background-color: #b9fffc;
 }
@@ -35,6 +38,17 @@ tbody tr:nth-child(odd) {
 .download-btn {
 	text-decoration: none;
 	font-family: "Rubik", sans-serif;
+}
+.navbar span{
+	color: white;
+	cursor: pointer;
+}
+.navbar span :hover{
+	color: cyan;
+	cursor: pointer;
+}
+.Details-small{
+	display: none;
 }
 
 /* RESPONSIVENESS */
@@ -58,8 +72,11 @@ tbody tr:nth-child(odd) {
 	.Dashboard {
 		overflow-x: scroll;
 	}
-	.Deatils-small {
+	.Details-small {
 		display: block;
+	}
+	.Details-big{
+		display: none;
 	}
 }
 @media only screen and (max-width: 607px) {
@@ -74,7 +91,7 @@ tbody tr:nth-child(odd) {
 		display: none;
 	}
 	.patienttabel {
-		margin-left: 1.5em;
+		margin-left: 0.5em;
 	}
 	.Date {
 		text-align: center;
@@ -82,7 +99,7 @@ tbody tr:nth-child(odd) {
 }
 @media only screen and (max-width: 340px) {
 	.patienttabel {
-		margin-left: 1em;
+		margin-left: 0em;
 	}
 	.Search {
 		margin-right: 1px;

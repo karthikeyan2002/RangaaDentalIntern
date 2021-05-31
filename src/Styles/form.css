@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .form {
-	background: url("../img/amy-shamblen-61rFb1qnu1k-unsplash.jpg");
-	height: 100% !important;
+	background: url("../img/form-1.jpg");
+	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -13,7 +13,8 @@
 	opacity: 0.96;
 }
 .form2 {
-	height: 100% !important;
+	background: url("../img/form-1.jpg");
+	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -21,7 +22,7 @@
 	font-family: "Roboto", sans-serif;
 }
 .form3 {
-	background: url("../img/amy-shamblen-61rFb1qnu1k-unsplash.jpg");
+	background: url("../img/form-1.jpg");
 	height: 100% !important;
 	background-position: center;
 	background-repeat: no-repeat;

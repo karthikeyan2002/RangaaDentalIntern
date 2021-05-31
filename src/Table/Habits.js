@@ -1,65 +1,12 @@
-import { faArrowLeft, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFormik } from "formik";
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import Habits from "./Table/Habits";
-import MedicalHistory from "./Table/MedicalHistory";
-import ToothProblem from "./Table/Mucosalesions";
-import { logout } from "./redux/actions";
-import "./Styles/form.css";
-import "./Styles/index.css";
-import { updatePatientData } from "./utils";
-import { useSelector, useDispatch } from "react-redux";
-import { userLogout } from "./utils";
-import { logout } from "./redux/actions";
-import { Link } from "react-router-dom";
-import classnames from "classnames";
-// let myRadios = document.getElementsByName('tabs2');
-// let setCheck;
-// let x = 0;
-// for(x = 0; x < myRadios.length; x++){
-//     myRadios[x].onclick = function(){
-//         if(setCheck !== this){
-//              setCheck = this;
-//         }else{
-//             this.checked = false;
-//             setCheck = null;
-//     }
-//     };
-// }
+import React from 'react';
+import { useSelector } from "react-redux";
+import { updatePatientData } from "../utils";
+
 const validate = (values) => {};
-const Formtwo = ({ pid }) => {
-	const [open, setOpen] = useState(false);
-	const [openTwo, setOpenTwo] = useState(false);
-	console.log(open, openTwo);
-	const accordion = classnames(
-		"border-l-2",
-		"bg-gray-100",
-		"border-indigo-500",
-		"leading-normal",
-		"transition",
-		"duration-300",
-		"ease-in-out",
-		"justify-center",
-		"p-0",
-		"h-0",
-		{ "opacity-0": !open, "opacity-1 h-auto p-10": open }
-	);
-	const accordionTwo = classnames(
-		"border-l-2",
-		"bg-gray-100",
-		"border-indigo-500",
-		"leading-normal",
-		"transition",
-		"duration-300",
-		"ease-in-out",
-		"p-0",
-		"h-0",
-		{ "opacity-0": !openTwo, "opacity-1 h-auto p-10": openTwo }
-	);
-	const dispatch = useDispatch();
+
+const Habits = ({ pid }) => {
+	
 	const state = useSelector((state) => state.state);
 	console.log(state);
 	const formik = useFormik({
@@ -83,40 +30,9 @@ const Formtwo = ({ pid }) => {
 		},
 	});
 
-	return (
-		<div className='form2 h-screen'>
-			<div className='mb-12 mt-2'>
-				<Link to='/'>
-					<FontAwesomeIcon
-						icon={faArrowLeft}
-						className='text-blue-600 float-left hover:text-blue-400'
-						size='lg'
-					></FontAwesomeIcon>
-				</Link>
-				<span>
-					<FontAwesomeIcon
-						icon={faSignOutAlt}
-						className='float-right text-blue-600 hover:text-blue-400'
-						size='lg'
-						onClick={() => userLogout().then(() => dispatch(logout()))}
-					></FontAwesomeIcon>
-				</span>
-			</div>
-
-			<form
-				onSubmit={formik.handleSubmit}
-				className='form-container shadow-md rounded p-10 mb-4 flex flex-col my-2'
-			>
-				<div className='tab w-full overflow-hidden border-t transition-all duration-300 ease-in-out justify-center'>
-					<span
-						className='block p-5 leading-normal cursor-pointer'
-						for='tab-single-three'
-						onClick={() => setOpen((open) => !open)}
-					>
-						HABITS
-					</span>
-					<div className={accordion}>
-						<table>
+    return (
+        <div>
+              <table className="w-full">
 							<thead className='border border-green-600 text-center px-3'>
 								<tr class='text-black'>
 									<th class='px-2 py-2'>Name of the Disease</th>
@@ -365,160 +281,8 @@ const Formtwo = ({ pid }) => {
 								</tr>
 							</tbody>
 						</table>
-					</div>
-				</div>
+        </div>
+    )
+}
 
-				<div className='tab w-full overflow-hidden border-t'>
-					<span
-						className='block p-5 leading-normal cursor-pointer'
-						for='tab-single-two'
-						onClick={() => setOpenTwo((openTwo) => !openTwo)}
-					>
-						MEDICAL HISTORY
-					</span>
-					<div className={accordionTwo}>
-						<table className='tablecenter border-collapse border border-green-800'>
-							<thead className=' border border-green-600 '>
-								<tr className='text-black text-center'>
-									<th className='w-1/2 px-2 py-2'>Habit</th>
-									<th className='w-1/4 px-2 py-2'>Yes</th>
-									<th className='w-1/4 px-2 py-2'>No</th>
-								</tr>
-							</thead>
-							<tbody className='text-center'>
-								<tr>
-									<td className='w-1/2 px-2 py-2 text-left'>Nail biting</td>
-									<td className='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											className='form-radio'
-											name='biting'
-											value='yes'
-											checked={formik.values.biting === "yes"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-									<td className='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											className='form-radio'
-											name='biting'
-											value='no'
-											checked={formik.values.biting === "no"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-								</tr>
-								<tr>
-									<td className='w-1/2 px-2 py-2 text-left'>bottle feeding</td>
-									<td className='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											className='form-radio'
-											name='bottle'
-											value='yes'
-											checked={formik.values.bottle === "yes"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-									<td className='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											className='form-radio'
-											name='bottle'
-											value='no'
-											checked={formik.values.bottle === "no"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-								</tr>
-								<tr>
-									<td className='w-1/2 px-2 py-2 text-left'>Thumb sucking</td>
-									<td className='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											className='form-radio'
-											name='thumb'
-											value='yes'
-											checked={formik.values.thumb === "yes"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-									<td className='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											className='form-radio'
-											name='thumb'
-											value='no'
-											checked={formik.values.thumb === "no"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-								</tr>
-								<tr>
-									<td className='w-1/2 px-2 py-2 text-left'>
-										Tongue Thrusting
-									</td>
-									<td className='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											className='form-radio'
-											name='tongue'
-											value='yes'
-											checked={formik.values.tongue === "yes"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-									<td className='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											className='form-radio'
-											name='tongue'
-											value='no'
-											checked={formik.values.tongue === "no"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-								</tr>
-								<tr>
-									<td className='w-1/2 px-2 py-2 text-left'>Mouth breathing</td>
-									<td className='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											className='form-radio'
-											name='mouth'
-											value='yes'
-											checked={formik.values.mouth === "yes"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-									<td className='w-1/4 px-2 py-2'>
-										<input
-											type='radio'
-											className='form-radio'
-											name='mouth'
-											value='no'
-											checked={formik.values.mouth === "no"}
-											onChange={formik.handleChange}
-										></input>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-
-				<div className='text-center'>
-					<button
-						type='submit'
-						className='bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase w-1/7 hover:bg-gray-600 border-none tracking-wider mt-3'
-					>
-						submit
-					</button>
-				</div>
-			</form>
-		</div>
-	);
-};
-
-export default React.memo(Formtwo);
+export default Habits

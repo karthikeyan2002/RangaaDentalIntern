@@ -1,4 +1,4 @@
-import { faArrowLeft, faPowerOff } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFormik } from "formik";
 import React from "react";
@@ -76,28 +76,19 @@ const Formone = () => {
         <Link to="/">
           <FontAwesomeIcon
             icon={faArrowLeft}
-            className="text-blue-600 float-left"
+            className="text-blue-600 float-left hover:text-blue-400"
             size="lg"
           ></FontAwesomeIcon>
         </Link>
-        <div className="dropdown">
-          <span>
+           <span>
             <FontAwesomeIcon
-              icon={faPowerOff}
-              className="float-right text-gray-600"
+              icon={faSignOutAlt}
+              className="float-right text-blue-600 hover:text-blue-400"
               size="lg"
+              onClick={() => userLogout().then(() => dispatch(logout()))}
             ></FontAwesomeIcon>
           </span>
-          <div className="dropdown-content">
-            <span
-              href="#"
-              onClick={() => userLogout().then(() => dispatch(logout()))}
-            >
-              Log out
-            </span>
-          </div>
         </div>
-      </div>
 
       <form
         onSubmit={formik.handleSubmit}

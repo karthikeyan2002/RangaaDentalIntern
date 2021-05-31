@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {
-	faPowerOff,
+	faSignOutAlt,
 	// faBars,
 	faSearch,
 	faUserPlus,
@@ -33,24 +33,15 @@ function Dashboard() {
 	const currentPosts = patients.slice(indexOfFirstPost, indexOfLastPost);
 	return (
 		<>
-			<div className='navbar text-white'>
-				<h3 className='text-center m-auto'>PATIENT DETAILS</h3>
-				<div className='dropdown'>
-					<a>
-						<FontAwesomeIcon
-							icon={faPowerOff}
-							className='float-right'
-						></FontAwesomeIcon>
-					</a>
-					<div className='dropdown-content'>
-						<span
-							href='#'
-							onClick={() => userLogout().then(() => dispatch(logout()))}
-						>
-							Log out
-						</span>
-					</div>
-				</div>
+			<div className='navbar'>
+				<h3 className='text-center m-auto text-white'>PATIENT DETAILS</h3>
+				<span className='float-right'>
+					<FontAwesomeIcon
+						icon={faSignOutAlt}
+						size='lg'
+						onClick={() => userLogout().then(() => dispatch(logout()))}
+					></FontAwesomeIcon>
+				</span>
 			</div>
 			<div className='Dashboard'>
 				<div className='p-4'>
@@ -87,7 +78,7 @@ function Dashboard() {
 				<Table patients={currentPosts} />
 
 				{/* Pagination starts here */}
-				<div className='p-3 pt-5 text-center'>
+				<div className='pt-5 text-center'>
 					<div className=' patienttabel mt-3 flex items-center justify-between border-t border-gray-200 sm:px-6'>
 						<div className='sm:flex-1 sm:flex sm:items-center content-center justify-center sm:justify-center'>
 							<div>
@@ -102,13 +93,13 @@ function Dashboard() {
 				</div>
 
 				<Link to='/Receptionist'>
-					<a className='hover:text-cyan-900'>
+					<span>
 						<FontAwesomeIcon
 							icon={faUserPlus}
 							className='userplus'
 							size='lg'
 						></FontAwesomeIcon>
-					</a>
+					</span>
 				</Link>
 			</div>
 		</>
