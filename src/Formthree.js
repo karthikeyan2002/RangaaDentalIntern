@@ -1,7 +1,7 @@
 import { faArrowLeft, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { updatePatientData, userLogout } from "./utils";
 import { logout } from "./redux/actions";
@@ -11,10 +11,67 @@ import { Link } from "react-router-dom";
 import Diagnosis from "./Table/Diagnosis";
 import Mucosalesions from "./Table/Mucosalesions";
 import Treatment from "./Table/Treatment";
+import classnames from "classnames";
 
 const validate = (values) => {};
 
 const Formthree = ({ pid }) => {
+	const [open, setOpen] = useState(false);
+	const [openTwo, setOpenTwo] = useState(false);
+	const [openThree, setOpenThree] = useState(false);
+	const [openFour, setOpenFour] = useState(false);
+	console.log(open, openTwo, openThree);
+	const accordion = classnames(
+		"border-l-2",
+		"bg-gray-100",
+		"border-indigo-500",
+		"leading-normal",
+		"transition",
+		"duration-300",
+		"ease-in-out",
+		"justify-center",
+		"p-0",
+		"h-0",
+		{ "opacity-0": !open, "opacity-1 h-auto p-10": open }
+	);
+	const accordionTwo = classnames(
+		"border-l-2",
+		"bg-gray-100",
+		"border-indigo-500",
+		"leading-normal",
+		"transition",
+		"duration-300",
+		"ease-in-out",
+		"p-0",
+		"h-0",
+		{ "opacity-0": !openTwo, "opacity-1 h-auto p-10": openTwo }
+	);
+
+	const accordionThree = classnames(
+		"border-l-2",
+		"bg-gray-100",
+		"border-indigo-500",
+		"leading-normal",
+		"transition",
+		"duration-300",
+		"ease-in-out",
+		"p-0",
+		"h-0",
+		{ "opacity-0": !openThree, "opacity-1 h-auto p-10": openThree }
+	);
+
+	const accordionFour = classnames(
+		"border-l-2",
+		"bg-gray-100",
+		"border-indigo-500",
+		"leading-normal",
+		"transition",
+		"duration-300",
+		"ease-in-out",
+		"p-0",
+		"h-0",
+		{ "opacity-0": !openFour, "opacity-1 h-auto p-10": openFour }
+	);
 	const dispatch = useDispatch();
 	const formik = useFormik({
 		initialValues: {},
@@ -35,10 +92,10 @@ const Formthree = ({ pid }) => {
 				</Link>
 				<span>
 					<FontAwesomeIcon
-					icon={faSignOutAlt}
-					className="float-right text-blue-600 hover:text-blue-400"
-					size="lg"
-					onClick={() => userLogout().then(() => dispatch(logout()))}
+						icon={faSignOutAlt}
+						className='float-right text-blue-600 hover:text-blue-400'
+						size='lg'
+						onClick={() => userLogout().then(() => dispatch(logout()))}
 					></FontAwesomeIcon>
 				</span>
 			</div>
@@ -50,9 +107,9 @@ const Formthree = ({ pid }) => {
 				<div className='text-center text-2xl'>
 					<p className='font-black'>DOCTOR'S PORTAL</p>
 				</div>
-				
-				<div className="text-center">
-				<div className=''>
+
+				<div className='text-center'>
+					<div className=''>
 						<input
 							id='dname'
 							name='dname'
@@ -64,55 +121,61 @@ const Formthree = ({ pid }) => {
 						/>
 					</div>
 				</div>
-			
-				
-				<div className="tab w-full overflow-hidden border-t">
-				<input className="absolute opacity-0" id="tab-single-three" type="radio" name="tabs2"></input>
-				<label className="block p-4 leading-normal cursor-pointer" for="tab-single-three">HABITS</label>
-				<div className="tab-content overflow-x-scroll border-l-2 bg-gray-100 border-indigo-500 leading-normal text-center">
+
+				<div className='tab w-full overflow-hidden border-t'>
+					<span
+						className='block p-4 leading-normal cursor-pointer'
+						for='tab-single-three'
+						onClick={() => setOpen((open) => !open)}
+					>
+						HABITS
+					</span>
+					<div className={accordion}>
 						<Diagnosis />
-				</div>
-				</div>
-	
-				<div className="tab w-full overflow-hidden border-t">
-				<input className="absolute opacity-0" id="tab-single-two" type="radio" name="tabs2"></input>
-				<label className="block p-4 leading-normal cursor-pointer" for="tab-single-two">MEDICAL HISTORY</label>
-				<div className="tab-content overflow-x-scroll border-l-2 bg-gray-100 border-indigo-500 leading-normal">
-						<Mucosalesions/>
-				</div>
+					</div>
 				</div>
 
-				<div className="tab w-full overflow-hidden border-t">
-				<input className="absolute opacity-0" id="tab-single-one" type="radio" name="tabs2"></input>
-				<label className="block p-4  leading-normal cursor-pointer" for="tab-single-one">TOOTH PROBLEM</label>
-				<div className="tab-content overflow-x-scroll border-l-2 bg-gray-100 border-indigo-500 leading-normal">
+				<div className='tab w-full overflow-hidden border-t'>
+					<span
+						className='block p-4 leading-normal cursor-pointer'
+						for='tab-single-two'
+						onClick={() => setOpenTwo((openTwo) => !openTwo)}
+					>
+						MEDICAL HISTORY
+					</span>
+					<div className={accordionTwo}>
+						<Mucosalesions />
+					</div>
+				</div>
+
+				<div className='tab w-full overflow-hidden border-t'>
+					<span
+						className='block p-4  leading-normal cursor-pointer'
+						for='tab-single-one'
+						onClick={() => setOpenThree((openThree) => !openThree)}
+					>
+						TOOTH PROBLEM
+					</span>
+					<div className={accordionThree}>
 						<Treatment />
+					</div>
 				</div>
+
+				<div className='tab w-full overflow-hidden border-t'>
+					<span
+						className='block p-4 leading-normal cursor-pointer'
+						for='tab-single-four'
+						onClick={() => setOpenFour((open) => !open)}
+					>
+						Comments
+					</span>
+					<div className={accordionFour}>
+						<textarea
+							class='resize border rounded-md w-full'
+							placeholder='Type your message here ..'
+						></textarea>
+					</div>
 				</div>
-					
-				<div className="tab w-full overflow-hidden border-t">
-				<input className="absolute opacity-0" id="tab-single-four" type="radio" name="tabs2"></input>
-				<label className="block p-4 leading-normal cursor-pointer" for="tab-single-four">Comments</label>
-				<div className="tab-content overflow-x-scroll border-l-2 bg-gray-100 border-indigo-500 leading-normal">
-				<textarea class="resize border rounded-md w-full" placeholder="Type your message here .."></textarea>
-				</div>
-				</div>
-									
-					{/* <div className='md:w-1/2 px-3 mb-6 md:mb-0'>
-					 <div className='ml-3 mt-2'>
-						<label for="toggleB" className="ml-9 flex items-center cursor-pointer">
-							<div className="relative">
-							<input type="checkbox" id="toggleB" className="sr-only"></input>
-							<div className="block bg-red-600 w-14 h-8 rounded-full"></div>
-							<div className="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
-							</div>
-							<div className="ml-3 text-gray-700 font-medium">
-							Completed !
-							</div>
-						</label>
-						</div>
-					</div> */}
-		
 			</form>
 		</div>
 	);
